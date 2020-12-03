@@ -17,8 +17,8 @@ Irina Leicach, tengo 26 años y aunque estudié psicología es ahora que me meta
 
 ## Inspiración 💻
 
-* https://balcon.com.ar/  Elegimos esta web principalmente porque nos gustó su estética, en cuanto a colores y dinamismo de la página y creemos que apunta a un público similar al que apuntamos 
-* https://potit.com.ar/  Creemos que es una página  muy estética pero a su vez simple.
-* https://www.naddeos.com/
-* https://www.maranta.com.ar/ 
-* https://www.hokudeco.com.ar/
+* https://balcon.com.ar/ - De esta web nos gustó que en el header el tamaño del logo y el posicionamiento de la sección "Buscar" y "Iniciar sesión. También nos agradó la parte de "Detalle de productos", las opciones que tiene dentro y la posibilidad de ver opciones similares del producto seleccionado. Además, la estetética es muy linda.
+* https://potit.com.ar/  - Además de tener una web muy bonita y simple a la vez, nos agradó el footer. Es simple, serio y completo.
+* https://www.naddeos.com/ - De esta lo que más destacamos es el home. Es muy completo y muy ordenado. Tiene acceso a todo.
+* https://www.maranta.com.ar/ - Esta web es muy simple, lo que más nos gustó fue que la barra del header está en el medio, no tiene muchas opciones y queda bastante bien.
+* https://www.hokudeco.com.ar/ - Probablemente la más bonita esteticamente. De esta nos gustó más que nada que en el home tenemos redireccionamiento a todas las secciones de productos principales de una manera un poco fuera de lo normal para lo que veníamos viendo. Queda muy bien y nos gustaría hacerlo así.
