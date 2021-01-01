@@ -1,0 +1,17 @@
+{
+  "name": "calathea",
+  "version": "1.0.0",
+  "description": "Proyecto integrador",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon --watch src src/app.js"
+  },
+  "author": "Tomás Marenco, Irina Leicach, Gastón Gatti",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
