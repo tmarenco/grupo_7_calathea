@@ -48,12 +48,22 @@
     </header>
 
     <main class= "register-main">
-        <section clas= "login-form">
+        <section class= "login-form">
             <form action = "/login" method ="POST">
-                <p class= "titulo"><strong>Iniciar Sesión</strong></p>
+                <p class= "titulo"><strong>Crear cuenta</strong></p>
+                <label for="name"><strong>NOMBRE</strong></label>
+                <br>
+                <input type="text" name="name" id="name">
+                <br>
+                <br>
                 <label for="email"><strong>EMAIL</strong></label>
                 <br>
                 <input type="email" name="email" id="email">
+                <br>
+                <br>
+                <label for="tel"><strong>TELÉFONO</strong></label>
+                <br>
+                <input type="tel" name="tel" id="tel">
                 <br>
                 <br>
                 <label for="password"><strong>CONTRASEÑA</strong></label>
@@ -61,13 +71,15 @@
                 <input type="password" name="password" id="password">
                 <br>
                 <br>
-                <a href="" >¿Olvidaste tu contraseña?</a>
+                <label for="password"><strong>CONFIRMAR CONTRASEÑA</strong></label>
+                <br>
+                <input type="password" name="password" id="password">
                 <br>
                 <br>
-                <button type="submit">INICIAR SESIÓN</button>
+                <button type="submit">CREAR CUENTA</button>
                 <br>
                 <br>
-                <a href="">¿No tenés cuenta? Creá tu cuenta</a>
+                <a href="">¿Ya tenés cuenta? Iniciá sesión</a>
             </form>
         </section>
     </main>
