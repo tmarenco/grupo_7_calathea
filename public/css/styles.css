@@ -113,3 +113,116 @@ section {
 .register-main {
     background-color: #d9d9d9
 }
+
+.main-carrito {
+    background-color: #d9d9d9;
+    padding: 10px;
+}
+
+.titulos-carrito {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.titulo-cantidad {
+    position: relative;
+    left: 780px;
+}
+
+.titulo-precio {
+    position: relative;
+    left: 350px;
+}
+
+.titulo-subtotal {
+    position: relative;
+    right: 110px;
+}
+
+.cuadro-carrito {
+    border: solid #6d6875 5px;
+    margin: 0px 200px;
+}
+
+.cuadro-carrito ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.foto-producto {
+    position: relative;
+    right: 400px;
+}
+
+.nombre-producto {
+    position: relative;
+    right: 360px;
+}
+
+.signo-resta {
+    position: relative;
+    right: 100px
+}
+
+.cantidad {
+    position: relative;
+    right: 95px;
+}
+
+
+.signo-suma {
+    position: relative;
+    right: 90px;
+}
+
+.precio {
+    position: relative;
+    left: 70px
+}
+
+.subtotal { 
+    position: relative;
+    left: 200px
+}
+
+.vaciar-carro {
+    position: relative; 
+    left: 330px;
+}
+
+.subtotal-y-total {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.subtotal-y-total1 {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 230px;
+    right: 350px;
+    font-size: 25px;
+}
+.subtotal-y-total li {
+    margin: 10px 0px;
+}
+
+.codigo-postal {
+    display: flex;
+    flex-direction: column;
+}
+
+.medios-de-envio {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    left: 300px
+}
+
+.boton {
+    width: 150px;
+}

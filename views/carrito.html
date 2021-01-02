@@ -47,8 +47,44 @@
 
     </header>
 
-    <main>
-        <h1>Hola</h1>
+    <main class = "main-carrito">
+        <h1>Carrito de compras</h1>
+        <ul class= "titulos-carrito">
+            <li class= "titulo-cantidad">CANTIDAD</li>
+            <li class= "titulo-precio">PRECIO</li>
+            <li class= "titulo-subtotal">SUBTOTAL</li>
+        </ul>
+        <section class= "cuadro-carrito"> 
+            <ul>
+                <li class= "foto-producto"><img width= 200px height= 200px src ="/images/producto.jpg"></li>
+                <li class= "nombre-producto">COMBO BUXUS ARBOLITO EN ESPAÑOLA + TIERRA</li>
+                <li class= "signo-resta"><a href= ""><strong>-</strong></a></li>
+                <li class= "cantidad">1</li>
+                <li class= "signo-suma"><a href= ""><strong>+</strong></a></li>
+                <li class= "precio">$ 1</li>
+                <li class= "subtotal">$ 1</li>
+                <li class= "vaciar-carro"><a href= ""><i class="fas fa-trash"></i></a></li>
+            </ul>
+        </section>
+        <section class= "medios-de-envio">
+                <br>
+                <form class= "codigo-postal" action= "" method= "POST">
+                    <h3>Medios de envío</h3>
+                    <label class= "boton" for= "codigo-postal">Código Postal</label>
+                    <input class= "boton" type= "number" name= "codigo-postal" id= "codigo-postal">
+                    <button class= "boton" type= "button"><strong>CALCULAR</strong></button>
+                    <br>
+                    <a href= "">No sé mi código</a>
+                    <h3>Retiro en local</h3>
+                    <p>Showroom: Amenábar 4587 2 "D". Sucursal Palermo: Ravignani 5498, Capital Federal</p>
+                </form>
+        </section>
+        <section class=subtotal-y-total1>
+            <ul class= "subtotal-y-total">
+                <li>Subotal: $1</li>
+                <li>Total: $1</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <div class="footer">
