@@ -6,6 +6,10 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
+.main-home {
+    background-color: #d9d9d9;
+}
+
 .header-top {
     background-color: #b5dda4;
     display: flex;
@@ -102,6 +106,22 @@ section {
     display: flex;
     justify-content: center;
 }
+.fa-angle-left,
+.fa-angle-right {
+    font-size: 100px;
+    color: #100b00;
+}
+.fa-angle-left {
+    position: relative;
+    right: 1200px;
+    top: 250px
+}
+.fa-angle-right{
+    position: relative;
+    top: 250px;
+    right: 100px;
+}
+
 
 .titulo {
     display: flex;
