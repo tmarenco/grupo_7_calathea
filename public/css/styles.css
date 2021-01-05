@@ -1,137 +1,183 @@
+/*general
+---------*/
+
+
+
 * {
     box-sizing: border-box;
-}
-
-body {
     font-family: 'Raleway', sans-serif;
 }
 
-.main-home {
-    background-color: #d9d9d9;
-    padding: 50px;
-}
-
+/*header
+--------*/
 .header-top {
-    background-color: #b5dda4;
+    background-color: #fff;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .search-box {
     display: flex;
-    align-items: center;
     margin: 10px;
     width: 300px;
     position: relative;
 }
-.search {
-    border: none; 
-    height: 40px;
-    width: 200px;
-    margin: 10px;
-    border-radius: 20px;
-    background-color: #e5e5e5
+
+.search-box input{
+color: #754668; 
+border: solid 1.5px;
+border-radius: .5rem;
 }
 
-.logo {
+.fa-search{
+    color:#754668;
+    margin-right: .25rem;
+}
+
+.logo{
+    align-self: center;
+
+    /* acá no se cómo ahcer para que quede centrado
+    por otro lado podemos pensar qué hacer con el logo,
+    por ej que se achique al hacer scroll como en potit */
+}
+
+.header-right li, .header-right a{
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin: .25rem;
+    color: #754668;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .75rem;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    margin: 10px;
-    color: black;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-.header-right a{
-    color: #495057;
-    text-decoration: none;
-    font-weight: bolder;
+.header-right i{
+    margin-right: .75rem;
 }
 
 .header-bottom {
     background-color: #754668;
     color: white;
     font-weight: bold;
-    
 }
 
-.nav-bar ul {
+
+
+.nav-bar {
+    padding: .25rem;
+}
+
+.nav-bar ul{
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: space-around;
 }
 
-.nav-bar a {
+.nav-bar a{
     text-decoration: none;
     color: white;
     display: inline-block;
 }
 
-
-.nav-bar {
-    padding: 30px;
+.nav-bar a:hover{
+    color:#e7badb;
+    background-color: #75466893;
 }
 
 
-footer {
-    background-color: #b5dda4;
-}
-.footer {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 10px;
-    margin: 10px;
-}
-
-.footer li {
-    padding: 10px;
-}
-
-.footer a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer-mdp{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 40px;
-    right: 250px;
-    
-}
+/* main
+-------*/
 
 .hero {
     display: flex;
     justify-content: center;
 }
 
+
+
+/* footer
+----------*/
+
+footer{
+    color: white;
+}
+
+footer a{
+    color:white;
+}
+
+.footer-top {
+   background-color: #754668;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+.footer-top ul{
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+.footer-top li {
+    padding: 10px;
+}
+
+.footer-top a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.footer-bottom {
+    background-color: #5c3251;
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    padding: .75rem;
+}
+
+.footer-bottom a{
+    margin: 5px 10px 5px 0px;
+    text-decoration: none;
+    font-size: .75rem;
+}
+
+/* ----
+esta section de qué es ??? 
+--------*/
+
+
 section {
     display: flex;
     justify-content: center;
 }
+
+
+/* Home ------- */
+.main-home {
+    background-color: #fff;
+    padding: 50px;
+}
+
+
+/* Carrito ------- */
 .fa-angle-left,
 .fa-angle-right {
     font-size: 100px;
     color: #100b00;
 }
+
 .fa-angle-left {
     position: relative;
     right: 1200px;
     top: 250px
 }
+
 .fa-angle-right{
     position: relative;
     top: 250px;
@@ -288,3 +334,6 @@ section {
     width: 150px;
 }
 
+
+
+/* color verde #9dc28e*/
