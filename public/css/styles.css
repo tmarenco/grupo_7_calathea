@@ -1,11 +1,10 @@
 /*general
 ---------*/
-
-
-
 * {
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*header
@@ -13,7 +12,7 @@
 .header-top {
     background-color: #fff;
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -111,10 +110,19 @@ footer a{
 
 .footer-top {
    background-color: #754668;
-   display: flex;
-   justify-content: space-between;
+
 }
 
+
+
+
+
+
+.cont-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;;
+}
 
 .footer-top ul{
     list-style: none;
@@ -130,6 +138,17 @@ footer a{
     text-decoration: none;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
