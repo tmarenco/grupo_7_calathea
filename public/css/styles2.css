@@ -7,8 +7,84 @@
     padding: 0px;
 }
 
+/*main*/
 
+main {
+    background-color: #ffe8d6;
+}
 
+.opciones-catalogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 1em;
+    ;
+}
+
+.opcion {
+    border: solid #5c3251 5px;
+    margin: 1rem;
+    width: 18rem;
+    height: 18rem;;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14rem 14rem;
+}
+
+#opcion1 {
+    background-image: url(/images/plantainterior.jpg);
+}
+#opcion2 {
+    background-image: url(/images/plantaexterior.jpg);
+}
+#opcion3 {
+    background-image: url(/images/deco.jpg);
+}
+#opcion4 {
+    background-image: url(/images/macetas.jpg);
+}
+#opcion5 {
+    background-image: url(/images/accesorios.jpg);
+}
+#opcion6 {
+    background-image: url(/images/fertilizantes.jpg);
+}
+
+.titulo-opcion {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #754668;
+}
+
+.titulo-opcion a {
+    color: white;
+    text-decoration: none;
+}
+
+.titulo-pd {
+    font-weight: bold;
+    border: double 0.5rem #754668;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 3rem
+}
+.section-productos-destacados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+ 
+}
+.producto-destacado {
+    border: black solid 5px;
+    margin: 1rem 1rem;
+    height: 8rem;
+    width: 8rem;
+}
 /*footer-top*/
 
 .footer-top{
@@ -46,7 +122,7 @@ a{
 
 
 
-/*footer-top*/
+/*footer-bottom*/
 
 .footer-bottom {
     background-color: #5c3251;
@@ -67,7 +143,7 @@ a{
 }
 
 
-/*footer-media*/
+/*media*/
 
 @media (min-width: 768px){
     .footer-top-main{
@@ -114,6 +190,11 @@ a{
     .footer-bottom a{
         margin: 1rem;
     }
+
+    .opciones-catalogo {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -127,6 +208,9 @@ a{
         display: flex;
         justify-content: center;
     }
-    
 
+    .opciones-catalogo {
+        max-width: 1200px;
+        margin: auto;
+    }
 }
