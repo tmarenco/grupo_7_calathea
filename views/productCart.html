@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calathea</title>
-    <link href="css/styles.css" rel= "stylesheet">
+    <link href="css/styles2.css" rel= "stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/72a545861a.js" crossorigin="anonymous"></script>
@@ -45,91 +45,98 @@
         </div>
 
     </header>
-    <!--
     <main class = "main-carrito">
-        <h1>Carrito de compras</h1>
-        <ul class= "titulos-carrito">
-            <li class= "titulo-cantidad">CANTIDAD</li>
-            <li class= "titulo-precio">PRECIO</li>
-            <li class= "titulo-subtotal">SUBTOTAL</li>
-        </ul>
-        <section class= "cuadro-carrito"> 
-            <ul>
-                <li class= "foto-producto"><img width= 200px height= 200px src ="/images/producto.jpg"></li>
-                <li class= "nombre-producto">COMBO BUXUS ARBOLITO EN ESPAÑOLA + TIERRA</li>
-                <li class= "signo-resta"><a href= ""><strong>-</strong></a></li>
-                <li class= "cantidad">1</li>
-                <li class= "signo-suma"><a href= ""><strong>+</strong></a></li>
-                <li class= "precio">$ 1</li>
-                <li class= "subtotal">$ 1</li>
-                <li class= "vaciar-carro"><a href= ""><i class="fas fa-trash"></i></a></li>
-            </ul>
+        <h1 class= "titulo-carrito">Carrito de compras</h1>
+        <section class= "cuadro-carrito">
+            <div id= "imagen-nombre" class= "item-carrito">
+                <img id= "imagen-producto" src= "images/producto.jpeg">
+                <h4 id= "imagen-nombre" class= "item-carrito">DÚO NACARADA CHICA + PHILO PERUVIANO</h4>
+            </div>
+            <div id= "cantidad-carrito" class= "item-carrito">
+                <h3>CANTIDAD</h3>
+                <span><a href= "">-</a></span>
+                <span>1</span>
+                <span><a href= "">+</a></span>
+            </div>
+            <div id= "precio-carrito" class= "item-carrito">
+                <h3>PRECIO</h3>
+                <h3 class= "importe">$ 1</h3>
+            </div>
+            <div id= "precio-carrito" class= "item-carrito">
+                <h3>SUBTOTAL</h3>
+                <h3 class= "importe">$ 1</h3>
+            </div>
+            <div id= "basura" class= "item-carrito">
+                <i class="fas fa-trash"></i>
+            </div>
         </section>
         <section class= "medios-de-envio">
-                <br>
-                <form class= "codigo-postal" action= "" method= "POST">
-                    <h3>Medios de envío</h3>
-                    <label class= "boton" for= "codigo-postal">Código Postal</label>
-                    <input class= "boton" type= "number" name= "codigo-postal" id= "codigo-postal">
-                    <button class= "boton" type= "button"><strong>CALCULAR</strong></button>
-                    <br>
-                    <a href= "">No sé mi código</a>
-                    <h3>Retiro en local</h3>
-                    <p>Showroom: Amenábar 4587 2 "D". Sucursal Palermo: Ravignani 5498, Capital Federal</p>
-                </form>
-        </section>
-        <section class=subtotal-y-total1>
-            <ul class= "subtotal-y-total">
-                <li>Subotal: $1</li>
-                <li>Total: $1</li>
-            </ul>
+            <h2 class= titulo-carrito>Medios de envío</h2>
+            <div class= "texto-carrito"><input type= "radio" name= "medio-de-envio" value= "Retiro en el local" checked> Retiro en el local - GRATIS</div>
+            <div class= "texto-carrito"><input type= "radio" name= "medio-de-envio" value= "Envío a domicilio"> Envío a domicilio</div>
+            <h2 class= titulo-carrito>Calcular envío</h2>
+            <input class= "formulario" type= "number" name="codigopostal" placeholder=" Codigo Postal">
+            <button id= "boton" type= "submit">Calcular costo</button>
+            <div class= "link-codigopostal"><a href="">No sé mi código</a></div>
+            <h3 id= "subtotal-total" class= "titulo-carrito">Subtotal: $ 1</h3>
+            <h3 id= "subtotal-total" class= "titulo-carrito">Total: $ 1</h3>
         </section>
     </main>
 
-    -->
-    <footer>
-        <div class="footer">
 
-            <ul class ="nav-footer">
-                <li><strong>Navegación</strong></li>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Quiénes Somos</a></li>
-                <li><a href="">Preguntas Frecuentes</a></li>
-                <li><a href="">Contacto</a></li>
-            </ul>
-            <ul class= "cont-footer">
-                <li><strong>Contactanos</strong></li>
-                <li><i class="fas fa-phone"></i> +54 11 *******</li>
-                <li><i class="fab fa-whatsapp"></i> +54 11 *****</li>
-                <li><i class="fas fa-at"></i> contacto@calathea.com.ar</li>
-                <li><i class="fas fa-map-marker-alt"></i> Showroom: Amenábar 4587 2 "D". Sucursal Palermo: Ravignani 5498, Capital Federal</li>
-            </ul>
-            <ul class="footer-mdp1">
-                <li><strong>Medios de pago</strong></li>
-            </ul>
-            <ul class="footer-mdp">
-                <li><img width= 50px heigth= 50px src= "images/visa.jpg"></li>
-                <li><img width= 50px heigth= 50px src= "images/mastecard.jpg"></li>
-                <li><img width= 50px heigth= 50px src= "images/american.jpg"></li>
-            </ul>
-            <ul class="footer-mdp">
-                <li><img width= 50px heigth= 50px src= "images/pagofacil.png"></li>
-                <li><img width= 50px heigth= 50px src= "images/rapipago.jpg"></li>
-                <li><img width= 50px heigth= 50px src= "images/mercadopago.jpeg"></li>
-            </ul>
-            <ul id="footer-rd">
-                <li><strong>REDES SOCIALES</strong></li>
-                <li><i class="fab fa-instagram"> @calathea</i></li>
-                <li><i class="fab fa-facebook"></i> Somos calathea</li>
-                <li></li>
-                <li><form action="" method="POST">
-                    <label for="newsletter" id="newsletter"><strong>NEWSLETTER</strong>
-                    <br>
-                    <input type="email" name="newsletter"> 
-                </form> </li>
+    <footer>
+        <div class="footer-top">
+            <div class= footer-top-main>
+                <div class= "cont-footer">
+                    <span class="titulo-footer">CONTACTANOS</span>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +54 11 *******</li>
+                        <li><i class="fab fa-whatsapp"></i> +54 11 *****</li>
+                        <li><i class="fas fa-at"></i> contacto@calathea.com.ar</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Showroom: Amenábar 4587 2 "D". <br>Sucursal Palermo: Ravignani 5498, Capital Federal</li>
+                    </ul>
+                </div>
+                
+                <div class="cont-footer">
+                    <span class="titulo-footer">MEDIOS DE PAGO</span>
+                    <ul class="medios-de-pago">
+                        <li><img width= 50px heigth= 50px src= "images/visa.jpg"></li>
+                        <li><img width= 50px heigth= 50px src= "images/mastecard.jpg"></li>
+                        <li><img width= 50px heigth= 50px src= "images/american.jpg"></li>
+                        <!--
+                        <li><img width= 50px heigth= 50px src= "images/pagofacil.png"></li>
+                        <li><img width= 50px heigth= 50px src= "images/rapipago.jpg"></li>
+                        <li><img width= 50px heigth= 50px src= "images/mercadopago.jpeg"></li>-->
+                    </ul>
+                </div>
+                <div class="cont-footer">
+                    <span class="titulo-footer">REDES SOCIALES</span>
+                    <ul id="footer-rd">
+                        <li><i class="fab fa-instagram"> <a href="http://instagram.com" target="_blank"> Calathea</a></i></li>
+                        <li><i class="fab fa-facebook"><a href="http://facebook.com" target="_blank"></i> Somos Calathea </a></li>
+                    </ul>
+                </div>
+    
+                <div class="cont-footer">
+                    <form action="" method="POST">
+                        <div class="titulo-footer">NEWSLETTER</div>
+                        <label for="newsletter" id="newsletter">
+                        <input class= "formulario" type="email" name="newsletter" placeholder="   Recibí novedades!"> 
+                    </form> 
+                </div>
+
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+                <a href="">Inicio</a>  
+                <a href="">Productos</a>  
+                <a href="">Quiénes Somos</a>  
+                <a href="">Preguntas Frecuentes</a> 
+                <a href="">Contacto</a>
             </ul>
         </div>
+
     </footer>
 
     </body>
