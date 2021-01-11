@@ -1,14 +1,10 @@
 const express = require("express");
 const app = express();
 const path = require ("path");
-const publicPath = path.resolve (__dirname, "./public");
+const publicPath = path.resolve (__dirname, "../public");
 
 
 app.use (express.static(publicPath));
-
-
-app.listen (3000, () => console.log ("Servidor corriendo en el puerto 3000"));
-
 
 
 app.get ("/", (req, res) => {
@@ -17,6 +13,10 @@ app.get ("/", (req, res) => {
 
 app.get ("/productDetail", (req, res) => {
     res.sendFile (path.resolve (__dirname, "./views/productDetail.html"));
+});
+
+app.get ("/product", (req, res) => {
+    res.sendFile (path.resolve (__dirname, "./views/products.html"));
 });
 
 app.get ("/productCart", (req, res) => {
@@ -30,3 +30,11 @@ app.get ("/register", (req, res) => {
 app.get ("/login", (req, res) => {
     res.sendFile (path.resolve (__dirname, "./views/login.html"));
 });
+
+
+app.listen (3030, () => {
+    console.log ("-----------------------");
+    console.log ("http://localhost:3030");
+    console.log ("-----------------------");
+
+})

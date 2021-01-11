@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calathea</title>
-    <link href="css/styles.css" rel= "stylesheet">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/72a545861a.js" crossorigin="anonymous"></script>
-
+    <link href="css/styles2.css" rel= "stylesheet">
 </head>
 <body>
     <header>
@@ -18,14 +18,14 @@
                 <input class= "search" type="text" name="search" id= "search" placeholder="Buscar">
             </div>
             
-            <div class="logo"><img width= 300px heigth= 300px src="images/logonuevo.png" alt="logo"></div>
+            <div class="logo"><img width= 300px heigth= 300px src="\images\logo-cursiva.png" alt="logo"></div>
             
             <div class="header-right">
             
               <ul>
-                  <li class="header-right"><a href="#"><i class="fas fa-user"></i> Iniciar sesión</a></li>
-                  <li class="header-right"><a href="#"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-                  <li class="header-right"><a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+                  <li class="header-right"><a href="/"><i class="fas fa-user"></i> Iniciar sesión</a></li>
+                  <li class="header-right"><a href="/product"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                  <li class="header-right"><a href="/productCart"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
               </ul>
           </div>
         </div>
@@ -34,8 +34,8 @@
             <div>
                 <nav class="nav-bar">
                     <ul>
-                        <li class="nav"><a href="">Inicio</a></li>
-                        <li class="nav"><a href="">Productos</a></li>
+                        <li class="nav"><a href="/">Inicio</a></li>
+                        <li class="nav"><a href="/product">Productos</a></li>
                         <li class="nav"><a href="">Quiénes Somos</a></li>
                         <li class="nav"><a href="">Preguntas Frecuentes</a></li>
                         <li class="nav"><a href="">Contacto</a></li>
@@ -45,39 +45,50 @@
         </div>
 
     </header>
-    <!--
-    <main class= "register-main">
-        <section clas= "login-form">
-            <form action = "/login" method ="POST">
-                <p class= "titulo"><strong>Iniciar Sesión</strong></p>
-                <label for="email"><strong>EMAIL</strong></label>
-                <br>
-                <input type="email" name="email" id="email">
-                <br>
-                <br>
-                <label for="password"><strong>CONTRASEÑA</strong></label>
-                <br>
-                <input type="password" name="password" id="password">
-                <br>
-                <br>
-                <a href="" >¿Olvidaste tu contraseña?</a>
-                <br>
-                <br>
-                <button type="submit">INICIAR SESIÓN</button>
-                <br>
-                <br>
-                <a href="">¿No tenés cuenta? Creá tu cuenta</a>
-            </form>
-        </section>
-    </main>
-    -->
+    
+    <div class="container-loguin">
+        <header>
+    
+        </header>
+    
+        <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/">Mi Cuenta /</a> <a href="#"><strong>Login</strong></a></div>
+    
+        <main class= "register-main">
+            <section clas= "login-form">
+    
+                <form action = "/login" method ="POST" class="formulario-login">
+    
+                    <p class= "title"><strong>Iniciar Sesión</strong></p>
+                    
+                    <div class="formulario-login-div">
+                        <label for="email"><strong>EMAIL</strong></label>
+                        <input type="email" name="email" id="email" placeholder="  email@email.com" class="formulario-login-input"> 
+                    </div>
+                    
+                    <div class="formulario-login-div">
+                        <label for="password"><strong>CONTRASEÑA</strong></label>
+                        <input type="password" name="password" id="password" placeholder="  Contraseña" class="formulario-login-input">
+                    </div>
+    
+                    <p><a href="" class="contraseña-olvidada">¿Olvidaste tu contraseña?</a></p>
+                    
+    
+                    <button type="submit" class="boton-login">Ingresar</button>
+                    
+                    <p class="crea-tu-cuenta">¿No formas parte de nuestra comunidad? <br><a href="/register"> Creá tu cuenta</a></p>
+                </form>
+    
+            </section>
+        </main>
+
+
     <footer>
         <div class="footer">
 
             <ul class ="nav-footer">
                 <li><strong>Navegación</strong></li>
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/product">Productos</a></li>
                 <li><a href="">Quiénes Somos</a></li>
                 <li><a href="">Preguntas Frecuentes</a></li>
                 <li><a href="">Contacto</a></li>

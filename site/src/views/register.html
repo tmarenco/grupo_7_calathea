@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calathea</title>
-    <link href="css/styles.css" rel= "stylesheet">
+  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/72a545861a.js" crossorigin="anonymous"></script>
+    <link href="css/styles2.css" rel= "stylesheet">
 
 </head>
 <body>
@@ -18,14 +19,14 @@
                 <input class= "search" type="text" name="search" id= "search" placeholder="Buscar">
             </div>
             
-            <div class="logo"><img width= 300px heigth= 300px src="images/logonuevo.png" alt="logo"></div>
+            <div class="logo"><img width= 300px heigth= 300px src="images/logo-cursiva.png" alt="logo"></div>
             
             <div class="header-right">
             
               <ul>
-                  <li class="header-right"><a href="#"><i class="fas fa-user"></i> Iniciar sesión</a></li>
-                  <li class="header-right"><a href="#"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-                  <li class="header-right"><a href="#"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+                  <li class="header-right"><a href="/login"><i class="fas fa-user"></i> Iniciar sesión</a></li>
+                  <li class="header-right"><a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                  <li class="header-right"><a href="/productCart"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
               </ul>
           </div>
         </div>
@@ -34,8 +35,8 @@
             <div>
                 <nav class="nav-bar">
                     <ul>
-                        <li class="nav"><a href="">Inicio</a></li>
-                        <li class="nav"><a href="">Productos</a></li>
+                        <li class="nav"><a href="/">Inicio</a></li>
+                        <li class="nav"><a href="/product">Productos</a></li>
                         <li class="nav"><a href="">Quiénes Somos</a></li>
                         <li class="nav"><a href="">Preguntas Frecuentes</a></li>
                         <li class="nav"><a href="">Contacto</a></li>
@@ -45,44 +46,54 @@
         </div>
 
     </header>
-    <!--
-    <main class= "register-main">
-        <section class= "login-form">
-            <form action = "/login" method ="POST">
-                <p class= "titulo"><strong>Crear cuenta</strong></p>
+    
+    <!--MUENU HORIZONTAL-->
+
+    <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/">Mi Cuenta /</a> <a href="#"><strong>Registro</strong></a></div>
+
+    
+    <!--INICIO DE FORMULARIO-->
+
+    <main class= "Main-fr">
+        <section class= "section-fr">
+
+            <form action = "/login" method ="POST" class="form-fr">
+
+                <p class= "formulario-titulo-fr"><strong>Bienvenido aqui podras unirte a la comunidad</strong></p>
+
+            <div class="fomulario-div-fr">
                 <label for="name"><strong>NOMBRE</strong></label>
-                <br>
-                <input type="text" name="name" id="name">
-                <br>
-                <br>
+                <input type="text" name="name" id="name" placeholder ="  EJ: Juan Perez" class="formulario-input-fr">
+            </div> 
+            <div class="fomulario-div-fr">  
                 <label for="email"><strong>EMAIL</strong></label>
-                <br>
-                <input type="email" name="email" id="email">
-                <br>
-                <br>
+                <input type="email" name="email" id="email" placeholder ="  Email@email.com" class="formulario-input-fr">
+            </div> 
+            <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
-                <br>
-                <input type="tel" name="tel" id="tel">
-                <br>
-                <br>
+                <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" class="formulario-input-fr">
+            </div> 
+            <div class="fomulario-div-fr"> 
                 <label for="password"><strong>CONTRASEÑA</strong></label>
-                <br>
-                <input type="password" name="password" id="password">
-                <br>
-                <br>
+                <input type="password" name="password" id="password" class="formulario-input-fr">
+            </div>  
+            <div class="fomulario-div-fr">  
                 <label for="password"><strong>CONFIRMAR CONTRASEÑA</strong></label>
-                <br>
-                <input type="password" name="password" id="password">
-                <br>
-                <br>
-                <button type="submit">CREAR CUENTA</button>
-                <br>
-                <br>
-                <a href="">¿Ya tenés cuenta? Iniciá sesión</a>
+                <input type="password" name="password" id="password" class="formulario-input-fr">
+            </div> 
+
+                <button type="submit" class="formulario-boton-fr">CREAR CUENTA</button>
+                
+               
+                <p> Si ya perteneces a nuestra comunidad entonces..<br><a href="/login">Iniciá sesión</a></p>
+            
             </form>
+        
         </section>
+    
     </main>
-    -->
+
+  <!--FOOTER-->
     
     <footer>
         <div class="footer">

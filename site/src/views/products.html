@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles2.css">
+
+    <title>Productos</title>
+</head>
+<body>
+
+    <!--HEADER-->
+
+    <header>
+        <div class="header-top">
+             <div class="search-box-desktop">
+                 <form action="" method="POST">                        
+                         <input type="text" name="search" placeholder="Buscar">
+                         <i class="fas fa-search"></i> 
+                     </form>
+                 
+             </div>
+
+             <div class="menu-icon">
+                 <i class="fas fa-bars"></i>
+             </div>
+             
+             <div class="logo">
+                 <img width=200px heigth=200px src="images/logo-cursiva.png" alt="Calathea-logo">
+             </div>
+             
+             <div class="header-right">
+                 <ul>
+                     <li><a href="/login"><i class="fas fa-user"></i> Iniciar sesión</a></li>
+                     <li><a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a></li>
+                     <li><a href="/productCart"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
+                 </ul>
+             </div>
+         
+         </div>
+     
+         <div class="header-bottom">
+             <div class="search-box">
+                 <form action="" method="POST">                        
+                         <input type="text" name="search" placeholder="Buscar">
+                 </form>
+                 <button><i class="fas fa-search"></i>
+                 </button>
+             </div>
+         
+             <div class="nav-bar">
+                 <nav class="nav-bar">
+                         <ul class="nav">
+                             <li><a href="/" class="active">Inicio</a></li>
+                             <li><a href="/product">Productos</a></li>
+                             <li><a href="">Quiénes Somos</a></li>
+                             <li><a href="">Preguntas Frecuentes</a></li>
+                             <li><a href="">Contacto</a></li>
+                         </ul>
+                 </nav>
+             </div>
+         </div> 
+    </header>    
+        
+    <!--MAIN DEL CUERPO DE LOS PRODUCTOS-->
+
+ 
+<main>
+    <!-- BARRA DE BUSQUEDA-->
+        <div class="div-search-productos">
+            <div class="barra-nav-productos">
+               <i class="lupa-nav-productos"></i>
+                <input class= "input-nav-productos" type="text" name="search" id= "search" placeholder="Buscar...">
+            </div>
+ 
+    <div class="container-productos">
+        <!--MENU HORIZONTAL-->
+    <section class="Contenedor-menu-lista">
+        <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/productos"><strong>Productos</strong></a></div>
+    
+
+            <!--MENU DESPLEGABLE-->
+
+        <div class="lista-conteiner-productos">
+                <label>Ordena por..</label>
+                    <select name="list-options">
+                        <option value = "Precio Mayor a Menor">Precio de Mayor a Menor</option>
+                        <option value = "Precio Menor a Mayor">Precio Menor a Mayor</option>
+                        <option value = "A-Z">A-Z</option>
+                        <option value = "Z-A">Z-A</option>
+                        <option value = "Mas Vendido" selected >Mas Vendido</option> require
+                    </select>
+        </div>
+    </section>
+
+        
+
+                <!--LISTADO DE PRODUCTOS-->
+
+    <section class="products">
+
+                <article class="products-container">
+
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/anthurium - m15.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Anthurium</h4>
+                <p class="price">$550</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/aphelandra - m 14.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Aphelandra</h4>
+                <p class="price">$550</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                    <a href ="/productDetail"><img src="images/plantas/interior/areca -7 lts.png" alt="Plantas de Interior"></a>
+                    <h4 class="name">Areca</h4>
+                    <p class="price">$550</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+
+             <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/pothus - m12.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Pothus</h4>
+                <p class="price">$550</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/estrella-federal.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Estrella Federal</h4>
+                <p class="price">$550</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/asplenium-crispi - m12.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Asplenium Crispi</h4>
+                <p class="price">$900</p>
+                <p class="dues">6 cuotas de $150</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images/plantas/interior/oreja-de-elefante.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Oreja de Elefante</h4>
+                <p class="price">$600</p>
+                <p class="dues">6 cuotas de $100</p>
+            </div>
+
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Orquídea - m16.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Orquidea</h4>
+                <p class="price">$1200</p>
+                <p class="dues">6 cuotas de $200</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="images\plantas\interior\Marginata Tricolor - m15.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Margarita Ticolor</h4>
+                <p class="price">$1800</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Jazmin Gardenia Augusta - 4lts.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Jazmin Gardenia</h4>
+                <p class="price">$1200</p>
+                <p class="dues">6 cuotas de $200</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Helecho - b18.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Helecho</h4>
+                <p class="price">$3600</p>
+                <p class="dues">6 cuotas de $600</p>
+            </div>
+
+
+           <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Peperomia . m12.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Peperomia</h4>
+                <p class="price">$3600</p>
+                <p class="dues">6 cuotas de $600</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Cordatum Brasilero - m 14.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Cordatum Brasilero</h4>
+                <p class="price">$6000</p>
+                <p class="dues">6 cuotas de $1000</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Seaphortia Elegans - 5 lts.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Seaphortia Elegants</h4>
+                <p class="price">$1800</p>
+                <p class="dues">6 cuotas de $300</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Fittonia - m 14.png" alt="Plantas de Interior"></a>
+                <h4 class="name">Fittonia</h4>
+                <p class="price">$4200</p>
+                <p class="dues">6 cuotas de $700</p>
+            </div>
+
+            <div class="desciption-product">
+                <a href ="/productDetail"><img src="\images\plantas\interior\Vara de San Jorge - m12.jpg" alt="Plantas de Interior"></a>
+                <h4 class="name">Vara de San Jorge</h4>
+                <p class="price">$3000</p>
+                <p class="dues">6 cuotas de $500</p>
+            </div>
+
+        </article>
+
+    </section>
+        
+    </main>
+
+    <!--FOOTER-->
+
+    <footer>
+    <div class="footer-top">
+        <div class= footer-top-main>
+            <div class= "cont-footer">
+                <span class="titulo-footer">CONTACTANOS</span>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +54 11 *******</li>
+                    <li><i class="fab fa-whatsapp"></i> +54 11 *****</li>
+                    <li><i class="fas fa-at"></i> contacto@calathea.com.ar</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Showroom: Amenábar 4587 2 "D". <br>Sucursal Palermo: Ravignani 5498, Capital Federal</li>
+                </ul>
+            </div>
+            
+            <div class="cont-footer">
+                <span class="titulo-footer">MEDIOS DE PAGO</span>
+                <ul class="medios-de-pago">
+                    <li><img width= 50px heigth= 50px src= "images/visa.jpg"></li>
+                    <li><img width= 50px heigth= 50px src= "images/mastecard.jpg"></li>
+                    <li><img width= 50px heigth= 50px src= "images/american.jpg"></li>
+                    <!--
+                    <li><img width= 50px heigth= 50px src= "images/pagofacil.png"></li>
+                    <li><img width= 50px heigth= 50px src= "images/rapipago.jpg"></li>
+                    <li><img width= 50px heigth= 50px src= "images/mercadopago.jpeg"></li>-->
+                </ul>
+            </div>
+            <div class="cont-footer">
+                <span class="titulo-footer">REDES SOCIALES</span>
+                <ul id="footer-rd">
+                    <li><i class="fab fa-instagram"> <a href="http://instagram.com" target="_blank"> Calathea</a></i></li>
+                    <li><i class="fab fa-facebook"><a href="http://facebook.com" target="_blank"></i> Somos Calathea </a></li>
+                </ul>
+            </div>
+
+            <div class="cont-footer">
+                <form action="" method="POST">
+                    <div class="titulo-footer">NEWSLETTER</div>
+                    <label for="newsletter" id="newsletter">
+                    <input class= "formulario" type="email" name="newsletter" placeholder="   Recibí novedades!"> 
+                </form> 
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+            <a href="/">Inicio</a>  
+            <a href="">Productos</a>  
+            <a href="">Quiénes Somos</a>  
+            <a href="">Preguntas Frecuentes</a> 
+            <a href="">Contacto</a>
+        </ul>
+    </div>
+
+</footer>
+    
+</body>
+</html>

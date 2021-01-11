@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js",
-    "dev": "nodemon --watch src src/app.js"
+    "start": "node app.js",
+    "startdev" : "nodemon app.js -e js,html"
   },
   "author": "Tomás Marenco, Irina Leicach, Gastón Gatti",
   "license": "ISC",
