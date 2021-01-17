@@ -266,6 +266,7 @@ main {
 a{
     text-decoration: none;
 }
+
 /* PARRAFOS CENTRADOS*/
 
 form p {
@@ -387,7 +388,7 @@ a { text-decoration: none;}
 .formulario-boton-fr{
     width: 100%;
     font-size: 1.2rem;
-    background-color: rgb(56, 129, 56);
+    background-color: #537467;
     color: white;
     border: none;
     border-radius: 7px ;
@@ -410,19 +411,37 @@ a { text-decoration: none;}
     text-align: center;
 }
 
+
 .container-productos {
-   max-width: 80%;
-     margin:auto
+     display:flex;
+     justify-content: space-between;
+     max-width: 90%;
+     
+     
  }
 
+ .Contenedor-menu-lista{
+     display:flex;
+ }
+
+ .div-izquierdo-productos{
+     background-color: rgba(128, 128, 128, 0.514);
+
+ }
+
+ .div-izquierdo-productos h2 {
+     margin-bottom: 0px;
+    background-color: wheat
+ }
 
 .input-nav-productos{
  width: 100%;
- padding: 10px;
+ padding: 7px;
 }
    
 
 .menu-horizontal{
+ display:flex;
  text-align: left;
  font-size: 1.2rem;
  color: black;
@@ -431,10 +450,10 @@ a { text-decoration: none;}
 
 .menu-horizontal a{
  text-decoration: none;
- color:rgb(2, 59, 2)
+ color: #537467
 
 }
-.menu-horizontala:hover{
+.menu-horizontal a:hover{
 color: pink
 
 }
@@ -450,8 +469,8 @@ color: pink
 .products-container{
    display: flex;
    flex-wrap: wrap;
-   justify-content: flex-end;
-   align-content: flex-end;
+   justify-content: space-between;
+   align-content: space-between;
    margin-left: 5rem;
    margin-top: 2rem;
    align-items: baseline;
@@ -477,7 +496,7 @@ color: pink
 
 .dues{
    display: inline-block;
-   background-color: rgba(8, 73, 8, 0.774);
+   background-color: #537467;
    color:white;
    border : solid 1px grey;
    padding: 5px 50px;
@@ -492,7 +511,6 @@ color: pink
 
 .Contenedor-general-pd{
     display: flex;
-    font-family: sans-serif;
     width: 90%;
     margin: auto;
     text-transform: uppercase
@@ -562,16 +580,16 @@ color: pink
 
 .a-pd{
     text-decoration: none;
-    color:rgba(61, 35, 40, 0.856);
+    color:#537467;
     line-height: 1.5rem;
 }
 
-/* BOTON VERDER DE AGREGAR PRODUCTO DE LA PAGINA  DE DETALLE DEL PRODUCTO*/
+/* BOTON VERDE DE AGREGAR PRODUCTO DE LA PAGINA  DE DETALLE DEL PRODUCTO*/
 
 .boton-agregar-pd{
     display: block;
     width: 100%;
-    background-color: rgb(50, 78, 50);
+    background-color:#537467;
     color: white;
     padding: 10px;
     margin-top: 10px;
@@ -587,6 +605,78 @@ color: pink
 }
 
 /*FIN ESTILOS PAGINA DETALLE DE PRODUCTOS*/
+
+/* INICIO DE ESTILOS PAGINA QUIENES SOMOS*/
+
+
+.main-quienes-somos{
+    width: 90%;
+    margin: auto;
+    padding: 100px;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.main-quienes-somos h1 {
+    margin-bottom: 1.5rem;
+
+}
+
+.lista-direcciones-qs{
+    margin-top: 40px;
+    text-align: left;
+}
+/* FIN DE ESTILOS PAGINA QUIENES SOMOS*/
+
+/* INICIO DE ESTILOS PAGINA CONTACTOS*/
+
+.main-contactos{
+    width: 80%;
+    display:flex;
+    justify-content:center;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 22px;
+}
+
+.section-izquierdo-contacto{
+    width: 50%;
+}
+.main-contactos p{
+    width: 90%;
+    text-align: left;
+    margin: 10px 0px
+}
+
+.div-izquierdo-contactos{
+    margin-bottom: 5px;
+    
+}
+.div-izquierdo-lista-contactos{
+    list-style: none;
+    padding: 0;
+}
+.section-derecha-contacto{
+    width: 50%;
+}
+.formulario-contacto{
+    width: 100%;
+}
+
+.formulario-input-contacto {
+    width: 100%;
+    margin: 7px auto;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: solid 1px rgb(211, 206, 206);
+    outline: none;
+}
+
+
+
+
+
+
 
 
 /*carrito*/
@@ -747,7 +837,12 @@ color: pink
     }
 }
 
-/* INICIO DE MEDIAQUERY PRODUCTOS*/
+/* INICIO DE MEDIA QUERY PRODUCTOS*/
+
+.div-izquierdo-productos{
+    display: none;
+}
+
 .list-options{
     max-width: 40%;
 }
@@ -783,6 +878,10 @@ color: pink
 
 /*FIN MEDIA QUERY DETALLE PRODUCTOS*/
 
+.main-contactos{
+    display: block;
+}
+
 @media (min-width: 768px){
     .header-bottom{
         display: block;
@@ -816,14 +915,16 @@ color: pink
         display: block;
     }
 
-    /*MEDIA DE LOGIN*/
+
+
+    /*INICIO DEL MEDIA QUERY DEL LOGIN*/
 
     .formulario-login{
         width: 70%;
         margin : 10px auto
     }
 
-    /* FIN MEDIA LOGIN*/
+    /*FIN DEL MEDIA QUERY DEL LOGIN*/
 
     /* INICIO MEDIA QUERY DEL REGISTRO*/
 
@@ -836,6 +937,16 @@ color: pink
 
   /* INICIO MEDIA QUERY PRODUCTOS*/
 
+  .input-nav-productos{
+    display: none;
+   }
+      
+  .div-izquierdo-productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: columm;
+    margin: 0
+}
   .container-productos {
     max-width: 80%;
       margin:auto
@@ -862,6 +973,13 @@ color: pink
 
  /*FIN MEDIA QUERY DETALLE DE PRODUCTOS*/
 
+ /* INICIO DE MEDIA QUERY PAGINA DE CONTACTO*/
+
+ .main-contactos{
+    display: flex;
+}
+
+/*FIN DR MEDIA QUERY PAGINA DE CONTACTO*/
 
     .footer-top-main{
         display: flex;

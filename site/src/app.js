@@ -31,10 +31,17 @@ app.get ("/login", (req, res) => {
     res.sendFile (path.resolve (__dirname, "./views/login.html"));
 });
 
+app.get ("/quienes-somos", (req, res) => {
+    res.sendFile (path.resolve (__dirname, "./views/quienes-somos.html"));
+});
 
-app.listen (3030, () => {
+app.get ("/contacto", (req, res) => {
+    res.sendFile (path.resolve (__dirname, "./views/contacto.html"));
+});
+
+app.listen (3000, () => {
     console.log ("-----------------------");
-    console.log ("http://localhost:3030");
+    console.log ("http://localhost:3000");
     console.log ("-----------------------");
 
 })
