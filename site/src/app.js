@@ -2,14 +2,18 @@ const express = require("express");
 const app = express();
 const path = require ("path");
 const publicPath = path.resolve (__dirname, "../public");
+const mainRouter= require ("./routes/mainRouter");
 
 
 app.use (express.static(publicPath));
+app.set ("view engine", "ejs");
+app.use ("/", mainRouter);
 
 
-app.get ("/", (req, res) => {
-    res.sendFile (path.resolve (__dirname, "./views/index.html"));
-});
+
+
+
+
 
 app.get ("/productDetail", (req, res) => {
     res.sendFile (path.resolve (__dirname, "./views/productDetail.html"));
@@ -44,4 +48,4 @@ app.listen (3000, () => {
     console.log ("http://localhost:3000");
     console.log ("-----------------------");
 
-})
+});
