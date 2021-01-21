@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- PARTIAL DEL HEAD-->
+
+<%- include("../partials/head.ejs")%>
+
+<body>
+
+       <!-- PARTIAL DEL HEADER-->
+<%-include ("../partials/header.ejs") %>
+   
+
+    <br>
+    <main>
+        <section class= "hero">
+            <div class= "hero-container">
+                <span><a class= "hero-texto" href= "">PROMOCIONES EXCLUSIVAS</a></span>
+                <div class= "flechas">
+                <a id= "flecha-izquierda" href= ""><i class="fas fa-angle-left"></i></a>
+                <a id= "flecha-derecha" href= ""><i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section class= "opciones-catalogo">
+            <section class= "opcion" id= "opcion1">
+                <p class="titulo-opcion"><a href="/product" >PLANTAS INTERIOR</a></p>
+            </section>
+            <section class= "opcion" id= "opcion2">
+                <p class="titulo-opcion"><a href= "/product">PLANTAS EXTERIOR</a></p>
+            </section>
+            <section class= "opcion" id= "opcion3">
+                <p class="titulo-opcion"><a href= "/product">DECO</a></p>
+            </section>
+            <section class= "opcion" id= "opcion4">
+                <p class="titulo-opcion"><a href= "/product">MACETAS</a></p>
+            </section>
+            <section class= "opcion" id= "opcion5">
+                <p class="titulo-opcion"><a href= "/product">ACCESORIOS</a></p>
+            </section>
+            <section class= "opcion" id= "opcion6">
+                <p class="titulo-opcion"><a href= "/product">FERTILIZANTES</a></p>
+            </section>
+        </section>
+        <p class="titulo-pd">PRODUCTOS DESTACADOS</p>
+        <section class= "section-productos-destacados">
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+            <section class= "producto-destacado"><a href= "">PRODUCTO</a></section>
+        </section>
+    </main>
+
+         <!-- PARTIAL DEL FOOTER-->
+<%-include ("../partials/footer.ejs") %>
+
+    </body>
+</html>

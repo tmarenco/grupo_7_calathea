@@ -1,69 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles2.css">
+    <!-- PARTIAL DEL HEAD-->
 
-    <title>Productos</title>
-</head>
+    <%- include("../partials/head.ejs")%>
+
 <body>
 
-    <!--HEADER-->
-
-    <header>
-        <div class="header-top">
-             <div class="search-box-desktop">
-                 <form action="" method="POST">                        
-                         <input type="text" name="search" placeholder="Buscar">
-                         <i class="fas fa-search"></i> 
-                     </form>
-                 
-             </div>
-
-             <div class="menu-icon">
-                 <i class="fas fa-bars"></i>
-             </div>
-             
-             <div class="logo">
-                 <img width=200px heigth=200px src="images/logo-cursiva.png" alt="Calathea-logo">
-             </div>
-             
-             <div class="header-right">
-                 <ul>
-                     <li><a href="/login"><i class="fas fa-user"></i> Iniciar sesión</a></li>
-                     <li><a href="/register"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-                     <li><a href="/productCart"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
-                 </ul>
-             </div>
-         
-         </div>
-     
-         <div class="header-bottom">
-             <div class="search-box">
-                 <form action="" method="POST">                        
-                         <input type="text" name="search" placeholder="Buscar">
-                 </form>
-                 <button><i class="fas fa-search"></i>
-                 </button>
-             </div>
-         
-             <div class="nav-bar">
-                 <nav class="nav-bar">
-                         <ul class="nav">
-                             <li><a href="/" class="active">Inicio</a></li>
-                             <li><a href="/product">Productos</a></li>
-                             <li><a href="">Quiénes Somos</a></li>
-                             <li><a href="">Preguntas Frecuentes</a></li>
-                             <li><a href="">Contacto</a></li>
-                         </ul>
-                 </nav>
-             </div>
-         </div> 
-    </header>    
+          <!-- PARTIAL DEL HEADER-->
+<%-include ("../partials/header.ejs") %> 
         
     <!--MAIN DEL CUERPO DE LOS PRODUCTOS-->
 
@@ -237,62 +182,8 @@
         
     </main>
 
-    <!--FOOTER-->
-
-    <footer>
-    <div class="footer-top">
-        <div class= footer-top-main>
-            <div class= "cont-footer">
-                <span class="titulo-footer">CONTACTANOS</span>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +54 11 *******</li>
-                    <li><i class="fab fa-whatsapp"></i> +54 11 *****</li>
-                    <li><i class="fas fa-at"></i> contacto@calathea.com.ar</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Showroom: Amenábar 4587 2 "D". <br>Sucursal Palermo: Ravignani 5498, Capital Federal</li>
-                </ul>
-            </div>
-            
-            <div class="cont-footer">
-                <span class="titulo-footer">MEDIOS DE PAGO</span>
-                <ul class="medios-de-pago">
-                    <li><img width= 50px heigth= 50px src= "images/visa.jpg"></li>
-                    <li><img width= 50px heigth= 50px src= "images/mastecard.jpg"></li>
-                    <li><img width= 50px heigth= 50px src= "images/american.jpg"></li>
-                    <!--
-                    <li><img width= 50px heigth= 50px src= "images/pagofacil.png"></li>
-                    <li><img width= 50px heigth= 50px src= "images/rapipago.jpg"></li>
-                    <li><img width= 50px heigth= 50px src= "images/mercadopago.jpeg"></li>-->
-                </ul>
-            </div>
-            <div class="cont-footer">
-                <span class="titulo-footer">REDES SOCIALES</span>
-                <ul id="footer-rd">
-                    <li><i class="fab fa-instagram"> <a href="http://instagram.com" target="_blank"> Calathea</a></i></li>
-                    <li><i class="fab fa-facebook"><a href="http://facebook.com" target="_blank"></i> Somos Calathea </a></li>
-                </ul>
-            </div>
-
-            <div class="cont-footer">
-                <form action="" method="POST">
-                    <div class="titulo-footer">NEWSLETTER</div>
-                    <label for="newsletter" id="newsletter">
-                    <input class= "formulario" type="email" name="newsletter" placeholder="   Recibí novedades!"> 
-                </form> 
-            </div>
-
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-            <a href="/">Inicio</a>  
-            <a href="">Productos</a>  
-            <a href="">Quiénes Somos</a>  
-            <a href="">Preguntas Frecuentes</a> 
-            <a href="">Contacto</a>
-        </ul>
-    </div>
-
-</footer>
+           <!-- PARTIAL DEL FOOTER-->
+<%-include ("../partials/footer.ejs") %>
     
 </body>
 </html>
