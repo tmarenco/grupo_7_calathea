@@ -16,13 +16,14 @@ const mainRouter= require ("./routes/mainRouter");
 app.use ("/", mainRouter);
 app.use ("/contacto", mainRouter);
 app.use ("/quienes-somos",mainRouter);
-
+app.use ("/preguntas-frecuentes",mainRouter);
 
 /* RUTAS PRODUCTOS*/
 const productsRouter= require ("./routes/productsRouter");
 app.use ("/", productsRouter);
-app.use ("/detail", productsRouter);
+app.use ("/detalle", productsRouter);
 app.use ("/cart", productsRouter);
+app.use ("/edit", productsRouter);
 
 /* RUTAS USER*/
 const userRouter= require ("./routes/userRouter");

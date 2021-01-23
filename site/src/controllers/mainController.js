@@ -11,5 +11,9 @@ module.exports = {
 
     about :(req, res) => {
          res.render (path.join(__dirname, "../views/home/quienes-somos.ejs"));
+},
+   faq :(req, res) => {
+   res.render (path.join(__dirname, "../views/home/preguntas-frecuentes.ejs"));
 }
+
 }

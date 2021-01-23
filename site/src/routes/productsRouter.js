@@ -4,8 +4,10 @@ const controller = require ("../controllers/productsController");
 
 
 router.get ("/products", controller.Products);
-router.get ("/productDetail", controller.Detail);
-router.get ("/productCart", controller.Cart)
+router.get ("/Detail", controller.Detail);
+router.get ("/Cart", controller.Cart);
+router.get ("/Edit", controller.Edit)
+
 
 
 module.exports = router;
