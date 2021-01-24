@@ -4,12 +4,27 @@ const express = require("express");
 const app = express();
 const path = require ("path");
 const publicPath = path.resolve (__dirname, "../public");
+const methodOverride = require("method-override")
 
 
 /* CONFIGURACION*/
+
+/*carpeta pblica*/
 app.use (express.static(publicPath));
+
+
+/* ejs*/
 app.set ("view engine", "ejs");
 app.set ("views ", "src/views");
+
+
+/*post*/
+app.use(express.urlencoded({extended:false}));
+app.use (express.json());
+
+/* put y delete*/
+app.use(methodOverride("_method"))
+
 
 /* RUTAS HOME*/
 const mainRouter= require ("./routes/mainRouter");
@@ -20,9 +35,12 @@ app.use ("/preguntas-frecuentes",mainRouter);
 
 /* RUTAS PRODUCTOS*/
 const productsRouter= require ("./routes/productsRouter");
-app.use ("/", productsRouter);
+
+app.use ("/", productsRouter)
+app.use ("/productos", productsRouter);
 app.use ("/detalle", productsRouter);
-app.use ("/cart", productsRouter);
+app.use ("/carrito", productsRouter);
+app.use ("/new", productsRouter);
 app.use ("/edit", productsRouter);
 app.use ("/create", productsRouter);
 
@@ -30,7 +48,14 @@ app.use ("/create", productsRouter);
 const userRouter= require ("./routes/userRouter");
 app.use ("/",userRouter);
 app.use ("/register", userRouter );
-app.use ("/login",userRouter)
+app.use ("/login",userRouter);
+
+
+/* RUTA 404*/
+/*app.use ((req,res,next) => {
+    res.status(404). render ("not-found")
+})
+
 
 /* SERVIDOR*/
 
