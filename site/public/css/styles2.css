@@ -46,7 +46,8 @@
     margin-left: 75px;
 }
 
-.header-right li, .header-right a{
+.header-right li, 
+.header-right a{
     display: flex;
     align-items: center;
     margin: .25rem;
@@ -63,23 +64,26 @@
 /* header desktop 
 --------------------- */
 .search-box-desktop{
-    display: none;
+    display: flex;
 }
 
 .search-box-desktop input{
-color: #754668; 
-border: solid 1.5px;
+position: relative; 
+border-bottom: solid 1.5px ;
 border-radius: .75rem;
+padding:5px;
+
 }
 
 .fa-search{
+    position: absolute;
     color:#754668;
-    margin-right: .25rem;
+    
+    
 }
 
 .header-bottom .nav-bar{
-    background-color: #754668;
-    color: white;
+    background-color: #754668cb;
     font-weight: bold;
     width: 100%;
     display: none;
@@ -177,23 +181,30 @@ main {
 }
 
 #opcion1 {
-    background-image: url(/images/interior2.jpg);
+    background-image: url(/images/back-planta-interior.jpg);
+    background-size: cover;
+    opacity:1
 }
 #opcion2 {
-    background-image: url(/images/plantaexterior2.jpg);
+    background-image: url(/images/back-planta-exterior.jpg);
+    background-size: cover;
 }
 #opcion3 {
-    background-image: url(/images/deco2.jpg);
+    background-image: url(/images/back-deco.jpg);
+    background-size: cover;
 }
 #opcion4 {
-    background-image: url(/images/macetas4.jpg);
+    background-image: url(/images/back-macetas.jpg);
+    background-size: cover;
 }
 #opcion5 {
-    background-image: url(/images/accesorios2.jpg);
+    background-image: url(/images/back-accesorios.jpg);
+    background-size: cover;
     
 }
 #opcion6 {
-    background-image: url(/images/fertilizantes3.jpg);
+    background-image: url(/images/back-fertilizantes.jpg);
+    background-size: cover;
 }
 
 .titulo-opcion {
@@ -290,7 +301,8 @@ form p {
 
 .formulario-login-input{
     width: 100%;
-    padding: 5px 10px;
+    font-size: 1rem;
+    padding: 10px;
     border-radius: 10px;
     border: solid 1px rgb(211, 206, 206);
     outline: none;
@@ -420,19 +432,18 @@ a { text-decoration: none;}
      
  }
 
- .Contenedor-menu-lista{
-     display:flex;
- }
-
  .div-izquierdo-productos{
-     background-color: rgba(128, 128, 128, 0.514);
+     display: flex;
+     width: 250px;
+     margin: 0;
+     padding: 0;
 
  }
 
- .div-izquierdo-productos h2 {
-     margin-bottom: 0px;
-    background-color: wheat
+ .div-izquierdo-productos p{
+     height: 50px;
  }
+
 
 .input-nav-productos{
  width: 100%;
