@@ -24,6 +24,7 @@ app.use ("/", productsRouter);
 app.use ("/detalle", productsRouter);
 app.use ("/cart", productsRouter);
 app.use ("/edit", productsRouter);
+app.use ("/create", productsRouter);
 
 /* RUTAS USER*/
 const userRouter= require ("./routes/userRouter");

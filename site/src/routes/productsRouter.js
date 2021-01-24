@@ -7,6 +7,7 @@ router.get ("/products", controller.Products);
 router.get ("/Detail", controller.Detail);
 router.get ("/Cart", controller.Cart);
 router.get ("/Edit", controller.Edit)
+router.get ("/Create", controller.Create)
 
 
 

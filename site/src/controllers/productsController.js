@@ -18,5 +18,8 @@ module.exports = {
 },
     Load :(req, res) => {
         res.render (path.join(__dirname, "../views/products/productLoad.ejs"));
-}
+},
+    Create :(req, res) => {
+        res.render (path.join(__dirname, "../views/products/productNew.ejs"));
+    }
 }
