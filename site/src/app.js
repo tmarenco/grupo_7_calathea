@@ -29,30 +29,21 @@ app.use(methodOverride("_method"))
 /* RUTAS HOME*/
 const mainRouter= require ("./routes/mainRouter");
 app.use ("/", mainRouter);
-app.use ("/contacto", mainRouter);
-app.use ("/quienes-somos",mainRouter);
-app.use ("/preguntas-frecuentes",mainRouter);
+
 
 /* RUTAS PRODUCTOS*/
 const productsRouter= require ("./routes/productsRouter");
-
 app.use ("/productos", productsRouter)
-app.use ("/detail", productsRouter);
-app.use ("/carrito", productsRouter);
-app.use ("/new", productsRouter);
-app.use ("/edit", productsRouter);
-app.use ("/create", productsRouter);
 
 /* RUTAS USER*/
 const userRouter= require ("./routes/userRouter");
-app.use ("/",userRouter);
-app.use ("/register", userRouter );
-app.use ("/login",userRouter);
+app.use ("/usuario",userRouter);
+
 
 
 /* RUTA 404*/
-/*app.use ((req,res,next) => {
-    res.status(404). render ("not-found")
+app.use ((req,res,next) => {
+    res.status(404).render ("not-found")
 })
 
 

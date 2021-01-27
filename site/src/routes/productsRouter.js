@@ -2,12 +2,12 @@ const express = require("express");
 const router = express.Router();
 const controller = require ("../controllers/productsController");
 
-router.get ("/", controller.index)
-router.get ("/Detail", controller.show);
-/*router.get ("/Detail/:id", controller.Detail);
-router.get ("/Cart", controller.Cart);
-router.get ("/Edit", controller.Edit);
-router.get ("/create", controller.create)*/
+
+router.get ("/", controller.Products);
+router.get ("/detalle", controller.Detail);
+router.get ("/carrito", controller.Cart);
+router.get ("/editar", controller.Edit);
+router.get ("/crear", controller.New)
 
 
 
