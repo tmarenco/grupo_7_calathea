@@ -2,14 +2,15 @@ const path = require ("path");
 
 module.exports = {
 
-    listProduct : (req, res) => {
-        res.render (path.join (__dirname, "../views/products/list.ejs"))
-    },
-    Products: (req, res) => {
+    index: (req, res) => {
         res.render (path.join (__dirname, "../views/products/products.ejs"))
     },
 
-    Detail: (req, res) => {
+    /*Products: (req, res) => {
+        res.render (path.join (__dirname, "../views/products/products.ejs"))
+    },*/
+
+    show: (req, res) => {
         res.render (path.join (__dirname, "../views/products/productDetail.ejs"))
 },
 
@@ -20,7 +21,7 @@ module.exports = {
     Edit :(req, res) => {
         res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
 },
-    New :(req, res) => {
-        res.render (path.join(__dirname, "../views/products/productNew.ejs"));
+    create :(req, res) => {
+        res.render (path.join(__dirname, "../views/products/productCreate.ejs"));
 }
 }

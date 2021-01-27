@@ -36,9 +36,8 @@ app.use ("/preguntas-frecuentes",mainRouter);
 /* RUTAS PRODUCTOS*/
 const productsRouter= require ("./routes/productsRouter");
 
-app.use ("/", productsRouter)
-app.use ("/productos", productsRouter);
-app.use ("/detalle", productsRouter);
+app.use ("/productos", productsRouter)
+app.use ("/detail", productsRouter);
 app.use ("/carrito", productsRouter);
 app.use ("/new", productsRouter);
 app.use ("/edit", productsRouter);
