@@ -99,6 +99,9 @@ padding:5px;
     justify-content: space-around;
 }
 
+.nav-bar ul li{
+    text-decoration: none;
+}
 .nav-bar a{
     text-decoration: none;
     color: white;
@@ -149,8 +152,7 @@ main {
     font-weight: 700;
 }
 
-.hero-container span {
-    border: 10px solid #5c3251;
+.hero-container span{
     padding: 6px 14px;
     display: inline-block;
     background-color: #754668;
