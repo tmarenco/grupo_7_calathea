@@ -22,8 +22,8 @@
 
 ### Sprint 4
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1. Comenzar a hacer: Weeklies. Nuevamente no implementamos eso y ahora nos comprometemos a hacerlo. Si podemos juntarnos más de una vez, mejor.
+2. Hacer más: Mucho más tiempo dedicado a entender todo lo que vamos aprendiendo para que cuando nos sentemos a hacer el proyecto, lo tengamos todo más claro.
+3. Continuar haciendo: Continuar manteniendonos comunicados y dándonos aviso cada vez que vamos a trabajar en algo y actualizar el proyecto. Continuar ayudándonos cuando tenemos algún inconveniente que no nos deja avanzar.
+4. Hacer menos: Nuevamente, hablar menos por whatsapp y reunirnos más.
+5. Dejar de hacer: Va de la mano con lo que tenemos que comenzar a hacer, pero tenemos que dejar de perder tiempo y dedicarle más tiempo a el proyecto.
