@@ -11,7 +11,7 @@ module.exports = {
         res.render (path.join (__dirname, "../views/products/products.ejs"))
     },*/
 
-    show: (req, res) => {
+    Detail: (req, res) => {
         res.render (path.join (__dirname, "../views/products/productDetail.ejs"))
 },
 

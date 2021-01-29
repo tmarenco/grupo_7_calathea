@@ -5,10 +5,15 @@
     font-family: 'Raleway', sans-serif;
     margin: 0px;
     }
-
+.contenedor-general{
+    width: 90%;
+    margin: auto;
+}
 
 /*header mobile
 --------*/
+
+
 .header-top {
     background-color: #fff;
     display: flex;
@@ -133,7 +138,45 @@ main {
     background-color: #fff;
 }
 
-.hero {
+.hero-container{
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.hero-container ul{
+    padding: 0px;
+    display: flex;
+    width: 400%;
+    animation: cambio 20s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+.hero-container li {
+    list-style: none;
+    width: 100%;
+}
+
+.hero-container img{
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+/*.hero {
     height: 300px;
     overflow: hidden;
     background: url(/images/SLIDE1.jpg);
@@ -162,19 +205,19 @@ main {
 .hero-texto {
     text-decoration: none;
     color: white;
-}
+}*/
 
 
 .opciones-catalogo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0px 1em;
 }
 
 .opcion {
-    margin: 1rem;
+    margin: 0.75rem;
     width: 18rem;
     height: 18rem;;
     background-repeat: no-repeat;
@@ -185,29 +228,67 @@ main {
 #opcion1 {
     background-image: url(/images/back-planta-interior.jpg);
     background-size: cover;
-    opacity:1
+    width: 30%;
+    transition: transform .5s;
 }
+
+#opcion1:hover{
+    transform: scale(1.2);
+}
+
 #opcion2 {
     background-image: url(/images/back-planta-exterior.jpg);
     background-size: cover;
+    width: 30%;
+    transition: transform .5s;
 }
+
+#opcion2:hover{
+    transform: scale(1.2);
+}
+
 #opcion3 {
     background-image: url(/images/back-deco.jpg);
     background-size: cover;
+    width:30%;
+    transition: transform .5s;
+}
+
+#opcion3:hover{
+    transform: scale(1.2);
 }
 #opcion4 {
     background-image: url(/images/back-macetas.jpg);
     background-size: cover;
+    width: 30%;
+    transition: transform .5s;
+}
+
+#opcion4:hover{
+    transform: scale(1.2);
 }
 #opcion5 {
     background-image: url(/images/back-accesorios.jpg);
     background-size: cover;
+    width: 30%;
+    transition: transform .5s;
     
+}
+
+#opcion5:hover{
+    transform: scale(1.2);
 }
 #opcion6 {
     background-image: url(/images/back-fertilizantes.jpg);
     background-size: cover;
+    width: 30%;
+    transition: transform .5s;
 }
+
+#opcion6:hover{
+    transform: scale(1.2);
+}
+
 
 .titulo-opcion {
     display: flex;
@@ -216,6 +297,8 @@ main {
     font-weight: bold;
     background-color: #754668;
 }
+
+
 
 .titulo-opcion a {
     color: white;
@@ -843,12 +926,27 @@ color: pink
 
 /*media*/
 
-@media (min-width : 360px) {
+@media (min-width : 360px),(max-width : 767px) {
     .section-fr{
         width: 70%;
         margin : 10px auto
     }
+
+    .contenedor-general{
+        width: 100%;
+    }
 }
+
+#opcion1,
+#opcion2,
+#opcion3,
+#opcion4,
+#opcion5,
+#opcion6{
+    width: 100%;
+
+}
+
 
 /* INICIO DE MEDIA QUERY PRODUCTOS*/
 
@@ -896,6 +994,11 @@ color: pink
 }
 
 @media (min-width: 768px){
+
+    .contenedor-general{
+        width: 90%;
+        margin: auto;
+    }
     .header-bottom{
         display: block;
     }
@@ -927,6 +1030,16 @@ color: pink
     .nav-bar a.active{
         display: block;
     }
+
+#opcion1,
+#opcion2,
+#opcion3,
+#opcion4,
+#opcion5,
+#opcion6{
+    width: 30%;
+
+}
 
 
 
