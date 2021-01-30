@@ -1,3 +1,6 @@
+/*ESTE ARCHIVO STYLES LO CREE NUEVO. COPIE Y PEGUE EL ARCHIVO ANTES DE HACER UNOS CAMBIOS PARA QUE EN CASO DE QUE SE ME ROMPIERA O NO ME SALIERA. ACÁ QUEDARA EL ORIGINAL. 
+ESTE NO ESTÁ CONECTADO A LOS ARCHIVOS EJS, ES SOLO PARA QUE QUEDE TODO LO QUE HABÍA ANTES DE QUE YO HICIERA CAMBIOS
+
 /*general*/
 
 * {
@@ -5,53 +8,57 @@
     font-family: 'Raleway', sans-serif;
     margin: 0px;
     }
-
 .contenedor-general{
     width: 90%;
     margin: auto;
 }
 
-/*header*/
+/*header mobile
+--------*/
 
 
 .header-top {
+    background-color: #fff;
     display: flex;
-    margin: 0.2rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    width:100%;
 }
 
+.menu-icon{
+    color: #754668;
+    font-size: 20px;
+    margin: 10px;
+}
 
+.search-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    font-size: 17px;
+}
+
+.search-box button{
+    background-color: white;
+    border: none;
+}
 .fa-search{
-    padding: 10px;
     color:#754668;
+    margin-right: .25rem;
+    padding: 10px;
 }
 
 
 .logo{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem
+    margin-left: 75px;
 }
 
-.mini-menu {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    color: white;
-    border: solid 3px #49183c;
-    border-radius: 0.5rem;
-    width: 3rem;
-    height: 2.5rem;
-    align-items: center;
-    margin: auto;
-    background-color: #754668
-}
 .header-right li, 
 .header-right a{
     display: flex;
     align-items: center;
-    margin: .25rem 0px;
+    margin: .25rem;
     color: #754668;
     text-decoration: none;
     font-weight: bold;
@@ -62,12 +69,26 @@
     margin-right: .75rem;
 }
 
-.buscador input{
+/* header desktop 
+--------------------- */
+.search-box-desktop{
+    display: flex;
+}
+
+.search-box-desktop input{
+position: relative; 
+border-bottom: solid 1.5px ;
 border-radius: .75rem;
 padding:5px;
 
 }
 
+.fa-search{
+    position: absolute;
+    color:#754668;
+    
+    
+}
 
 .header-bottom .nav-bar{
     background-color: #754668cb;
@@ -105,6 +126,14 @@ padding:5px;
     display: none;
 
 }
+
+.search-box input{
+    color: #754668; 
+    border: solid 1.5px;
+    width: 100%;
+    display: none;
+    }
+
 
 /*main*/
 
@@ -977,7 +1006,7 @@ color: pink
         display: block;
     }
 
-    .mini-menu{
+    .menu-icon{
         display: none;
     }
 
@@ -989,16 +1018,13 @@ color: pink
         margin-right: .75rem;
     }
 
-    .logo {
-        position: relative;
-        bottom: 2.4rem;
-        margin-bottom: 0px;
+    .search-box{
+        display:none;
     }
-
-    .header-top {
-        justify-content: space-around;
+    
+    .search-box-desktop{
+       display: flex;
     }
-
     
     .header-bottom .nav-bar{
         display: block;
@@ -1141,7 +1167,6 @@ color: pink
 
 
 @media (min-width: 1200px){
-
     .footer-top-main {
         max-width: 1200px;
         margin: auto;
@@ -1160,10 +1185,4 @@ color: pink
     .hero {
         height: 500px;
     }
-
-    .header-top {
-        position: relative;
-        top: 6rem
-    }
-
 }
