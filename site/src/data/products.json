@@ -1,596 +1,612 @@
 [
-    {
-        "identificador": 1,
-        "nombre": "APHELANDRA - M 14",
-        "descripcion": "Aphelandra. Maceta N 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
-        "imagen": "interior/aphelandra.png",
-        "categoria": "interior",
-        "precio": 649,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 2,
-        "nombre": "ASPIDISTRA - 3 LTS",
-        "descripcion": "Aspidistra. Maceta 3 Litros / Maceta plástico Soplado / 60cm (sin contar maceta). Exterior / Interior",
-        "imagen": "interior/aspidistra.png",
-        "categoria": "interior",
-        "precio": 561,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 3,
-        "nombre": "ASPLENIUM CRISPI - M12",
-        "descripcion": "Asplenium Crispi. Maceta n°12 / Maceta plástico Soplado / 25cm. Interior",
-        "imagen": "interior/asplenium.png",
-        "categoria": "interior",
-        "precio": 896.50,
-        "promo": false,
-        "stock": true
-    },    
-    {
-        "identificador": 4,
-        "nombre": "CALATHEA MIL RAYAS - M14",
-        "descripcion": "Calathea mil rayas. Maceta n 14 / Maceta plástico Soplado /30cm (sin contar maceta). Interior",
-        "imagen": "interior/calathea.jpg",
-        "categoria": "interior",
-        "precio": 665.50,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 5,
-        "nombre": "CHAMADOREA - M14",
-        "descripcion": "Phoenix Robellini. Maceta n 14 / Maceta plástico Soplado / 40cm (sin contar maceta). Interior",
-        "imagen": "interior/chamadorea.jpg",
-        "categoria": "interior",
-        "precio": 854.70,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 6,
-        "nombre": "CORDATUM BRASILERO - M 14",
-        "descripcion": "Cordatum Brasilero. Maceta nro 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
-        "imagen": "interior/cordatum.png",
-        "categoria": "interior",
-        "precio": 605,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 7,
-        "nombre": "CROTON HIBRIDO - M 15",
-        "descripcion": "Croton Hibrido. Maceta n 15 / Maceta plástico Soplado / 25cm (sin contar maceta). Interior",
-        "imagen": "interior/croton-hibrido.jpg",
-        "categoria": "interior",
-        "precio": 1052.70,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 8,
-        "nombre": "FITTONIA - M 14",
-        "descripcion": "Fittonia.Maceta n 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
-        "imagen": "interior/fittonia.png",
-        "categoria": "interior",
-        "precio": 946,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 9,
-        "nombre": "JAZMIN GARDENIA AUGUSTA - 4LTS",
-        "descripcion": "Jazmin Gardenia Augusta. Maceta de 4 lts / Maceta plástico Soplado / 40cm (sin contar maceta). Interior",
-        "imagen": "interior/jazmin.png",
-        "categoria": "interior",
-        "precio": 625,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 10,
-        "nombre": "MARANTHA CTENANTHE - M12",
-        "descripcion": "Marantha Ctenanthe. Maceta n°12 / Maceta plástico Soplado / 25cm. Interior",
-        "imagen": "interior/marantha.png",
-        "categoria": "interior",
-        "precio": 605,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 11,
-        "nombre": "MONSTERA MISIONERA - 10 LTS",
-        "descripcion": "Monstera Misionera. Maceta 10 lts / Maceta plástico Soplado / 50cm. Interior / Exterior",
-        "imagen": "interior/monstera.png",
-        "categoria": "interior",
-        "precio": 1680,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 12,
-        "nombre": "PALO DE AGUA - 3 LTS",
-        "descripcion": "Palo de Agua. Maceta de 3 lts / Maceta plástico Soplado / 40/60cm (sin contar maceta). Interior",
-        "imagen": "interior/palo-agua.jpg",
-        "categoria": "interior",
-        "precio": 1089,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 13,
-        "nombre": "PEPEROMIA . M12",
-        "descripcion": "Peperomia. Maceta nro 12 / Maceta plástico Soplado / 15cm (sin contar maceta). Interior",
-        "imagen": "interior/peperomia.jpg",
-        "categoria": "interior",
-        "precio": 524.70,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 14,
-        "nombre": "PHILODENDRON ELEGANS - M14",
-        "descripcion": "Philodendro Elegans M14. Maceta nro 14 / Maceta plástico Soplado / 30/40cm (sin contar maceta). Planta de Interior",
-        "imagen": "interior/philo-elegans.png",
-        "categoria": "interior",
-        "precio": 1140,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 15,
-        "nombre": "COMBO PHILODENDRON ELEGANS M14 EN PREMIUM 18",
-        "descripcion": "Philodendron Elegans M14. Maceta Premium 18. Alto Combo: 40/50cm / Ancho Combo: 20/30 cm",
-        "imagen": "interior/philo-dendron.png",
-        "categoria": "interior",
-        "precio": 1472,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 16,
-        "nombre": "PHILODENDRON PERUBEANO - M 15",
-        "descripcion": "Philodendron Perubeano. Maceta nro 15 / Maceta plástico Soplado / 30/35cm. Interior / Exterior",
-        "imagen": "interior/philo-perubeano.png",
-        "categoria": "interior",
-        "precio": 715,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 17,
-        "nombre": "POTHUS CORDATUM LEMON COLGANTE B18",
-        "descripcion": "Cordatum Lemon. Maceta Bols 18 / Maceta plástico  / 15/20cm (sin contar maceta). Planta de Interior - Colgante",
-        "imagen": "interior/pothus.png",
-        "categoria": "interior",
-        "precio": 1190,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 18,
-        "nombre": "SANSEVIERIA EN PREMIUM 27 + PIE DE HIERRO DE 20CM + TIERRA",
-        "descripcion": "Combo Sansevieria + Premium 27 + Pie de Hierro de 20 cm. Sansevieria 3 litros en maceta Premium nro 27 + Pie de Hierro de 20cm + Tierra",
-        "imagen": "interior/sansevieria.png",
-        "categoria": "interior",
-        "precio": 3044,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 19,
-        "nombre": "SENDERIANA - M 17",
-        "descripcion": "Senderiana. Maceta nro 17 / Maceta plástico Soplado / 35cm. Interior / Exterior",
-        "imagen": "interior/senderiana.png",
-        "categoria": "interior",
-        "precio": 759,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 20,
-        "nombre": "TRADESCANTIA - M 12",
-        "descripcion": "Tradescantia. Maceta n 12 / Maceta plástico Soplado / 25cm. Interior / Exterior",
-        "imagen": "interior/tradescantia.png",
-        "categoria": "interior",
-        "precio": 649,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 21,
-        "nombre": "BUXUS ARBOLITO - 8LS",
-        "descripcion": "Buxus Bocha. Maceta de 8 litros / Maceta plástico Soplado / 60cm. Exterior",
-        "imagen": "exterior/buxus-arbolito.png",
-        "categoria": "exterior",
-        "precio": 1375,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 22,
-        "nombre": "EUGENIA BOCHA - 10 LTS",
-        "descripcion": "Eugenia Bocha 10lts. Maceta de 10 litros / Maceta plástico Soplado / 50cm. Planta de Exterior",
-        "imagen": "exterior/eugenia-bocha.png",
-        "categoria": "exterior",
-        "precio": 1815,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 23,
-        "nombre": "FORMIO BRONCE - 5 LTS",
-        "descripcion": "Formio Bronce. Maceta de 5 litros / Maceta plástico Soplado / 100cm. Exterior",
-        "imagen": "exterior/formio-bronce.png",
-        "categoria": "exterior",
-        "precio": 979,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 24,
-        "nombre": "FORMIO VERDE - 10 LTS",
-        "descripcion": "Formio Verde. Maceta de 10 lts / Maceta plástico Soplado / 45cm (sin contar maceta). Exterior",
-        "imagen": "exterior/formio-verde.jpg",
-        "categoria": "exterior",
-        "precio": 1028.50,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 25,
-        "nombre": "JAZMIN GARDENIA AUGUSTA - 10 LTS",
-        "descripcion": "Jazmin Gardenia Augusta. Maceta de 10 lts / Maceta plástico Soplado / 70cm (sin contar maceta). Exterior",
-        "imagen": "exterior/jazmin-gardenia.png",
-        "categoria": "exterior",
-        "precio": 910,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 26,
-        "nombre": "JUNCO - 5 LTS",
-        "descripcion": "Junco Efusus. Maceta de 5 litros / Maceta plástico Soplado / 60cm. Exterior",
-        "imagen": "exterior/junco.png",
-        "categoria": "exterior",
-        "precio": 495,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 27,
-        "nombre": "LIGUSTRUM SINENSE - 30 LTS",
-        "descripcion": "Ligustrum Sinense 30lts. Maceta de 30 litros / Maceta plástico Soplado / 160cm de altura!. Planta de Exterior",
-        "imagen": "exterior/ligustrum.png",
-        "categoria": "exterior",
-        "precio": 2145,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 28,
-        "nombre": "MONSTERA MISIONERA - 10 LTS",
-        "descripcion": "Monstera Misionera. Maceta 10 lts / Maceta plástico Soplado / 50cm. Interior / Exterior",
-        "imagen": "exterior/monstera.png",
-        "categoria": "exterior",
-        "precio": 1680,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 29,
-        "nombre": "OREJA DE ELEFANTE - 10 LTS",
-        "descripcion": "Oreja de Elefante. Maceta 10 lts / Maceta plástico Soplado / 50-60 cm. Interior / Exterior",
-        "imagen": "exterior/oreja-de-elefante.png",
-        "categoria": "exterior",
-        "precio": 2750,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 30,
-        "nombre": "PALMERA EXCELSA TRACHYCARPUS FORTUNEI - 30 LITROS",
-        "descripcion": "Trachycarpus Fortunei - Palmera Excelsa. Maceta 30 lts - Altura 140/150 cm. Planta de Exterior",
-        "imagen": "exterior/palmera-excelsa.png",
-        "categoria": "exterior",
-        "precio": 5489,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 31,
-        "nombre": "PALMERA PINDO - 15 LITROS",
-        "descripcion": "Arecastrum ramonzifolia - Palmera Pindo. Maceta 15 lts - Altura 180/200 cm. Exterior",
-        "imagen": "exterior/palmera-pindo.jpg",
-        "categoria": "exterior",
-        "precio": 3135,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 32,
-        "nombre": "PHOENIX ROBELLINI - 30 LTS",
-        "descripcion": "Phoenix Robellini. Maceta de 30 litros / Maceta plástico Soplado / 150cm (sin contar maceta). Exterior",
-        "imagen": "exterior/phoenix.jpg",
-        "categoria": "exterior",
-        "precio": 5692.50,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 33,
-        "nombre": "PHOENIX ROBELLINI - 7 LITROS",
-        "descripcion": "Phoenix Robellini. Maceta de 7 litros / Maceta plástico Soplado / 40/50cm (sin contar maceta). Exterior",
-        "imagen": "exterior/phoenix-robellini.png",
-        "categoria": "exterior",
-        "precio": 2035,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 34,
-        "nombre": "PINO LIMON - 04 LTS",
-        "descripcion": "Pino Limon / Cupressus Lutea. Maceta de 4 litros / Maceta plástico Soplado / 30/40cm (sin contar maceta). Exterior",
-        "imagen": "exterior/pino-limon.jpg",
-        "categoria": "exterior",
-        "precio": 598.95,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 35,
-        "nombre": "PALITA DE MANO - TRAMONTINA",
-        "descripcion": "Se utiliza las palitas anchas en actividades de horticultura, cultivo de frutas y jardinería principalmente para cavar y transportar tierra. Piezas producidas en acero al carbono especial de alta calidad. Se aplica pintura electrostática a polvo que ofrece mejor presentación visual y alta protección contra corrosión. Los mangos, además de poseer excelente resistencia, son hechos con madera de origen renovable. Especificaciones: Largo: 31 cm. Ancho: 8,5 cm",
-        "imagen": "accesorios/palita-de-mano.jpeg",
-        "categoria": "accesorios",
-        "precio": 302.50,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 36,
-        "nombre": "GUANTES TACTIL PARA JARDINERIA",
-        "descripcion": "GUANTES DE POLIÉSTER POLIURETANO. RECUBIERTOS EN PALMA Y DEDOS. DORSO AIREADO. IDEAL PARA TRABAJOS DE JARDINERIA ",
-        "imagen": "accesorios/guantes.jpg",
-        "categoria": "accesorios",
-        "precio": 290,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 37,
-        "nombre": "RASTRILLO DE MANO - TRAMONTINA",
-        "descripcion": "Rastrillo de tres dientes soldado con mango madera. Piezas producidas en acero al carbono especial de alta calidad. Reciben pintura electrostática a polvo que ofrece mejor presentación visual y alta protección contra corrosión. El mango de la herramienta es producido en polipropileno especial de alta resistencia",
-        "imagen": "accesorios/rastrillo-de-mano.jpeg",
-        "categoria": "accesorios",
-        "precio": 308,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 38,
-        "nombre": "TIJERA DE MANO KASTOR ECO",
-        "descripcion": "La tijera es apropiada pala la poda de arboles fructíferos, flores y plantas ornamentales. Lámina templada en acero al carbono para un corte preciso y suave. El afilado hecho por máquinas CNC resulta en un excelente filo en las piezas. El mango además de ser hecho en polipropileno de alta resistencia es anatómico y ergonómico proporcionando confort al operador",
-        "imagen": "accesorios/tijera-mano.jpg",
-        "categoria": "accesorios",
-        "precio": 1333.20,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 39,
-        "nombre": "FERTILIZANTE LIQUIDO FERTIFOX - FLORACION 200CC",
-        "descripcion": "Fertifox fertilizante líquido es ideal para fomentar la floración de todo tipo de plantas de interior y exterior. Mejora el color, textura, resistencia y crecimiento de las plantas. Estimula el crecimiento de brotes sanos. ",
-        "imagen": "fertilizantes/fertifox-floracion.jpeg",
-        "categoria": "fertilizantes",
-        "precio": 396,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 40,
-        "nombre": "FERTILIZANTE LIQUIDO FERTIFOX - CRECIMIENTO 200CC",
-        "descripcion": "Fertifox fertilizante líquido es ideal para fomentar el crecimiento de hojas, tallos y la floración de todo tipo de plantas de interior y exterior. La correcta fertilización de plantas, arbustos y árboles ayuda a prevenir las enfermedades como hongos y los ataques de insectos como cochinillas y pulgones.",
-        "imagen": "fertilizantes/fertifox-potenciado.jpeg",
-        "categoria": "fertilizantes",
-        "precio": 396,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 41,
-        "nombre": "FERTILIZANTE NITROFULL - 1 KG",
-        "descripcion": "Fertilizante Nitrofull  En presentación granulada que permite una disolución lenta con el riego. Ideal para árboles, flores, césped, hortalizas y plantas en general.",
-        "imagen": "fertilizantes/ferti-nitrofull.jpg",
-        "categoria": "fertilizantes",
-        "precio": 413.60,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 42,
-        "nombre": "FERTILIZANTE GRANULADO VITTA TRIPLE 15 - 1KG",
-        "descripcion": "Estimula el desarrollo del follaje, desarrolla los tejidos y mejora la sanidad de las flores y frutos. Se utiliza para cualquier tipo de plantas, frutales, hornamentales, cesped, etc",
-        "imagen": "fertilizantes/granulado-vitta.jpeg",
-        "categoria": "fertilizantes",
-        "precio": 311.30,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 43,
-        "nombre": "FERTILIZANTE LIQUIDO FERTIFOX - FOLLAJE 200CC",
-        "descripcion": "Fertifox fertilizante líquido es ideal para fomentar el crecimiento de hojas y tallos de todo tipo de plantas de interior y exterior.La correcta fertilización de plantas, arbustos y árboles ayuda a prevenir las enfermedades como hongos y los ataques de insectos como cochinillas y pulgones.",
-        "imagen": "fertilizantes/liquido-fertifox.jpeg",
-        "categoria": "fertilizantes",
-        "precio": 396,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 44,
-        "nombre": "LUSTRE VEGETAL - FERTIFOX",
-        "descripcion": "Resalta el color natural, da brillo y limpia tus plantas sin dañar !. Ideal para tener siempre hermosas tus plantas de interior ! Vaporice la cara superior de las hojas a una distancia no menor a 50cm, rotando el brazo de iqzquierda a derecha y viceversa aplicando una cara delgada, sin empapar el follaje",
-        "imagen": "fertilizantes/lustre-vegetal.jpg",
-        "categoria": "fertilizantes",
-        "precio": 659.45,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 45,
-        "nombre": "JARDIN VERTICAL ROTOMOLDEO - 4 BOLSILLOS",
-        "descripcion": "Maceta Polietileno Rotomoldeado. Modelo: Jardin Vertical de 4 bolsillos. Medidas: 35x45 cm",
-        "imagen": "macetas/jardin-vertical.jpg",
-        "categoria": "macetas",
-        "precio": 3027.20,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 46,
-        "nombre": "MACETA DE BARRO COMUN - NRO 14",
-        "descripcion": "Medidas: boca : 14 cm. Base : 9 cm. Alto : 14 CM. Peso : 640 gr",
-        "imagen": "macetas/maceta-barro-comun.jpg",
-        "categoria": "macetas",
-        "precio": 209,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 47,
-        "nombre": "MACETA PLASTICO PREMIUM - NRO 27",
-        "descripcion": "Maceta de plástico. Modelo: Premium nro 27. Medidas: 27x27. Peso: 1.5kg",
-        "imagen": "macetas/maceta-plastico-premium-blanca.jpg",
-        "categoria": "macetas",
-        "precio": 1089,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 48,
-        "nombre": "MACETA PLASTICO PREMIUM - NRO 22",
-        "descripcion": "Maceta de plástico. Modelo: Premium nro 22. Medidas: 22x22. Peso: 1.0kg",
-        "imagen": "macetas/maceta-plastico-premium-negra.jpg",
-        "categoria": "macetas",
-        "precio": 605,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 49,
-        "nombre": "MACETA ROCIO - NRO 24",
-        "descripcion": "Maceta de plástico. Modelo: Rocio nro 24. Medidas: 24x17. Peso: 0.5kg. Colores: Negro, Blanco, Verde, Marrón",
-        "imagen": "macetas/maceta-rocio.jpg",
-        "categoria": "macetas",
-        "precio": 297,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 50,
-        "nombre": "MACETA ROTOMOLDEO CILINDRO - NRO 40",
-        "descripcion": "Maceta Polietileno Rotomoldeado. Modelo: Cilindro nro 40. Medidas: 40x40cm. Peso: 2.0kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca",
-        "imagen": "macetas/maceta-rotomoldeo-cilindro.jpg",
-        "categoria": "macetas",
-        "precio": 3272.50,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 51,
-        "nombre": "MACETA ROTOMOLDEO CONO RAYADO - 42 CM",
-        "descripcion": "Maceta Polietileno Rotomoldeado. Modelo: Cono Rayado nro 42. Medidas: 42x30. Peso: 2.0kg. Colores: Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y resec",
-        "imagen": "macetas/maceta-rotomoldeo-cono.jpg",
-        "categoria": "macetas",
-        "precio": 1969,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 52,
-        "nombre": "MACETA ROTOMOLDEO CUBO - NRO 30",
-        "descripcion": "Maceta Polietileno Rotomoldeado. Modelo: Cubo nro 30. Medidas: 30x30. Peso: 1.5kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca ",
-        "imagen": "macetas/maceta-rotomoldeo-cubo.jpg",
-        "categoria": "macetas",
-        "precio": 1925,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 53,
-        "nombre": "MACETA ROTOMOLDEO JARRON LISO - NRO 59",
-        "descripcion": "Maceta Polietileno Rotomoldeado. Modelo: Jarrón Liso nro 59. Medidas: 59x45. Peso: 4.5kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca ",
-        "imagen": "macetas/maceta-rotomoldeo-jarron.jpg",
-        "categoria": "macetas",
-        "precio": 4675,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 54,
-        "nombre": "Almohadon Palmera",
-        "descripcion": "Almohadon en lienzo grueso y estampado a mano con detalles de hojas de palmeras color naranja. Medidas: 50 x 50cm",
-        "imagen": "deco/almohadon-palmera.jpg",
-        "categoria": "deco",
-        "precio": 1100,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 55,
-        "nombre": "Altar Pirámide",
-        "descripcion": "Altar espejado para cargar tus piedra o simplemente como alhajero diario, de vidrio,confeccionado a mano con técnica Tiffany Medidas:Alto 19cm. Ancho 15cm.",
-        "imagen": "deco/altar-piramide.jpg",
-        "categoria": "deco",
-        "precio": 1311,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 56,
-        "nombre": "Canasto BeigeCanasto Beige",
-        "descripcion": "Canasto de fibras naturales con asas, combinado en color crudo y beige, ideal para interior.",
-        "imagen": "deco/canasto-beige.jpg",
-        "categoria": "deco",
-        "precio": 2841,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 57,
-        "nombre": "Canastos cuadrados",
-        "descripcion": "Por su forma cuadrada lo hace unico y diferente, Aportando la calidez que cualquier otro canasto redondo y el agregado de poder ubicarlo en esquinas sin ocupar mucho espacio.",
-        "imagen": "deco/canasto-cuadrado.jpg",
-        "categoria": "deco",
-        "precio": 2220,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 58,
-        "nombre": "Canasto Orange",
-        "descripcion": "Canasto de fibras naturales con asas de yute, combinado en color azul oscuro, crudo y naranja, ideal para interior.",
-        "imagen": "deco/canasto-orange.jpg",
-        "categoria": "deco",
-        "precio": 2400,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 59,
-        "nombre": "Florero / Terrario Ambar",
-        "descripcion": "Florero/Terrario de vidrio,confeccionado a mano con técnica Tiffany Medidas:Alto 20cm.Ancho 23cm. Capacidad: 4 sucus o cactus",
-        "imagen": "deco/florero-ambar.jpg",
-        "categoria": "deco",
-        "precio": 2898,
-        "promo": false,
-        "stock": true
-    },
-    {
-        "identificador": 60,
-        "nombre": "Vela de Pitanga",
-        "descripcion": "Aroma frutal a Pitanga (fruta brasilera) en vaso de vidro color bombé. Duración: 90hrs aprox",
-        "imagen": "deco/vela-pitanga.jpg",
-        "categoria": "deco",
-        "precio": 752,
-        "promo": false,
-        "stock": true
-    },    {
-        "identificador": 61,
-        "nombre": "Vela de Roses",
-        "descripcion": "Aroma floral a rosas, en vaso de vidrio bombé. Duración: 90hrs aprox",
-        "imagen": "deco/vela-roses.jpg",
-        "categoria": "deco",
-        "precio": 752,
-        "promo": false,
-        "stock": true
-    }
+ {
+  "identificador": 1,
+  "name": "APHELANDRA - M 14",
+  "description": "Aphelandra. Maceta N 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
+  "image": "interior/aphelandra.png",
+  "category": "interior",
+  "price": 649,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 2,
+  "name": "ASPIDISTRA - 3 LTS",
+  "description": "Aspidistra. Maceta 3 Litros / Maceta plástico Soplado / 60cm (sin contar maceta). Exterior / Interior",
+  "image": "interior/aspidistra.png",
+  "category": "interior",
+  "price": 561,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 3,
+  "name": "ASPLENIUM CRISPI - M12",
+  "description": "Asplenium Crispi. Maceta n°12 / Maceta plástico Soplado / 25cm. Interior",
+  "image": "interior/asplenium.png",
+  "category": "interior",
+  "price": 896.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 4,
+  "name": "CALATHEA MIL RAYAS - M14",
+  "description": "Calathea mil rayas. Maceta n 14 / Maceta plástico Soplado /30cm (sin contar maceta). Interior",
+  "image": "interior/calathea.jpg",
+  "category": "interior",
+  "price": 665.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 5,
+  "name": "CHAMADOREA - M14",
+  "description": "Phoenix Robellini. Maceta n 14 / Maceta plástico Soplado / 40cm (sin contar maceta). Interior",
+  "image": "interior/chamadorea.jpg",
+  "category": "interior",
+  "price": 854.7,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 6,
+  "name": "CORDATUM BRASILERO - M 14",
+  "description": "Cordatum Brasilero. Maceta nro 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
+  "image": "interior/cordatum.png",
+  "category": "interior",
+  "price": 605,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 7,
+  "name": "CROTON HIBRIDO - M 15",
+  "description": "Croton Hibrido. Maceta n 15 / Maceta plástico Soplado / 25cm (sin contar maceta). Interior",
+  "image": "interior/croton-hibrido.jpg",
+  "category": "interior",
+  "price": 1052.7,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 8,
+  "name": "FITTONIA - M 14",
+  "description": "Fittonia.Maceta n 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
+  "image": "interior/fittonia.png",
+  "category": "interior",
+  "price": 946,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 9,
+  "name": "JAZMIN GARDENIA AUGUSTA - 4LTS",
+  "description": "Jazmin Gardenia Augusta. Maceta de 4 lts / Maceta plástico Soplado / 40cm (sin contar maceta). Interior",
+  "image": "interior/jazmin.png",
+  "category": "interior",
+  "price": 625,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 10,
+  "name": "MARANTHA CTENANTHE - M12",
+  "description": "Marantha Ctenanthe. Maceta n°12 / Maceta plástico Soplado / 25cm. Interior",
+  "image": "interior/marantha.png",
+  "category": "interior",
+  "price": 605,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 11,
+  "name": "MONSTERA MISIONERA - 10 LTS",
+  "description": "Monstera Misionera. Maceta 10 lts / Maceta plástico Soplado / 50cm. Interior / Exterior",
+  "image": "interior/monstera.png",
+  "category": "interior",
+  "price": 1680,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 12,
+  "name": "PALO DE AGUA - 3 LTS",
+  "description": "Palo de Agua. Maceta de 3 lts / Maceta plástico Soplado / 40/60cm (sin contar maceta). Interior",
+  "image": "interior/palo-agua.jpg",
+  "category": "interior",
+  "price": 1089,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 13,
+  "name": "PEPEROMIA . M12",
+  "description": "Peperomia. Maceta nro 12 / Maceta plástico Soplado / 15cm (sin contar maceta). Interior",
+  "image": "interior/peperomia.jpg",
+  "category": "interior",
+  "price": 524.7,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 14,
+  "name": "PHILODENDRON ELEGANS - M14",
+  "description": "Philodendro Elegans M14. Maceta nro 14 / Maceta plástico Soplado / 30/40cm (sin contar maceta). Planta de Interior",
+  "image": "interior/philo-elegans.png",
+  "category": "interior",
+  "price": 1140,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 15,
+  "name": "COMBO PHILODENDRON ELEGANS M14 EN PREMIUM 18",
+  "description": "Philodendron Elegans M14. Maceta Premium 18. Alto Combo: 40/50cm / Ancho Combo: 20/30 cm",
+  "image": "interior/philo-dendron.png",
+  "category": "interior",
+  "price": 1472,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 16,
+  "name": "PHILODENDRON PERUBEANO - M 15",
+  "description": "Philodendron Perubeano. Maceta nro 15 / Maceta plástico Soplado / 30/35cm. Interior / Exterior",
+  "image": "interior/philo-perubeano.png",
+  "category": "interior",
+  "price": 715,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 17,
+  "name": "POTHUS CORDATUM LEMON COLGANTE B18",
+  "description": "Cordatum Lemon. Maceta Bols 18 / Maceta plástico  / 15/20cm (sin contar maceta). Planta de Interior - Colgante",
+  "image": "interior/pothus.png",
+  "category": "interior",
+  "price": 1190,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 18,
+  "name": "SANSEVIERIA EN PREMIUM 27 + PIE DE HIERRO DE 20CM + TIERRA",
+  "description": "Combo Sansevieria + Premium 27 + Pie de Hierro de 20 cm. Sansevieria 3 litros en maceta Premium nro 27 + Pie de Hierro de 20cm + Tierra",
+  "image": "interior/sansevieria.png",
+  "category": "interior",
+  "price": 3044,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 19,
+  "name": "SENDERIANA - M 17",
+  "description": "Senderiana. Maceta nro 17 / Maceta plástico Soplado / 35cm. Interior / Exterior",
+  "image": "interior/senderiana.png",
+  "category": "interior",
+  "price": 759,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 20,
+  "name": "TRADESCANTIA - M 12",
+  "description": "Tradescantia. Maceta n 12 / Maceta plástico Soplado / 25cm. Interior / Exterior",
+  "image": "interior/tradescantia.png",
+  "category": "interior",
+  "price": 649,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 21,
+  "name": "BUXUS ARBOLITO - 8LS",
+  "description": "Buxus Bocha. Maceta de 8 litros / Maceta plástico Soplado / 60cm. Exterior",
+  "image": "exterior/buxus-arbolito.png",
+  "category": "exterior",
+  "price": 1375,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 22,
+  "name": "EUGENIA BOCHA - 10 LTS",
+  "description": "Eugenia Bocha 10lts. Maceta de 10 litros / Maceta plástico Soplado / 50cm. Planta de Exterior",
+  "image": "exterior/eugenia-bocha.png",
+  "category": "exterior",
+  "price": 1815,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 23,
+  "name": "FORMIO BRONCE - 5 LTS",
+  "description": "Formio Bronce. Maceta de 5 litros / Maceta plástico Soplado / 100cm. Exterior",
+  "image": "exterior/formio-bronce.png",
+  "category": "exterior",
+  "price": 979,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 24,
+  "name": "FORMIO VERDE - 10 LTS",
+  "description": "Formio Verde. Maceta de 10 lts / Maceta plástico Soplado / 45cm (sin contar maceta). Exterior",
+  "image": "exterior/formio-verde.jpg",
+  "category": "exterior",
+  "price": 1028.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 25,
+  "name": "JAZMIN GARDENIA AUGUSTA - 10 LTS",
+  "description": "Jazmin Gardenia Augusta. Maceta de 10 lts / Maceta plástico Soplado / 70cm (sin contar maceta). Exterior",
+  "image": "exterior/jazmin-gardenia.png",
+  "category": "exterior",
+  "price": 910,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 26,
+  "name": "JUNCO - 5 LTS",
+  "description": "Junco Efusus. Maceta de 5 litros / Maceta plástico Soplado / 60cm. Exterior",
+  "image": "exterior/junco.png",
+  "category": "exterior",
+  "price": 495,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 27,
+  "name": "LIGUSTRUM SINENSE - 30 LTS",
+  "description": "Ligustrum Sinense 30lts. Maceta de 30 litros / Maceta plástico Soplado / 160cm de altura!. Planta de Exterior",
+  "image": "exterior/ligustrum.png",
+  "category": "exterior",
+  "price": 2145,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 28,
+  "name": "MONSTERA MISIONERA - 10 LTS",
+  "description": "Monstera Misionera. Maceta 10 lts / Maceta plástico Soplado / 50cm. Interior / Exterior",
+  "image": "exterior/monstera.png",
+  "category": "exterior",
+  "price": 1680,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 29,
+  "name": "OREJA DE ELEFANTE - 10 LTS",
+  "description": "Oreja de Elefante. Maceta 10 lts / Maceta plástico Soplado / 50-60 cm. Interior / Exterior",
+  "image": "exterior/oreja-de-elefante.png",
+  "category": "exterior",
+  "price": 2750,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 30,
+  "name": "PALMERA EXCELSA TRACHYCARPUS FORTUNEI - 30 LITROS",
+  "description": "Trachycarpus Fortunei - Palmera Excelsa. Maceta 30 lts - Altura 140/150 cm. Planta de Exterior",
+  "image": "exterior/palmera-excelsa.png",
+  "category": "exterior",
+  "price": 5489,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 31,
+  "name": "PALMERA PINDO - 15 LITROS",
+  "description": "Arecastrum ramonzifolia - Palmera Pindo. Maceta 15 lts - Altura 180/200 cm. Exterior",
+  "image": "exterior/palmera-pindo.jpg",
+  "category": "exterior",
+  "price": 3135,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 32,
+  "name": "PHOENIX ROBELLINI - 30 LTS",
+  "description": "Phoenix Robellini. Maceta de 30 litros / Maceta plástico Soplado / 150cm (sin contar maceta). Exterior",
+  "image": "exterior/phoenix.jpg",
+  "category": "exterior",
+  "price": 5692.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 33,
+  "name": "PHOENIX ROBELLINI - 7 LITROS",
+  "description": "Phoenix Robellini. Maceta de 7 litros / Maceta plástico Soplado / 40/50cm (sin contar maceta). Exterior",
+  "image": "exterior/phoenix-robellini.png",
+  "category": "exterior",
+  "price": 2035,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 34,
+  "name": "PINO LIMON - 04 LTS",
+  "description": "Pino Limon / Cupressus Lutea. Maceta de 4 litros / Maceta plástico Soplado / 30/40cm (sin contar maceta). Exterior",
+  "image": "exterior/pino-limon.jpg",
+  "category": "exterior",
+  "price": 598.95,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 35,
+  "name": "PALITA DE MANO - TRAMONTINA",
+  "description": "Se utiliza las palitas anchas en actividades de horticultura, cultivo de frutas y jardinería principalmente para cavar y transportar tierra. Piezas producidas en acero al carbono especial de alta calidad. Se aplica pintura electrostática a polvo que ofrece mejor presentación visual y alta protección contra corrosión. Los mangos, además de poseer excelente resistencia, son hechos con madera de origen renovable. Especificaciones: Largo: 31 cm. Ancho: 8,5 cm",
+  "image": "accesorios/palita-de-mano.jpeg",
+  "category": "accesorios",
+  "price": 302.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 36,
+  "name": "GUANTES TACTIL PARA JARDINERIA",
+  "description": "GUANTES DE POLIÉSTER POLIURETANO. RECUBIERTOS EN PALMA Y DEDOS. DORSO AIREADO. IDEAL PARA TRABAJOS DE JARDINERIA ",
+  "image": "accesorios/guantes.jpg",
+  "category": "accesorios",
+  "price": 290,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 37,
+  "name": "RASTRILLO DE MANO - TRAMONTINA",
+  "description": "Rastrillo de tres dientes soldado con mango madera. Piezas producidas en acero al carbono especial de alta calidad. Reciben pintura electrostática a polvo que ofrece mejor presentación visual y alta protección contra corrosión. El mango de la herramienta es producido en polipropileno especial de alta resistencia",
+  "image": "accesorios/rastrillo-de-mano.jpeg",
+  "category": "accesorios",
+  "price": 308,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 38,
+  "name": "TIJERA DE MANO KASTOR ECO",
+  "description": "La tijera es apropiada pala la poda de arboles fructíferos, flores y plantas ornamentales. Lámina templada en acero al carbono para un corte preciso y suave. El afilado hecho por máquinas CNC resulta en un excelente filo en las piezas. El mango además de ser hecho en polipropileno de alta resistencia es anatómico y ergonómico proporcionando confort al operador",
+  "image": "accesorios/tijera-mano.jpg",
+  "category": "accesorios",
+  "price": 1333.2,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 39,
+  "name": "FERTILIZANTE LIQUIDO FERTIFOX - FLORACION 200CC",
+  "description": "Fertifox fertilizante líquido es ideal para fomentar la floración de todo tipo de plantas de interior y exterior. Mejora el color, textura, resistencia y crecimiento de las plantas. Estimula el crecimiento de brotes sanos. ",
+  "image": "fertilizantes/fertifox-floracion.jpeg",
+  "category": "fertilizantes",
+  "price": 396,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 40,
+  "name": "FERTILIZANTE LIQUIDO FERTIFOX - CRECIMIENTO 200CC",
+  "description": "Fertifox fertilizante líquido es ideal para fomentar el crecimiento de hojas, tallos y la floración de todo tipo de plantas de interior y exterior. La correcta fertilización de plantas, arbustos y árboles ayuda a prevenir las enfermedades como hongos y los ataques de insectos como cochinillas y pulgones.",
+  "image": "fertilizantes/fertifox-potenciado.jpeg",
+  "category": "fertilizantes",
+  "price": 396,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 41,
+  "name": "FERTILIZANTE NITROFULL - 1 KG",
+  "description": "Fertilizante Nitrofull  En presentación granulada que permite una disolución lenta con el riego. Ideal para árboles, flores, césped, hortalizas y plantas en general.",
+  "image": "fertilizantes/ferti-nitrofull.jpg",
+  "category": "fertilizantes",
+  "price": 413.6,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 42,
+  "name": "FERTILIZANTE GRANULADO VITTA TRIPLE 15 - 1KG",
+  "description": "Estimula el desarrollo del follaje, desarrolla los tejidos y mejora la sanidad de las flores y frutos. Se utiliza para cualquier tipo de plantas, frutales, hornamentales, cesped, etc",
+  "image": "fertilizantes/granulado-vitta.jpeg",
+  "category": "fertilizantes",
+  "price": 311.3,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 43,
+  "name": "FERTILIZANTE LIQUIDO FERTIFOX - FOLLAJE 200CC",
+  "description": "Fertifox fertilizante líquido es ideal para fomentar el crecimiento de hojas y tallos de todo tipo de plantas de interior y exterior.La correcta fertilización de plantas, arbustos y árboles ayuda a prevenir las enfermedades como hongos y los ataques de insectos como cochinillas y pulgones.",
+  "image": "fertilizantes/liquido-fertifox.jpeg",
+  "category": "fertilizantes",
+  "price": 396,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 44,
+  "name": "LUSTRE VEGETAL - FERTIFOX",
+  "description": "Resalta el color natural, da brillo y limpia tus plantas sin dañar !. Ideal para tener siempre hermosas tus plantas de interior ! Vaporice la cara superior de las hojas a una distancia no menor a 50cm, rotando el brazo de iqzquierda a derecha y viceversa aplicando una cara delgada, sin empapar el follaje",
+  "image": "fertilizantes/lustre-vegetal.jpg",
+  "category": "fertilizantes",
+  "price": 659.45,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 45,
+  "name": "JARDIN VERTICAL ROTOMOLDEO - 4 BOLSILLOS",
+  "description": "Maceta Polietileno Rotomoldeado. Modelo: Jardin Vertical de 4 bolsillos. Medidas: 35x45 cm",
+  "image": "macetas/jardin-vertical.jpg",
+  "category": "macetas",
+  "price": 3027.2,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 46,
+  "name": "MACETA DE BARRO COMUN - NRO 14",
+  "description": "Medidas: boca : 14 cm. Base : 9 cm. Alto : 14 CM. Peso : 640 gr",
+  "image": "macetas/maceta-barro-comun.jpg",
+  "category": "macetas",
+  "price": 209,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 47,
+  "name": "MACETA PLASTICO PREMIUM - NRO 27",
+  "description": "Maceta de plástico. Modelo: Premium nro 27. Medidas: 27x27. Peso: 1.5kg",
+  "image": "macetas/maceta-plastico-premium-blanca.jpg",
+  "category": "macetas",
+  "price": 1089,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 48,
+  "name": "MACETA PLASTICO PREMIUM - NRO 22",
+  "description": "Maceta de plástico. Modelo: Premium nro 22. Medidas: 22x22. Peso: 1.0kg",
+  "image": "macetas/maceta-plastico-premium-negra.jpg",
+  "category": "macetas",
+  "price": 605,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 49,
+  "name": "MACETA ROCIO - NRO 24",
+  "description": "Maceta de plástico. Modelo: Rocio nro 24. Medidas: 24x17. Peso: 0.5kg. Colores: Negro, Blanco, Verde, Marrón",
+  "image": "macetas/maceta-rocio.jpg",
+  "category": "macetas",
+  "price": 297,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 50,
+  "name": "MACETA ROTOMOLDEO CILINDRO - NRO 40",
+  "description": "Maceta Polietileno Rotomoldeado. Modelo: Cilindro nro 40. Medidas: 40x40cm. Peso: 2.0kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca",
+  "image": "macetas/maceta-rotomoldeo-cilindro.jpg",
+  "category": "macetas",
+  "price": 3272.5,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 51,
+  "name": "MACETA ROTOMOLDEO CONO RAYADO - 42 CM",
+  "description": "Maceta Polietileno Rotomoldeado. Modelo: Cono Rayado nro 42. Medidas: 42x30. Peso: 2.0kg. Colores: Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y resec",
+  "image": "macetas/maceta-rotomoldeo-cono.jpg",
+  "category": "macetas",
+  "price": 1969,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 52,
+  "name": "MACETA ROTOMOLDEO CUBO - NRO 30",
+  "description": "Maceta Polietileno Rotomoldeado. Modelo: Cubo nro 30. Medidas: 30x30. Peso: 1.5kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca ",
+  "image": "macetas/maceta-rotomoldeo-cubo.jpg",
+  "category": "macetas",
+  "price": 1925,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 53,
+  "name": "MACETA ROTOMOLDEO JARRON LISO - NRO 59",
+  "description": "Maceta Polietileno Rotomoldeado. Modelo: Jarrón Liso nro 59. Medidas: 59x45. Peso: 4.5kg. Colores: Negro, Blanco, Gris piedra, Arena. Ultra Liviano. Alto nivel estético tanto como para exterior como para interior. Con protección UV, no se decolora y reseca ",
+  "image": "macetas/maceta-rotomoldeo-jarron.jpg",
+  "category": "macetas",
+  "price": 4675,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 54,
+  "name": "Almohadon Palmera",
+  "description": "Almohadon en lienzo grueso y estampado a mano con detalles de hojas de palmeras color naranja. Medidas: 50 x 50cm",
+  "image": "deco/almohadon-palmera.jpg",
+  "category": "deco",
+  "price": 1100,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 55,
+  "name": "Altar Pirámide",
+  "description": "Altar espejado para cargar tus piedra o simplemente como alhajero diario, de vidrio,confeccionado a mano con técnica Tiffany Medidas:Alto 19cm. Ancho 15cm.",
+  "image": "deco/altar-piramide.jpg",
+  "category": "deco",
+  "price": 1311,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 56,
+  "name": "Canasto BeigeCanasto Beige",
+  "description": "Canasto de fibras naturales con asas, combinado en color crudo y beige, ideal para interior.",
+  "image": "deco/canasto-beige.jpg",
+  "category": "deco",
+  "price": 2841,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 57,
+  "name": "Canastos cuadrados",
+  "description": "Por su forma cuadrada lo hace unico y diferente, Aportando la calidez que cualquier otro canasto redondo y el agregado de poder ubicarlo en esquinas sin ocupar mucho espacio.",
+  "image": "deco/canasto-cuadrado.jpg",
+  "category": "deco",
+  "price": 2220,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 58,
+  "name": "Canasto Orange",
+  "description": "Canasto de fibras naturales con asas de yute, combinado en color azul oscuro, crudo y naranja, ideal para interior.",
+  "image": "deco/canasto-orange.jpg",
+  "category": "deco",
+  "price": 2400,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 59,
+  "name": "Florero / Terrario Ambar",
+  "description": "Florero/Terrario de vidrio,confeccionado a mano con técnica Tiffany Medidas:Alto 20cm.Ancho 23cm. Capacidad: 4 sucus o cactus",
+  "image": "deco/florero-ambar.jpg",
+  "category": "deco",
+  "price": 2898,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 60,
+  "name": "Vela de Pitanga",
+  "description": "Aroma frutal a Pitanga (fruta brasilera) en vaso de vidro color bombé. Duración: 90hrs aprox",
+  "image": "deco/vela-pitanga.jpg",
+  "category": "deco",
+  "price": 752,
+  "promo": false,
+  "stock": 5
+ },
+ {
+  "identificador": 61,
+  "name": "Vela de Roses",
+  "description": "Aroma floral a rosas, en vaso de vidrio bombé. Duración: 90hrs aprox",
+  "image": "deco/vela-roses.jpg",
+  "category": "deco",
+  "price": 752,
+  "promo": false,
+  "stock": 5
+ }
 ]
-

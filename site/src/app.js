@@ -18,7 +18,7 @@ app.set ("view engine", "ejs");
 app.set ("views ", "src/views");
 
 
-/*post*/
+/*Poder enviar información de formularios*/
 app.use(express.urlencoded({extended:false}));
 app.use (express.json());
 

@@ -11,7 +11,7 @@
 
 <div class="contenedor-general"> 
 
-    <div class="menu-horizontal-pd"><a class = "a-pd" href="/" > Inicio /</a><a class = "a-pd" href="/product">Productos /</a> <a class = "a-pd" href="/products">Planta interior /</a> <a class = "a-pd" href="#"><strong>Combo Philodendron Elegans m14 en Premium 18</strong></a></div>
+    <div class="menu-horizontal-pd"><a class = "a-pd" href="/" > Inicio /</a><a class = "a-pd" href="/product">Productos /</a> <a class = "a-pd" href="/products"><%= producto.category %>  /</a> <a class = "a-pd" href="#"><strong><%= producto.name %> </strong></a></div>
 
  <main>
     <!-- MAIN PAGINA DE PRODUCTOS DETALLADOS-->
@@ -22,29 +22,16 @@
 
             <section class="div-imagen-izquierda-pd">
 
-                 <img src="\images\plantas\interior\pothus - m12.jpg"alt="x">
-
-                        <h1>Philodendron Elegans M14
-                            Maceta Premium 18
-                            Alto Combo: 40/50cm / Ancho Combo: 20/30 cm
-                        </h1>
-
-                         <h1> CUIDADOS Y ESPECIFICACIONES</h1>
-                            <p> Cantidad de agua: Media<br>
-                                Cantidad de sol: Baja<br>
-                                Altura estimada de crecimiento: 80cm<br>
-                                Tierra: Sustrato Profesional de Calathea<br>
-                                Complemento recomendado: Fertilizante de Follaje Calathea<br>
-                                Las fotos publicadas son reales de productos nuestros pero las plantas son seres vivos que van cambiando constantemente, por lo que las mismas son ilustrativas! realiza la compra y te enviamos fotos del mismo producto en stock.
-                            </p>
+                <img src= "/images/productos/<%= producto.image %>">
+                 <p><%= producto.description %> </p>
             </section>
 
         <!--SECCION DERECHA DE LA PAGINA PRINCIPAL-->
 
     <section class="div-derecha-pd">
-        <h1>COMBO PHILODENDRON ELEGANS M14 EN PREMIUM 18</h1>
-        <p class="precio-Pd"> $1.472</p>
-        <a class = "a-pd" href="#"><strong> 18</strong> cuotas de <strong>$170.83</strong></a><br>
+        <h1><%= producto.name %> </h1>
+        <p class="precio-Pd"> $ <%= producto.price %> </p>
+        <!-- <a class = "a-pd" href="#"><strong> 18</strong> cuotas de <strong>$170.83</strong></a><br> -->
         <a class = "a-pd" href="#">ver medios de pago</a>
         <h4>color:</h4>
         <p class="cubo"></p>
@@ -57,6 +44,7 @@
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="3">4</option>
             <option value="5">5</option>
             <option value="6">6</option>
             <option value="7">7</option>

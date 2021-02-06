@@ -12,40 +12,57 @@
 <main class="main-contactos">
 
     <section class="section-derecha-contacto">
-        <form class="formulario-contacto" action="">
+        <form class="formulario-contacto" action= "/productos" method="POST">
+            <div class="div-formulario-contacto">
+                <label for="identificador"><strong>IDENTIFICADOR</strong></label>
+                <input type="number" name="identificador" id="identificador" placeholder ="1" class="formulario-input-contacto">
+            </div>
 
             <div class="div-formulario-contacto">
-                <label for="code"><strong>CODIGO</strong></label>
-                <input type="text" name="code" id="code" placeholder ="CODIGO MP1234" class="formulario-input-contacto">
+                <label for="name"><strong>NOMBRE</strong></label>
+                <input type="text" name="name" id="name" placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto">
             </div>
-          <div class="div-formulario-contacto">
-              <label for="name"><strong>NOMBRE</strong></label>
-              <input type="text" name="name" id="name" placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto">
+            <div class="div-formulario-contacto">
+                <label for="description"><strong>DESCRIPCION</strong></label>
+                <input type="text" name="description" id="description" placeholder ="DESCRIPCION" class="formulario-input-contacto">
+            </div>
+            <div class="div-formulario-contacto">
+                <label for="image"><strong>IMAGEN DEL PRODUCTO</strong></label>
+                <input type="file" name="image" id="image" placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto">
+            </div>
+          
+            <div class="div-formulario-contacto">
+              <label for="category"><strong>CATEGORIAS</strong></label>
+                  <select class="formulario-input-contacto" name="category" id="category">
+                      <option value="interior">PLANTA INTERIOR</option>
+                      <option value="exterior">PLANTA EXTERIOR</option>
+                      <option value="macetas">MACETAS</option>
+                      <option value="accesorios">ACCESORIOS</option>
+                      <option value="fertilizantes">FERTILIZANTES</option>
+                      <option value="deco">DECO</option>
+                  </select>
+            </div>
+  
+            <div class="div-formulario-contacto">
+              <label for="price"><strong>PRECIO</strong></label>
+              <input type="number" name="price" id="price" placeholder ="$ 1" class="formulario-input-contacto">
           </div>
+  
           <div class="div-formulario-contacto">
-              <label for="description"><strong>DESCRIPCION</strong></label>
-              <input type="text" name="description" id="description" placeholder ="DESCRIPCION" class="formulario-input-contacto">
+              <label for="promo"><strong>PROMOCIÓN</strong></label>
+                  <select class="formulario-input-contacto" name="promo" id="promo">
+                      <option value="false">SIN PROMOCIÓN</option>
+                      <option value="2">10 % OFF</option>
+                      <option value="3">20 % OFF</option>
+                      <option value="4">2x1</option>
+                  </select>
+            </div>
+  
+  
+            <div class="div-formulario-contacto">
+              <label for="stock"><strong>STOCK</strong></label>
+              <input type="number" name="stock" id="stock" placeholder ="5" class="formulario-input-contacto">
           </div>
-          <div class="div-formulario-contacto">
-              <label for="image"><strong>IMAGEN DEL PRODUCTO</strong></label>
-              <input type="file" name="image" id="image" placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto">
-          </div>
-        
-          <div class="div-formulario-contacto">
-            <label for="category"><strong>CATEGORIAS</strong></label>
-                <select class="formulario-input-contacto" name="category" id="category">
-                    <option value="1">PLANTA INTERIOR</option>
-                    <option value="2">PLANTA EXTERIOR</option>
-                    <option value="3">MACETAS</option>
-                    <option value="4">ACCESORIOS</option>
-                    <option value="5">FERTILIZANTES</option>
-                </select>
-          </div>
-          <div class="div-formulario-contacto">
-            <label for="price"><strong>PRECIO</strong></label>
-            <input type="text" name="price" id="price" placeholder ="$123.345" class="formulario-input-contacto">
-        </div>
-
           <button type="submit" class="formulario-boton-fr">Modificar producto</button>
 
   </section>

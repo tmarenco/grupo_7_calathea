@@ -1,30 +1,43 @@
 const path = require ("path");
 const fs = require ("fs");
+const jsonTable = require ("../data/jsonTable");
+const { userInfo } = require("os");
 
-//Esto vamos a tener que transformarlo en una función más adelante, en principio lo hago así//
-let productos = fs.readFileSync(path.join (__dirname, "../data/products.json"), "utf-8");
-productos = JSON.parse(productos);
 
 module.exports = {
 
 //Creé otro archivo ejs que se llama "product2.ejs" solo para hacer pruebas y no sobreescribir el "products.ejs". La ruta products está justamente asociada al products2.ejs//
-    Products: (req, res) => {
+    products: (req, res) => {
+        let productos = jsonTable.all();
         res.render (path.join (__dirname, "../views/products/products2.ejs"), {productos})
     },
-
-
-    Detail: (req, res) => {
-        res.render (path.join (__dirname, "../views/products/productDetail.ejs"))
-},
-
-    Cart :(req, res) => {
-         res.render (path.join(__dirname, "../views/products/productCart.ejs"));
-},
-
-    Edit :(req, res) => {
-        res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
-},
-    create :(req, res) => {
+//A "create" haría falta crearle un botón en la página de productos para crearlo. No lo hago todavía porque eso es algo que solo un administrador debería ver y no sabemos cómo hacer para que algo de ejs solo se vea por algún tipo de usuario pero no por el otro"//
+    create: (req, res) => {
         res.render (path.join(__dirname, "../views/products/productCreate.ejs"));
-}
+    },
+
+    show: (req, res) => {
+        let producto = jsonTable.findById(req.params.id);
+
+        if (producto){
+            res.render (path.join (__dirname, "../views/products/productDetail.ejs"), { producto });   
+        } else {
+            res.send ("No encontré el producto")
+        }
+    },
+
+    store: (req, res) => {
+        let newProduct = req.body;
+        newProduct.image = req.file.filename
+        let productId= jsonTable.create(newProduct)
+        res.redirect ("/productos/" + productId);
+    },
+
+    edit :(req, res) => {
+        res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
+    },
+
+    cart:(req, res) => {
+        res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
+        }
 }
