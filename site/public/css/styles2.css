@@ -19,6 +19,7 @@
     margin: 0.2rem;
     justify-content: space-around;
     align-items: center;
+    z-index: 2;
 }
 
 
@@ -31,7 +32,8 @@
 .logo{
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    z-index: 1;
 }
 
 .mini-menu {
@@ -999,7 +1001,6 @@ color: pink
    }
 
       
-
 .lista-conteiner-productos{
     display: flex;
     justify-content: flex-end;

@@ -11,7 +11,7 @@ module.exports = {
         let productos = jsonTable.all();
         res.render (path.join (__dirname, "../views/products/products2.ejs"), {productos})
     },
-//A "create" haría falta crearle un botón en la página de productos para crearlo. No lo hago todavía porque eso es algo que solo un administrador debería ver y no sabemos cómo hacer para que algo de ejs solo se vea por algún tipo de usuario pero no por el otro"//
+
     create: (req, res) => {
         res.render (path.join(__dirname, "../views/products/productCreate.ejs"));
     },
@@ -37,7 +37,7 @@ module.exports = {
         res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
     },
 
-    cart:(req, res) => {
-        res.render (path.join(__dirname, "../views/products/productEdit.ejs"));
-        }
+    cart: (req, res) => {
+        res.render (path.join(__dirname, "../views/products/productCart.ejs"));
+    }
 }

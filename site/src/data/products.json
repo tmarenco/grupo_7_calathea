@@ -608,5 +608,15 @@
   "price": 752,
   "promo": false,
   "stock": 5
+ },
+ {
+  "name": "Lionel Andres Messi",
+  "description": "El mejor jugador de la historia",
+  "category": "deco",
+  "price": "10",
+  "promo": "2",
+  "stock": "1",
+  "image": "producto1612826806455.jpeg",
+  "identificador": 62
  }
 ]
