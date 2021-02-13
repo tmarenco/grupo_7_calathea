@@ -33,8 +33,27 @@ const jsonTable = {
     findById (id){
         let rows = this.readFile();
         return rows.find (producto => producto.identificador == id);
+    },
+    update (row) {
+        let rows = this.readFile ();
+        let updatedRows = rows.map (oneRow => {
+            if (oneRow.identificador == row.identificador) {
+                return row;
+            } 
+            return oneRow;
+        });
+
+        this.writeFile (updatedRows);
+        return row.identificador;
+    },
+    destroy (id) {
+        let rows = this.readFile ();
+        let updatedRows = rows.filter (oneRow => oneRow.identificador != id);
+
+        this.writeFile (updatedRows)
     }
 
 }
 
 module.exports = jsonTable
+

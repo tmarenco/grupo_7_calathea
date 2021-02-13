@@ -2,7 +2,7 @@
  {
   "identificador": 1,
   "name": "APHELANDRA - M 14",
-  "description": "Aphelandra. Maceta N 14 / Maceta plástico Soplado / 25cm. Interior / Exterior",
+  "description": "Aphelandra. Maceta N 14 / Maceta plástico Soplado / 25 cm. Interior / Exterior",
   "image": "interior/aphelandra.png",
   "category": "interior",
   "price": 649,
@@ -608,15 +608,5 @@
   "price": 752,
   "promo": false,
   "stock": 5
- },
- {
-  "name": "Lionel Andres Messi",
-  "description": "El mejor jugador de la historia",
-  "category": "deco",
-  "price": "10",
-  "promo": "2",
-  "stock": "1",
-  "image": "producto1612826806455.jpeg",
-  "identificador": 62
  }
 ]

@@ -12,59 +12,59 @@
 <main class="main-contactos">
 
     <section class="section-derecha-contacto">
-        <form class="formulario-contacto" action= "/productos" method="POST">
+        <form class="formulario-contacto" action= "/productos/<%= producto.identificador %>?_method=PUT" method="POST" enctype="multipart/form-data">
             <div class="div-formulario-contacto">
                 <label for="identificador"><strong>IDENTIFICADOR</strong></label>
-                <input type="number" name="identificador" id="identificador" placeholder ="1" class="formulario-input-contacto">
+                <input type="number" name="identificador" id="identificador" value="<%= producto.identificador %>" class="formulario-input-contacto">
             </div>
 
             <div class="div-formulario-contacto">
                 <label for="name"><strong>NOMBRE</strong></label>
-                <input type="text" name="name" id="name" placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto">
+                <input type="text" name="name" id="name" value="<%= producto.name %>" class="formulario-input-contacto">
             </div>
             <div class="div-formulario-contacto">
                 <label for="description"><strong>DESCRIPCION</strong></label>
-                <input type="text" name="description" id="description" placeholder ="DESCRIPCION" class="formulario-input-contacto">
+                <input type="text" name="description" id="description" value="<%= producto.description %>" class="formulario-input-contacto">
             </div>
             <div class="div-formulario-contacto">
                 <label for="image"><strong>IMAGEN DEL PRODUCTO</strong></label>
-                <input type="file" name="image" id="image" placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto">
+                <input type="file" name="image" id="image" class="formulario-input-contacto" value = "<%=producto.image%>">
             </div>
           
             <div class="div-formulario-contacto">
               <label for="category"><strong>CATEGORIAS</strong></label>
-                  <select class="formulario-input-contacto" name="category" id="category">
-                      <option value="interior">PLANTA INTERIOR</option>
-                      <option value="exterior">PLANTA EXTERIOR</option>
-                      <option value="macetas">MACETAS</option>
-                      <option value="accesorios">ACCESORIOS</option>
-                      <option value="fertilizantes">FERTILIZANTES</option>
-                      <option value="deco">DECO</option>
-                  </select>
+                <select class="formulario-input-contacto" name="category" id="category">
+                    <option value="interior" <%= producto.category == "interior" ? "selected" : ""; %>>PLANTA INTERIOR</option>
+                    <option value="exterior" <%= producto.category == "exterior" ? "selected" : ""; %>>PLANTA EXTERIOR</option>
+                    <option value="macetas" <%= producto.category == "macetas" ? "selected" : ""; %>>MACETAS</option>
+                    <option value="accesorios" <%= producto.category == "accesorios" ? "selected" : ""; %>>ACCESORIOS</option>
+                    <option value="fertilizantes" <%= producto.category == "fertilizantes" ? "selected" : ""; %>>FERTILIZANTES</option>
+                    <option value="deco" <%= producto.category == "deco" ? "selected" : ""; %>>DECO</option>
+                </select>
             </div>
   
             <div class="div-formulario-contacto">
               <label for="price"><strong>PRECIO</strong></label>
-              <input type="number" name="price" id="price" placeholder ="$ 1" class="formulario-input-contacto">
+              <input type="number" name="price" id="price" value="<%= producto.price %>" class="formulario-input-contacto">
           </div>
   
           <div class="div-formulario-contacto">
               <label for="promo"><strong>PROMOCIÓN</strong></label>
                   <select class="formulario-input-contacto" name="promo" id="promo">
-                      <option value="false">SIN PROMOCIÓN</option>
-                      <option value="2">10 % OFF</option>
-                      <option value="3">20 % OFF</option>
-                      <option value="4">2x1</option>
+                      <option value="false" <%= producto.promo == "false" ? "selected" : ""; %>>SIN PROMOCIÓN</option>
+                      <option value="2" <%= producto.promo == "2" ? "selected" : ""; %>>10 % OFF</option>
+                      <option value="3" <%= producto.promo == "3" ? "selected" : ""; %>>20 % OFF</option>
+                      <option value="4" <%= producto.promo == "4" ? "selected" : ""; %>>2x1</option>
                   </select>
             </div>
   
   
             <div class="div-formulario-contacto">
               <label for="stock"><strong>STOCK</strong></label>
-              <input type="number" name="stock" id="stock" placeholder ="5" class="formulario-input-contacto">
+              <input type="number" name="stock" id="stock" value="<%= producto.stock %>" class="formulario-input-contacto">
           </div>
           <button type="submit" class="formulario-boton-fr">Modificar producto</button>
-
+        </form>
   </section>
 </main>  
 </body>
