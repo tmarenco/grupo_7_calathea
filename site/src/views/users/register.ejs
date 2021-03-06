@@ -8,39 +8,52 @@
 
     <!-- INICIO MAIN  -->
     <div class="contenedor-general">
-    <!--MUENU HORIZONTAL-->
-
+    <!--MENU HORIZONTAL-->
     <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/">Mi Cuenta /</a> <a href="#"><strong>Registro</strong></a></div>
 
-    
     <!--INICIO DE FORMULARIO-->
-
     <main class= "Main-fr">
         <section class= "section-fr">
 
-            <form action = "/login" method ="POST" class="form-fr">
+            <form action ="/usuario/registrarse" method ="POST" class="form-fr">
 
-                <p class= "formulario-titulo-fr"><strong>Bienvenido aqui podras unirte a la comunidad</strong></p>
+                <p class= "formulario-titulo-fr"><strong> Unite a nuestra comunidad!</strong></p>
 
             <div class="fomulario-div-fr">
                 <label for="name"><strong>NOMBRE</strong></label>
-                <input type="text" name="name" id="name" placeholder ="  EJ: Lionel Messi" class="formulario-input-fr">
+                <input type="text" name="name" id="name" class="formulario-input-fr"
+                value="<%= locals.old && old.name ? old.name : '' %>">
+                <% if(locals.errors && errors.name){ %>
+                    <%= errors.name.msg %>
+                <% } %> 
             </div> 
             <div class="fomulario-div-fr">  
                 <label for="email"><strong>EMAIL</strong></label>
-                <input type="email" name="email" id="email" placeholder ="  Email@email.com" class="formulario-input-fr">
+                <input type="email" name="email" id="email" class="formulario-input-fr" value="<%= locals.old && old.email ? old.email : '' %>">
+                <% if(locals.errors && errors.email){ %>
+                    <%= errors.email.msg %>
+                <% } %>
             </div> 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
                 <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" class="formulario-input-fr">
+                <% if(locals.errors && errors.tel){ %>
+                    <%= errors.tel.msg %>
+                <% } %>
             </div> 
             <div class="fomulario-div-fr"> 
                 <label for="password"><strong>CONTRASEÑA</strong></label>
                 <input type="password" name="password" id="password" class="formulario-input-fr">
+                <% if(locals.errors && errors.password){ %>
+                    <%= errors.password.msg %>
+                <% } %>
             </div>  
             <div class="fomulario-div-fr">  
-                <label for="password"><strong>CONFIRMAR CONTRASEÑA</strong></label>
-                <input type="password" name="password" id="password" class="formulario-input-fr">
+                <label for="confirm"><strong>CONFIRMAR CONTRASEÑA</strong></label>
+                <input type="password" name="confirm" id="confirm" class="formulario-input-fr">
+                <% if(locals.errors && errors.confirm){ %>
+                    <%= errors.confirm.msg %>
+                <% } %>
             </div> 
 
                 <button type="submit" class="formulario-boton-fr">CREAR CUENTA</button>

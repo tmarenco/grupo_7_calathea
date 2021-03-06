@@ -55,5 +55,5 @@ const jsonTable = {
 
 }
 
-module.exports = jsonTable
+module.exports = jsonTable;
 

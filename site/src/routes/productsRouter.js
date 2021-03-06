@@ -4,7 +4,7 @@ const router = express.Router();
 const controller = require ("../controllers/productsController");
 const path = require ("path")
 
-const multer = require ("multer");
+const multer = require("multer");
 const storage = multer.diskStorage ({
     destination: function (req, file, cb){
         cb (null, path.join(__dirname, "../../public/images/productos/"))

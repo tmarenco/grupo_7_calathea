@@ -7,7 +7,6 @@ const { json } = require("express");
 
 module.exports = {
 
-//Creé otro archivo ejs que se llama "product2.ejs" solo para hacer pruebas y no sobreescribir el "products.ejs". La ruta products está justamente asociada al products2.ejs//
     products: (req, res) => {
         let productos = jsonTable.all();
         res.render (path.join (__dirname, "../views/products/products.ejs"), {productos})
