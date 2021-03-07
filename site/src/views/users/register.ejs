@@ -15,44 +15,71 @@
     <main class= "Main-fr">
         <section class= "section-fr">
 
-            <form action ="/usuario/registrarse" method ="POST" class="form-fr">
+            <form action ="/usuario/registrarse" method ="POST" class="form-fr" enctype="multipart/form-data">
 
                 <p class= "formulario-titulo-fr"><strong> Unite a nuestra comunidad!</strong></p>
 
             <div class="fomulario-div-fr">
                 <label for="name"><strong>NOMBRE</strong></label>
-                <input type="text" name="name" id="name" class="formulario-input-fr"
-                value="<%= locals.old && old.name ? old.name : '' %>">
+                <input type="text" name="name" id="name" 
+                    class="formulario-input-fr <%= locals.errors && errors.name ? "error-border" : null %>" 
+                    value="<%= locals.old && old.name ? old.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
-                    <%= errors.name.msg %>
-                <% } %> 
+                    <div class="fr-error">
+                        <br><%= errors.name.msg %> 
+                    </div>
+                <% } %>
             </div> 
             <div class="fomulario-div-fr">  
                 <label for="email"><strong>EMAIL</strong></label>
-                <input type="email" name="email" id="email" class="formulario-input-fr" value="<%= locals.old && old.email ? old.email : '' %>">
+                <input type="email" name="email" id="email" placeholder= "email@valido.com" 
+                class="formulario-input-fr <%= locals.errors && errors.email ? "error-border" : null %>" 
+                value="<%= locals.old && old.email ? old.email : '' %>">
                 <% if(locals.errors && errors.email){ %>
+                    <div class="fr-error">
                     <%= errors.email.msg %>
                 <% } %>
             </div> 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
-                <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" class="formulario-input-fr">
+                <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" 
+                class="formulario-input-fr <<%= locals.errors && errors.tel ? "error-border" : null %>"
+                value='<%= locals.old && old.tel ? old.tel : '' %>'>
+                
                 <% if(locals.errors && errors.tel){ %>
-                    <%= errors.tel.msg %>
+                    <div class="fr-error">
+                    <%= errors.tel.msg %> </div>
                 <% } %>
             </div> 
             <div class="fomulario-div-fr"> 
                 <label for="password"><strong>CONTRASEÑA</strong></label>
-                <input type="password" name="password" id="password" class="formulario-input-fr">
+                <input type="password" name="password" id="password" 
+                class="formulario-input-fr <%= locals.errors && errors.password ? "error-border" : null %>">
                 <% if(locals.errors && errors.password){ %>
-                    <%= errors.password.msg %>
+                    <div class="fr-error">
+                        <%= errors.password.msg %>
+                    </div>
                 <% } %>
             </div>  
             <div class="fomulario-div-fr">  
                 <label for="confirm"><strong>CONFIRMAR CONTRASEÑA</strong></label>
-                <input type="password" name="confirm" id="confirm" class="formulario-input-fr">
+                <input type="password" name="confirm" id="confirm" 
+                class="formulario-input-fr <%= locals.errors && errors.confirm ? "error-border" : null %>">
                 <% if(locals.errors && errors.confirm){ %>
-                    <%= errors.confirm.msg %>
+                    <div class="fr-error">
+                        <%= errors.confirm.msg %>
+                    </div>
+                <% } %>
+            </div> 
+            <div class="fomulario-div-fr">
+                <label for="profileImage"><strong>IMAGEN DE PERFIL</strong></label>
+                <input type="file" name="profileImage" id="profileImage" 
+                class="formulario-input-fr <%= locals.errors && errors.profileImage ? "error-border" : null %>"
+                value="<%= locals.old && old.profileImage ? old.profileImage : '' %>">
+                <% if(locals.errors && errors.profileImage){ %>
+                    <div class="fr-error">
+                        <%= errors.profileImage.msg %> 
+                    </div>
                 <% } %>
             </div> 
 
