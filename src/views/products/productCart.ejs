@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+
+<body>
+       <!-- PARTIAL DEL HEADER-->
+       <%-include ("../partials/header.ejs") %>
+
+       
+<div class="contenedor-general">
+    <main class = "main-carrito">
+        <h1 class= "titulo-carrito">Carrito de compras</h1>
+        <section class= "cuadro-carrito">
+            <div id= "imagen-nombre" class= "item-carrito">
+                <img id= "imagen-producto" src= "images/producto.jpeg">
+                <h4 id= "imagen-nombre" class= "item-carrito">DÚO NACARADA CHICA + PHILO PERUVIANO</h4>
+            </div>
+            <div id= "cantidad-carrito" class= "item-carrito">
+                <h3>CANTIDAD</h3>
+                <span><a href= "">-</a></span>
+                <span>1</span>
+                <span><a href= "">+</a></span>
+            </div>
+            <div id= "precio-carrito" class= "item-carrito">
+                <h3>PRECIO</h3>
+                <h3 class= "importe">$ 1</h3>
+            </div>
+            <div id= "precio-carrito" class= "item-carrito">
+                <h3>SUBTOTAL</h3>
+                <h3 class= "importe">$ 1</h3>
+            </div>
+            <div id= "basura" class= "item-carrito">
+                <i class="fas fa-trash"></i>
+            </div>
+        </section>
+        <section class= "medios-de-envio">
+            <h2 class= titulo-carrito>Medios de envío</h2>
+            <div class= "texto-carrito"><input type= "radio" name= "medio-de-envio" value= "Retiro en el local" checked> Retiro en el local - GRATIS</div>
+            <div class= "texto-carrito"><input type= "radio" name= "medio-de-envio" value= "Envío a domicilio"> Envío a domicilio</div>
+            <h2 class= titulo-carrito>Calcular envío</h2>
+            <input class= "formulario" type= "number" name="codigopostal" placeholder=" Codigo Postal">
+            <button id= "boton" type= "submit">Calcular costo</button>
+            <div class= "link-codigopostal"><a href="">No sé mi código</a></div>
+            <h3 id= "subtotal-total" class= "titulo-carrito">Subtotal: $ 1</h3>
+            <h3 id= "subtotal-total" class= "titulo-carrito">Total: $ 1</h3>
+        </section>
+    </main>
+</div>
+
+           <!-- PARTIAL DEL FOOTER-->
+           <%-include ("../partials/footer.ejs") %>
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "calathea",
+  "version": "1.0.0",
+  "description": "Proyecto integrador",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "startdev": "nodemon src/app.js -e ejs,js,html,json"
+  },
+  "author": "Tomás Marenco, Irina Leicach, Gastón Gatti",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.6",
+    "validator": "^13.5.2"
+  }
+}

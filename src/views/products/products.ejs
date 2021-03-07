@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- PARTIAL DEL HEAD-->
+
+    <%- include("../partials/head.ejs")%>
+
+<body>
+
+          <!-- PARTIAL DEL HEADER-->
+<%-include ("../partials/header.ejs") %> 
+        
+    <!--MAIN DEL CUERPO DE LOS PRODUCTOS-->
+
+ 
+<main>
+<div class="contenedor-general">
+    <!-- BARRA DE BUSQUEDA-->
+        <div class="div-search-productos">
+            <div class="barra-nav-productos">
+               <i class="lupa-nav-productos"></i>
+                <input class= "input-nav-productos" type="text" name="search" id= "search" placeholder="Buscar...">
+            </div>
+        </div>
+    
+        <!--MENU HORIZONTAL-->
+    <section class="Contenedor-menu-lista">
+        <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/productos"><strong>Productos</strong></a></div>
+    
+
+            <!--MENU DESPLEGABLE-->
+
+        <div class="lista-conteiner-productos">
+                <label>Ordena por..</label>
+                    <select name="list-options">
+                        <option value = "Precio Mayor a Menor">Precio de Mayor a Menor</option>
+                        <option value = "Precio Menor a Mayor">Precio Menor a Mayor</option>
+                        <option value = "A-Z">A-Z</option>
+                        <option value = "Z-A">Z-A</option>
+                        <option value = "Mas Vendido" selected >Mas Vendido</option> require
+                    </select>
+        </div>
+    </section>
+
+
+    <!--LISTADO DE PRODUCTOS-->
+    <section class="products">
+        <% productos.forEach (producto => { %>
+            <article class="products-container">
+                <div class="description-product">
+                    <a href ="/productos/<%= producto.identificador %> "><img src= "images/productos/<%= producto.image %>" alt="Plantas de Interior" enctype= ></a>
+                    <h4 class="name"><%= producto.name %></h4>
+                    <p class="price">$<%= producto.price %></p>
+                </div>
+            </article>
+        <% })%> 
+    </section>
+
+
+    </div>  
+    </main>
+
+           <!-- PARTIAL DEL FOOTER-->
+<%-include ("../partials/footer.ejs") %>
+    
+</body>
+</html>
