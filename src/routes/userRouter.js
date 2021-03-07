@@ -20,17 +20,16 @@ const registerValidations = [
    body('confirm').notEmpty().withMessage("Debes confirmar la contraseña"),
    body('profileImage').custom((value, {req }) => {
        let file = req.file;
-       let extensions = ['.jpg', '.png', '.gif']
-       
-       
+       let extensions = ['.jpg', '.png', '.gif'];
+       let fileExtesion = path.extname(file.originalname)
+
        if(!file){
            throw new Error ('Debes cargar una imagen')
        } else{
-        let fileExtesion = path.extname(file.originalname)
-        if(!extensions.includes("fileExtension")){
-            throw new Error ("La extensión del archivo debe ser .png, .jpg o .gif")
-           }
-       }
+           if(!extensions.includes(fileExtesion)){
+                throw new Error ("La extensión del archivo debe ser .png, .jpg o .gif")
+            }
+        }
         return true
        }
    )
@@ -44,20 +43,6 @@ router.get ("/registrarse", controller.register); //Formulario de Registro
 router.post("/registrarse", multer.single('profileImage'), registerValidations, controller.processRegister); //Formulario de Registro - procesar
 
 router.get ("/perfil", controller.perfil);
-
-
-
-
-
-/*router.get ("/", controller.products); //LISTO
-router.get ("/crear", controller.create); // LISTO
-router.get ("/:id(\\d+)/", controller.show); // LISTO
-router.post ("/", upload.single("image"), controller.store); // LISTO
-router.get ("/:id/editar", controller.edit); // LISTO
-router.put ("/:id", upload.single ("image"), controller.update); // FALTA QUE APAREZCA LA IMAGEN QUE YA TIENE 
-router.delete ("/:id", controller.delete); // LISTO
-*/
-
 
 
 module.exports = router;
