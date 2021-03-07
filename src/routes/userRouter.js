@@ -4,7 +4,6 @@ const router = express.Router();
 const path = require("path");
 
 const controller = require ("../controllers/userController");
-
 //Middlewares
 const middlewareRegister = require("../middlewares/users/processRegister");
 const multer = require("../middlewares/users/multerMiddleware");
@@ -19,14 +18,14 @@ const registerValidations = [
    body('password').notEmpty().withMessage("Debes ingresar una contraseña"),
    body('confirm').notEmpty().withMessage("Debes confirmar la contraseña"),
    body('profileImage').custom((value, {req }) => {
-       let file = req.file;
+       let newfile = req.file;
        let extensions = ['.jpg', '.png', '.gif'];
-       let fileExtesion = path.extname(file.originalname)
-
-       if(!file){
+       
+       if(!newfile){
            throw new Error ('Debes cargar una imagen')
        } else{
-           if(!extensions.includes(fileExtesion)){
+            let fileExtesion = path.extname(newfile.originalname);
+            if(!extensions.includes(fileExtesion)){
                 throw new Error ("La extensión del archivo debe ser .png, .jpg o .gif")
             }
         }
