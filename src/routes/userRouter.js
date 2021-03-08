@@ -11,6 +11,7 @@ const multer = require("../middlewares/users/multerMiddleware");
 
     //Validaciones
 const {body} = require("express-validator");
+const userController = require("../controllers/userController");
 
 const registerValidations = [
    body('name').notEmpty().withMessage("Debes completar tu nombre"),
@@ -27,7 +28,7 @@ const registerValidations = [
            throw new Error ('Debes cargar una imagen')
        } else{
         let fileExtesion = path.extname(file.originalname)
-        if(!extensions.includes("fileExtension")){
+        if(!extensions.includes(fileExtesion)){
             throw new Error ("La extensión del archivo debe ser .png, .jpg o .gif")
            }
        }
@@ -37,11 +38,11 @@ const registerValidations = [
 ];
 
 //Rutas
-router.get ("/iniciar-sesion", controller.login); //Formulario de Login
-router.post('iniciar-sesion') //Formulario de Login - procesar 
+router.get ("/iniciar-sesion", userController.login); //Formulario de Login
+router.post('/iniciar-sesion',userController.loginProcces) //Formulario de Login - procesar 
 
-router.get ("/registrarse", controller.register); //Formulario de Registro 
-router.post("/registrarse", multer.single('profileImage'), registerValidations, controller.processRegister); //Formulario de Registro - procesar
+router.get ("/registrarse", userController.register); //Formulario de Registro 
+router.post("/registrarse", multer.single('profileImage'), registerValidations, userController.processRegister); //Formulario de Registro - procesar
 
 router.get ("/perfil", controller.perfil);
 

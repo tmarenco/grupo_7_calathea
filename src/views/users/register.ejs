@@ -23,7 +23,7 @@
                 <label for="name"><strong>NOMBRE</strong></label>
                 <input type="text" name="name" id="name" 
                     class="formulario-input-fr <%= locals.errors && errors.name ? "error-border" : null %>" 
-                    value="<%= locals.old && old.name ? old.name : '' %>">
+                    value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
                     <div class="fr-error">
                         <br><%= errors.name.msg %> 
@@ -34,7 +34,7 @@
                 <label for="email"><strong>EMAIL</strong></label>
                 <input type="email" name="email" id="email" placeholder= "email@valido.com" 
                 class="formulario-input-fr <%= locals.errors && errors.email ? "error-border" : null %>" 
-                value="<%= locals.old && old.email ? old.email : '' %>">
+                value="<%= locals.oldData && oldData.email ? oldData.email : '' %>">
                 <% if(locals.errors && errors.email){ %>
                     <div class="fr-error">
                     <%= errors.email.msg %>
@@ -43,8 +43,8 @@
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
                 <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" 
-                class="formulario-input-fr <<%= locals.errors && errors.tel ? "error-border" : null %>"
-                value='<%= locals.old && old.tel ? old.tel : '' %>'>
+                class="formulario-input-fr"<%= locals.errors && errors.tel ? "error-border" : null %>
+                value='<%= locals.oldData && oldData.tel ? oldData.tel : '' %>'>
                 
                 <% if(locals.errors && errors.tel){ %>
                     <div class="fr-error">
@@ -75,7 +75,7 @@
                 <label for="profileImage"><strong>IMAGEN DE PERFIL</strong></label>
                 <input type="file" name="profileImage" id="profileImage" 
                 class="formulario-input-fr <%= locals.errors && errors.profileImage ? "error-border" : null %>"
-                value="<%= locals.old && old.profileImage ? old.profileImage : '' %>">
+                value="<%= locals.oldData && oldData.profileImage ? oldData.profileImage : '' %>">
                 <% if(locals.errors && errors.profileImage){ %>
                     <div class="fr-error">
                         <%= errors.profileImage.msg %> 
