@@ -14,30 +14,31 @@
         <main class= "register-main">
             <section clas= "login-form">
     
-                <form action = "/usuario/iniciar-sesion" method ="POST" class="formulario-login">
+                <form action ="/usuario/iniciar-sesion" method ="POST" class="formulario-login">
     
                     <p class= "title"><strong>Iniciar Sesión</strong></p>
                     
                     <div class="formulario-login-div">
                         <label for="email"><strong>EMAIL</strong></label>
-                        <input type="email" name="email" id="email" placeholder="email@email.com" class="formulario-login-input">
+                        <input type="email" name="email" id="email" placeholder="  email@email.com" 
+                        class="formulario-login-input <%= locals.errors && errors.email ? "error-border" : null %>" 
+                        value="<%= locals.old && old.email ? old.email : '' %>"> 
                         <% if(locals.errors && errors.email){ %>
                             <div class="fr-error">
                             <%= errors.email.msg %>
                         <% } %>
-                    </div> 
+                    </div>
                     
                     <div class="formulario-login-div">
                         <label for="password"><strong>CONTRASEÑA</strong></label>
-                        <input type="password" name="password" id="password" placeholder="  Contraseña" class="formulario-login-input">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" 
+                        class="formulario-login-input <%= locals.errors && errors.password ? "error-border" : null %>">
+                        <% if(locals.errors && errors.password){ %>
+                            <div class="fr-error">
+                                <%= errors.password.msg %>
+                            </div>
+                        <% } %>
                     </div>
-                    <div class="formulario-login-chek">
-                        <label class="formulario-login-chek-label">
-                            <input type="checkbox" class="formulario-login-input" name="remember_user">Recordar mi usuario
-                        </label>
-                    </div>
-
-
     
                     <p><a href="" class="contraseña-olvidada">¿Olvidaste tu contraseña?</a></p>
                     

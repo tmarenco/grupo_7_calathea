@@ -12,6 +12,7 @@ const multer = require("../middlewares/users/multerMiddleware");
 const {body} = require("express-validator");
 const userController = require("../controllers/userController");
 
+    //Validaciones - Registro
 const registerValidations = [
    body('name').notEmpty().withMessage("Debes completar tu nombre"),
    body('email').notEmpty().withMessage("Debes ingresar un email").bail().isEmail().withMessage("Debes ingresar un email válido"),
@@ -34,15 +35,20 @@ const registerValidations = [
        }
    )
 ];
+    //Validaciones - Login
+const loginValidations = [
+    body('email').notEmpty().withMessage("Debes ingresar un email").bail().isEmail().withMessage("Debes ingresar un email válido"),
+    body('password').notEmpty().withMessage("Debes ingresar una contraseña")
+ ];
 
 //Rutas
 router.get ("/iniciar-sesion", userController.login); //Formulario de Login
-router.post('/iniciar-sesion',userController.loginProcces) //Formulario de Login - procesar 
+router.post('/iniciar-sesion', loginValidations, userController.loginProcces) //Formulario de Login - procesar 
 
 router.get ("/registrarse", userController.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, userController.processRegister); //Formulario de Registro - procesar
 
-router.get ("/perfil", controller.perfil);
+router.get("/perfil", controller.perfil);
 
 
 module.exports = router;

@@ -9,7 +9,7 @@ const Users = {
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
     },
 
-  // findAll funcion que trae a todos los usuarios ya convertido en un array, si parecido a getData pero a futuro se usara esta funcion
+    // findAll funcion que trae a todos los usuarios ya convertido en un array, si parecido a getData pero a futuro se usara esta funcion
     findAll: function(){
         return this.getData();
     },
@@ -49,7 +49,7 @@ const Users = {
         
 },
 
-// delete funcion que elimina un usuario. lo que hace la funcion es filtar el usuario a eliminar y retorna un nuevo array con todos los usuario menos el filtrado(eliminado)
+    // delete funcion que elimina un usuario. lo que hace la funcion es filtar el usuario a eliminar y retorna un nuevo array con todos los usuario menos el filtrado(eliminado)
     delete : function (identificador) {
         let allUsers = this.findAll();
         let finalUser = allUsers.filter(oneUser => oneUser.identificador !== identificador);

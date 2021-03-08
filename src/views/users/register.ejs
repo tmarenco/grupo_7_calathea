@@ -26,7 +26,7 @@
                     value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
                     <div class="fr-error">
-                        <br><%= errors.name.msg %> 
+                        <%= errors.name.msg %> 
                     </div>
                 <% } %>
             </div> 
@@ -42,8 +42,8 @@
             </div> 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
-                <input type="tel" name="tel" id="tel" placeholder="  011-123-4567" 
-                class="formulario-input-fr"<%= locals.errors && errors.tel ? "error-border" : null %>
+                <input type="tel" name="tel" id="tel" placeholder=" 011-123-4567" 
+                class='formulario-input-fr <%= locals.errors && errors.tel ? "error-border" : null %>'
                 value='<%= locals.oldData && oldData.tel ? oldData.tel : '' %>'>
                 
                 <% if(locals.errors && errors.tel){ %>
