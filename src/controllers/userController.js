@@ -3,7 +3,7 @@ const {validationResult} = require('express-validator')
 //se requiere bcryptjs para encriptar la contraseña
 const bcryptjs = require("bcryptjs")
 const usersTable = require("../models/Users")
-
+const guestMiddleware = require('../middlewares/users/guestMiddleware')
 
 module.exports = {
     users: (req, res) => {
@@ -62,11 +62,17 @@ module.exports = {
             {errors: resultValidation.mapped(), old: req.body})            
         } else {
         //si no hay errores verifico que el usuario exista            
-        let usuarioLogueado = usersTable.findByField("email", req.body.email);
+        let userToLogin = usersTable.findByField("email", req.body.email);
+       
+        //si el usuario está logueado
+        if(userToLogin){
+           //me fijo que las contraseñas coincidan
+           let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+           if(isOkThePassword){
+                delete userToLogin.password;
+                req.session.userlogged = userToLogin;
+                return res.render((path.join(__dirname, "../views/users/perfil.ejs")))
 
-        if(usuarioLogueado){
-           if(bcryptjs.compareSync(req.body.password, usuarioLogueado.password)){
-               return res.render((path.join(__dirname, "../views/users/login.ejs")))
            } else{
             return res.render((path.join(__dirname, "../views/users/login.ejs")),{errors: {
                 password:{
@@ -84,8 +90,10 @@ module.exports = {
         }}
     },
 
-    perfil :(req, res) => {
-         res.render (path.join(__dirname, "../views/users/perfil.ejs"),);
+    perfil:(req, res) => {
+        return res.render (path.join(__dirname, "../views/users/perfil.ejs"), {
+            user: req.session.userLogged
+        });
          
 }
 };
