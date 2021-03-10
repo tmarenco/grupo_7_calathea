@@ -7,6 +7,8 @@ const controller = require ("../controllers/userController");
 //Middlewares
 const middlewareRegister = require("../middlewares/users/processRegister");
 const multer = require("../middlewares/users/multerMiddleware");
+const guestMiddleware = require("../middlewares/users/guestMiddleware")
+const  authMiddleware = require ("../middlewares/users/authMiddelware")
 
     //Validaciones
 const {body} = require("express-validator");
@@ -42,13 +44,14 @@ const loginValidations = [
  ];
 
 //Rutas
-router.get ("/iniciar-sesion", userController.login); //Formulario de Login
+router.get ("/iniciar-sesion",guestMiddleware, userController.login); //Formulario de Login
 router.post('/iniciar-sesion', loginValidations, userController.loginProcces) //Formulario de Login - procesar 
 
-router.get ("/registrarse", userController.register); //Formulario de Registro 
+router.get ("/registrarse", guestMiddleware , userController.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, userController.processRegister); //Formulario de Registro - procesar
 
-router.get("/perfil", controller.perfil);
+router.get("/perfil", authMiddleware, controller.perfil);
+router.get("/logout", authMiddleware, controller.logout);
 
 
 module.exports = router;

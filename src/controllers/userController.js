@@ -93,8 +93,13 @@ module.exports = {
     perfil:(req, res) => {
         console.log(req.session)
         return res.render (path.join(__dirname, "../views/users/perfil.ejs"), {
-            user: req.session.userLogged
+            usuario: req.session.userlogged
         });
          
-}
+},
+
+    logout :(req,res) =>{
+        req.session.destroy();
+        return res.redirect("/");
+    }
 };

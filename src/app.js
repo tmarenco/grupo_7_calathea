@@ -5,11 +5,13 @@ const path = require ("path");
 const publicPath = path.resolve (__dirname, "../public");
 const methodOverride = require("method-override")
 const session = require("express-session");
+const cookies = require("cookie-parser")
 
 /* CONFIGURACION*/
 
 /*Carpeta pública*/
 app.use (express.static(publicPath));
+
 /* ejs*/
 app.set ("view engine", "ejs");
 app.set ("views ", "src/views");
@@ -20,6 +22,14 @@ app.use(session(
     resave: false, // no vuelve a guardar si no hay cambios
     saveUninitialized: false, //guarda sesiones aunque no haya datos
     }));
+
+//MIDDELWARE PARA USAR CUANDO ALGUIEN ESTA LOGUEADO O NO
+const userLoggedMiddelware = require("./middlewares/users/userLoggedmiddelware");
+app.use(userLoggedMiddelware)
+
+// COOKIES
+
+app.use(cookies())
     
 /*Poder enviar información de formularios*/
 app.use(express.urlencoded({extended:false}));
@@ -39,6 +49,7 @@ app.use ("/productos", productsRouter)
 
 /* RUTAS USER*/
 const userRouter= require ("./routes/userRouter");
+const cookieParser = require("cookie-parser");
 app.use ("/usuario", userRouter);
 
 
