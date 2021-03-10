@@ -71,7 +71,7 @@ module.exports = {
            if(isOkThePassword){
                 delete userToLogin.password;
                 req.session.userlogged = userToLogin;
-                return res.render((path.join(__dirname, "../views/users/perfil.ejs")))
+                return  res.redirect ("/usuario/perfil")
 
            } else{
             return res.render((path.join(__dirname, "../views/users/login.ejs")),{errors: {
@@ -91,6 +91,7 @@ module.exports = {
     },
 
     perfil:(req, res) => {
+        console.log(req.session)
         return res.render (path.join(__dirname, "../views/users/perfil.ejs"), {
             user: req.session.userLogged
         });

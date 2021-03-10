@@ -70,5 +70,14 @@
   "password": "$2a$10$IqBzU3RWs/wNKML5SLYo.uR8qtS.l3yNwJVefVWJdQg.q6Z74jj8O",
   "confirm": "pepe",
   "imagen": "usuario1615246966929.jpg"
+ },
+ {
+  "identificador": 9,
+  "name": "Carolina Garcia",
+  "email": "caro@gmail.com",
+  "tel": "01162757140",
+  "password": "$2a$10$lVQoqixd9EyqM.ZwEuiNau0DMZq6F2ss9xCq66K/ziG.y9EqKlqjC",
+  "confirm": "12",
+  "imagen": "usuario1615347595140.jpg"
  }
 ]
