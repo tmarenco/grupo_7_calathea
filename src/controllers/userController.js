@@ -3,7 +3,7 @@ const {validationResult} = require('express-validator')
 //se requiere bcryptjs para encriptar la contraseña
 const bcryptjs = require("bcryptjs")
 const usersTable = require("../models/Users")
-const guestMiddleware = require('../middlewares/users/guestMiddleware')
+
 
 module.exports = {
     users: (req, res) => {
@@ -43,8 +43,9 @@ module.exports = {
                  password : bcryptjs.hashSync(req.body.password, 10), // se encripta la contraseña
                  imagen : req.file.filename
              }
-             usersTable.create(userCreado)
-            return res.render (path.join(__dirname, "../views/users/perfil.ejs")) 
+             let userCreated = usersTable.create(userCreado);
+             //let userToLogin = usersTable.findByField("email", req.body.email)
+            return res.redirect("/usuario/iniciar-sesion")
           
     },
 
@@ -59,7 +60,7 @@ module.exports = {
        let resultValidation = validationResult(req);
         if(resultValidation.errors.length > 0){
             return res.render(path.join(__dirname, "../views/users/login.ejs"), 
-            {errors: resultValidation.mapped(), old: req.body})            
+            {errors: resultValidation.mapped(), oldData: req.body})            
         } else {
         //si no hay errores verifico que el usuario exista            
         let userToLogin = usersTable.findByField("email", req.body.email);
@@ -69,36 +70,35 @@ module.exports = {
            //me fijo que las contraseñas coincidan
            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
            if(isOkThePassword){
-                delete userToLogin.password;
-                req.session.userlogged = userToLogin;
-                return  res.redirect ("/usuario/perfil")
+                 delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return  res.redirect ("/usuario/perfil") //    si todo esta el login se redirije al home
 
-           } else{
-            return res.render((path.join(__dirname, "../views/users/login.ejs")),{errors: {
+           } // sino se muesta la pagina de login con los errores correspondientes
+
+            return res.render((path.join(__dirname, "../views/users/login.ejs")),{
+                errors: {
                 password:{
                     msg:"Contraseña incorrecta"
                 }
                 }})
            }
-       } else{
+       } 
         return res.render((path.join(__dirname, "../views/users/login.ejs")), 
         {errors: {
             email:{
                 msg:"Este email no se encuentra registrado"
             }
             }})
-        }}
     },
 
     perfil:(req, res) => {
         console.log(req.session)
-        return res.render (path.join(__dirname, "../views/users/perfil.ejs"), {
-            usuario: req.session.userlogged
-        });
+        return res.render( (path.join(__dirname, "../views/users/perfil.ejs")), {usuario : req.session.userLogged} )
          
 },
 
-    logout :(req,res) =>{
+    logout :(req,res) =>{ // cerrar sesion 
         req.session.destroy();
         return res.redirect("/");
     }

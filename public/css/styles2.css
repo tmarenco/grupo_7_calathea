@@ -7,7 +7,7 @@
     }
 
 .contenedor-general{
-    width: 90%;
+    width: 95%;
     margin: auto;
 }
 
@@ -69,6 +69,28 @@ border-radius: .75rem;
 padding:5px;
 
 }
+
+/* IMAGEN AVATAR HEADER */
+
+.header-right .imagen-avatar{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+
+/* ESTILOS PAGINA MI PERFIL */
+
+.section-izquierdo-contacto{
+   justify-content: right;
+    
+}
+
+.perfil-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+}
+
 
 
 .header-bottom .nav-bar{
@@ -294,7 +316,10 @@ main {
     justify-content: center; 
 }
 .producto-destacado {
+    background-image: url(/images/recomendados/anthorium-en-maceta.png);
+    background-size: cover;
     border: #754668 solid 1px;
+    border-radius: 10px;
     margin: 1rem 1rem;
     height: 8rem;
     width: 8rem;

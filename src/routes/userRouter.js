@@ -1,20 +1,21 @@
 const express = require("express");
 const router = express.Router();
-
 const path = require("path");
-
 const controller = require ("../controllers/userController");
 //Middlewares
-const middlewareRegister = require("../middlewares/users/processRegister");
 const multer = require("../middlewares/users/multerMiddleware");
 const guestMiddleware = require("../middlewares/users/guestMiddleware")
 const  authMiddleware = require ("../middlewares/users/authMiddelware")
 
-    //Validaciones
+
+
+//Validaciones
 const {body} = require("express-validator");
 const userController = require("../controllers/userController");
 
-    //Validaciones - Registro
+
+
+//Validaciones - Registro
 const registerValidations = [
    body('name').notEmpty().withMessage("Debes completar tu nombre"),
    body('email').notEmpty().withMessage("Debes ingresar un email").bail().isEmail().withMessage("Debes ingresar un email válido"),
@@ -37,21 +38,28 @@ const registerValidations = [
        }
    )
 ];
-    //Validaciones - Login
+
+
+//Validaciones - Login
 const loginValidations = [
     body('email').notEmpty().withMessage("Debes ingresar un email").bail().isEmail().withMessage("Debes ingresar un email válido"),
     body('password').notEmpty().withMessage("Debes ingresar una contraseña")
  ];
 
+
+
+
+
+ 
 //Rutas
-router.get ("/iniciar-sesion",guestMiddleware, userController.login); //Formulario de Login
+router.get ("/iniciar-sesion", guestMiddleware, userController.login); //Formulario de Login
 router.post('/iniciar-sesion', loginValidations, userController.loginProcces) //Formulario de Login - procesar 
 
-router.get ("/registrarse", guestMiddleware , userController.register); //Formulario de Registro 
+router.get ("/registrarse",guestMiddleware, userController.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, userController.processRegister); //Formulario de Registro - procesar
 
-router.get("/perfil", authMiddleware, controller.perfil);
-router.get("/logout", authMiddleware, controller.logout);
+router.get("/perfil", controller.perfil);
+router.get("/logout", controller.logout);
 
 
 module.exports = router;

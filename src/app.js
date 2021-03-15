@@ -1,4 +1,4 @@
-/* REQUERIMIENTO DE MODULOS*/
+/*---------------------------- REQUERIMIENTO DE MODULOS-------------------------------*/
 const express = require("express");
 const app = express();
 const path = require ("path");
@@ -7,7 +7,7 @@ const methodOverride = require("method-override")
 const session = require("express-session");
 const cookies = require("cookie-parser")
 
-/* CONFIGURACION*/
+/* -----------------------------CONFIGURACION APP.USE-------------------------------*/
 
 /*Carpeta pública*/
 app.use (express.static(publicPath));
@@ -23,6 +23,8 @@ app.use(session(
     saveUninitialized: false, //guarda sesiones aunque no haya datos
     }));
 
+  
+  
 //MIDDELWARE PARA USAR CUANDO ALGUIEN ESTA LOGUEADO O NO
 const userLoggedMiddelware = require("./middlewares/users/userLoggedmiddelware");
 app.use(userLoggedMiddelware)
@@ -38,6 +40,10 @@ app.use (express.json());
     
 /* put y delete*/
 app.use(methodOverride("_method"))
+
+
+
+//------------------RUTAS----------------------------//
 
 /* RUTAS HOME*/
 const mainRouter= require ("./routes/mainRouter");
@@ -58,7 +64,7 @@ app.use ((req,res,next) => {
     res.status(404).render ("not-found")
 })
 
-/* SERVIDOR*/
+/*------------------------------ SERVIDOR---------------------------*/
 app.listen (3000, () => {
     console.log ("-----------------------");
     console.log ("http://localhost:3000");

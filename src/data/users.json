@@ -1,83 +1,29 @@
 [
  {
-  "identificador": 1,
-  "nombre": "Tomás",
-  "apellido": "Marenco",
-  "email": "tmarencocastello@gmail.com",
-  "contraseña": "contraseña123",
-  "categoria": "administrador",
-  "imagen": "../../public/images/user-images/tmarenco.jpeg"
- },
- {
   "identificador": 2,
-  "nombre": "Gastón",
-  "apellido": "Gatti",
-  "email": "gastongatti@gmail.com",
-  "contraseña": "contraseña345",
-  "categoria": "administrador",
-  "imagen": "../../public/images/user-images/ggatti.jpeg"
+  "name": "Tomas ",
+  "email": "tomas@gmail.com",
+  "tel": "123456789",
+  "password": "$2a$10$bYGx5mcXkWRo534g/hsT7eLGVbxUcZL5njRcSD1.B892TWFvJSsoW",
+  "confirm": "",
+  "imagen": "usuario1615486058975.jpg"
  },
  {
   "identificador": 3,
-  "nombre": "Irina",
-  "apellido": "Leicach",
-  "email": "iru.leicach@gmail.com",
-  "contraseña": "contraseña234",
-  "categoria": "administrador",
-  "imagen": "../../public/images/user-images/ileicach.jpeg"
+  "name": "Iru",
+  "email": "iru@gmail.com",
+  "tel": "123456789",
+  "password": "$2a$10$ijWrzr1XEwBEm2Si8YDw9eMaqZi/1J4HuXCbOXVoiWVQR6tOgj1zC",
+  "confirm": "12",
+  "imagen": "usuario1615486224856.jpg"
  },
  {
   "identificador": 4,
-  "nombre": "Lionel Andrés",
-  "apellido": "Messi",
-  "email": "leomessi@gmail.com",
-  "contraseña": "lionel10",
-  "categoria": "cliente",
-  "imagen": "../../public/images/user-images/lmessi.jpeg"
- },
- {
-  "identificador": 5,
-  "nombre": "Marcelo",
-  "apellido": "Gallardo",
-  "email": "marcelitogallardo@gmail.com",
-  "contraseña": "gallardeta10",
-  "categoria": "cliente",
-  "imagen": "../../public/images/user-images/gallardo.jpg"
- },
- {
-  "identificador": 6,
-  "name": "Irina Leicach",
-  "email": "iru.leicach3@gmail.com",
-  "tel": "1151059007",
-  "password": "$2a$10$khXJD//O2u0sA359tV1a.O9YYGsor7M.ZkDRVYdRO642VRK5b1plq",
-  "confirm": "lala",
-  "imagen": "usuario1615245002937.png"
- },
- {
-  "identificador": 7,
-  "name": "Irina Leicach",
-  "email": "iru.leicach43@gmail.com",
-  "tel": "1151059007",
-  "password": "$2a$10$B5iS30Op50TUy5aR5F4K/Otdhn1HBDzDeN9CYq346o8478di5a2Sq",
-  "confirm": "jaja",
-  "imagen": "usuario1615246604077.jpg"
- },
- {
-  "identificador": 8,
-  "name": "GASTON",
-  "email": "GASTON@GASTON.COM",
-  "tel": "1111",
-  "password": "$2a$10$IqBzU3RWs/wNKML5SLYo.uR8qtS.l3yNwJVefVWJdQg.q6Z74jj8O",
-  "confirm": "pepe",
-  "imagen": "usuario1615246966929.jpg"
- },
- {
-  "identificador": 9,
-  "name": "Carolina Garcia",
-  "email": "caro@gmail.com",
-  "tel": "01162757140",
-  "password": "$2a$10$lVQoqixd9EyqM.ZwEuiNau0DMZq6F2ss9xCq66K/ziG.y9EqKlqjC",
+  "name": "Gaston",
+  "email": "gaston@gmail.com",
+  "tel": "123456789",
+  "password": "$2a$10$6DcYLj2lfvQ209h8071H2..1sB3cPZyJzzvxm.1JZJfGwsx596rIi",
   "confirm": "12",
-  "imagen": "usuario1615347595140.jpg"
+  "imagen": "usuario1615486270185.jpg"
  }
 ]
