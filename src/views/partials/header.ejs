@@ -12,12 +12,12 @@
                         <img class="imagen-avatar" src="/images/user-images/<%=locals.userLogged.imagen %> " alt=""><li> Hola <%=locals.userLogged.name %></a></li>
                             <ul>
                                 <a href="/usuario/perfil"><li><em>Mi perfil</em></li></a>
+                                <a href="/productos/carrito"><li><i class="fas fa-shopping-cart"></i><em>Mi carrito</em></li></a> 
                                 <a href="/usuario/logout"><li><em>Cerrar Sesion</em></li></a>
                             </ul>
                     <% } else { %> 
                         <li><a href="/usuario/iniciar-sesion"><i class="fas fa-user"></i> Iniciar sesión</a></li>
                         <li><a href="/usuario//registrarse"><i class="fas fa-user-plus"></i> Registrarse</a></li>
-                        <li><a href="/productos/carrito"><i class="fas fa-shopping-cart"></i> Carrito</a></li>
                     <% } %> 
                    
                 </ul>

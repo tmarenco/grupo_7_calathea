@@ -51,7 +51,10 @@
                     <a href ="/productos/<%= producto.identificador %> "><img src= "images/productos/<%= producto.image %>" alt="Plantas de Interior" enctype= ></a>
                     <h4 class="name"><%= producto.name %></h4>
                     <p class="price">$<%= producto.price %></p>
+                    <p class="category"><%= producto.category %></p>
+                    <button class="buttom-detail">Ver detalle</button><button class="buttom-cart">Agregar a carrito</button>
                 </div>
+                
             </article>
         <% })%> 
     </section>

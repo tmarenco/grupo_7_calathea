@@ -25,5 +25,14 @@
   "password": "$2a$10$6DcYLj2lfvQ209h8071H2..1sB3cPZyJzzvxm.1JZJfGwsx596rIi",
   "confirm": "12",
   "imagen": "usuario1615486270185.jpg"
+ },
+ {
+  "identificador": 5,
+  "name": "toto",
+  "email": "toto@toto.com",
+  "tel": "12",
+  "password": "$2a$10$513ENXxKzsY3.0XZfCZNR.QkZq5iTd99G14xYNUKvqbiYjA.k4JBa",
+  "confirm": "12",
+  "imagen": "usuario1615847227002.jpg"
  }
 ]
