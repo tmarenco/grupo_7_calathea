@@ -11,7 +11,7 @@
 
 <div class="contenedor-general"> 
 
-    <div class="menu-horizontal-pd"><a class = "a-pd" href="/" > Inicio /</a><a class = "a-pd" href="/product">Productos /</a> <a class = "a-pd" href="/products"><%= producto.category %>  /</a> <a class = "a-pd" href="#"><strong><%= producto.name %> </strong></a></div>
+    <div class="menu-horizontal-pd"><a class = "a-pd" href="/" > Inicio /</a><a class = "a-pd" href="/product">Productos /</a> <a class = "a-pd" href="/products"><%= producto.id_categories %> /</a> <a class = "a-pd" href="#"><strong><%= producto.name %> </strong></a></div>
 
  <main>
     <!-- MAIN PAGINA DE PRODUCTOS DETALLADOS-->
@@ -33,11 +33,11 @@
         <p class="precio-Pd"> $ <%= producto.price %> </p>
         <!-- <a class = "a-pd" href="#"><strong> 18</strong> cuotas de <strong>$170.83</strong></a><br> -->
         <a class = "a-pd" href="#">ver medios de pago</a>
-        <h4>color:</h4>
+        <!-- <h4>color:</h4>
         <p class="cubo"></p>
         <p class ="cubo"></p>
         <p class ="cubo"></p>
-        
+        -->
     
         <label>Cantidad</label>
         <select class="selec-pd" name="" id="">
@@ -56,8 +56,8 @@
         <p>Si ya agregaste este producto podras ir a <a class = "a-pd"href="/productos/carrito">mi carrito</a></p>
         <br>
         <form></form>
-        <a href ="/productos/<%= producto.identificador %>/editar" ><button class="boton-agregar-pd">Editar producto</button></a>
-        <form action= "/productos/<%= producto.identificador %>?_method=delete" method="POST">
+        <a href ="/productos/<%= producto.id %>/editar" ><button class="boton-agregar-pd">Editar producto</button></a>
+        <form action= "/productos/<%= producto.id %>?_method=delete" method="POST">
             <button class="boton-agregar-pd">Borrar producto</button>
         </form>
 
