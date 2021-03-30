@@ -4,7 +4,7 @@ const jsonTable = require ("../data/jsonTable");
 const { userInfo } = require("os");
 const { json } = require("express");
 const db = require ("../database/models/");
-const { Op, NUMBER, where } = require("sequelize");
+const { Op } = require("sequelize");
 const Offer = require("../database/models/Offer");
 const Product = require("../database/models/Product");
 
@@ -66,7 +66,7 @@ module.exports = {
             name, 
             description , 
             image : filename,
-            id_categories : NUMBER(id_categories), 
+            id_categories: Number(id_categories),
             price , 
             id_offer , 
             stock , 
@@ -74,7 +74,8 @@ module.exports = {
             
         })
         .then (newProduct => {
-            res.redirect("/productos/")
+            console.log(req.body)
+            res.redirect("/productos")
         })
         .catch (error =>{
             res.send ("fallo")
@@ -112,7 +113,7 @@ module.exports = {
            db.Product.update ({
             name, 
             description , 
-            id_categories , 
+            id_categories: Number(id_categories) , 
             price , 
             id_offer , 
             stock , 
@@ -126,6 +127,7 @@ module.exports = {
            })
 
            .then (() => {
+            console.log(req.body)
                res.redirect ("/productos");
            })
 

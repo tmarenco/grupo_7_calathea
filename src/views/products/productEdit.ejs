@@ -13,10 +13,7 @@
 
     <section class="section-derecha-contacto">
         <form class="formulario-contacto" action= "/productos/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-            <div class="div-formulario-contacto">
-                <label for="identificador"><strong>IDENTIFICADOR</strong></label>
-                <input type="number" name="identificador" id="identificador" value="<%= product.id %>" class="formulario-input-contacto">
-            </div>
+           
 
             <div class="div-formulario-contacto">
                 <label for="name"><strong>NOMBRE</strong></label>
@@ -33,7 +30,7 @@
           
             <div class="div-formulario-contacto">
               <label for="category"><strong>CATEGORIAS</strong></label>
-              <select class="formulario-input-contacto" name="id_category" id="id_category">
+              <select class="formulario-input-contacto" name="id_categories" id="id_categories">
                 <% categorie.forEach(category => { %>
                 <option value="<%= category.id %>"><%=category.name %></option>
                <% }) %> 
