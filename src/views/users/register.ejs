@@ -19,14 +19,26 @@
 
                 <p class= "formulario-titulo-fr"><strong> Unite a nuestra comunidad!</strong></p>
 
+            
             <div class="fomulario-div-fr">
-                <label for="name"><strong>NOMBRE COMPLETO</strong></label>
+                <label for="name"><strong>NOMBRE</strong></label>
                 <input type="text" name="name" id="name" 
                     class="formulario-input-fr <%= locals.errors && errors.name ? "error-border" : null %>" 
                     value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
                 <% if(locals.errors && errors.name){ %>
                     <div class="fr-error">
                         <%= errors.name.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="fomulario-div-fr">
+                <label for="last_name"><strong>APELLIDO</strong></label>
+                <input type="text" name="last_name" id="last_name" 
+                    class="formulario-input-fr <%= locals.errors && errors.last_name ? "error-border" : null %>" 
+                    value="<%= locals.oldData && oldData.last_name ? oldData.last_name : '' %>">
+                <% if(locals.errors && errors.last_name){ %>
+                    <div class="fr-error">
+                        <%= errors.last_name.msg %> 
                     </div>
                 <% } %>
             </div> 

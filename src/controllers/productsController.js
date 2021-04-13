@@ -18,13 +18,13 @@ module.exports = {
                 ]
         })
         .then(productList => {
-            console.log(productList.categorie)
+            //console.log(productList.categorie) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             res.render (path.join (__dirname, "../views/products/products.ejs"), {productos:productList})
         })
 
       
     },
-    //create: formulario de creeacion de un nuevo producto
+    //create: formulario de creacion de un nuevo producto
     create: (req, res) => {
         Promise.all([
         db.Offer.findAll(),
@@ -47,7 +47,7 @@ module.exports = {
                 ]
         })
         .then(productDetail =>{
-            console.log(productDetail.categorie)
+            //console.log(productDetail.categorie) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             if(productDetail){
              res.render (path.join (__dirname, "../views/products/productDetail.ejs"), {producto:productDetail})}
              else{
@@ -74,7 +74,7 @@ module.exports = {
             
         })
         .then (newProduct => {
-            console.log(req.body)
+            //console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             res.redirect("/productos")
         })
         .catch (error =>{
@@ -127,7 +127,7 @@ module.exports = {
            })
 
            .then (() => {
-            console.log(req.body)
+            // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
                res.redirect ("/productos");
            })
 

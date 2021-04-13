@@ -5,7 +5,7 @@ const controller = require ("../controllers/userController");
 //Middlewares
 const multer = require("../middlewares/users/multerMiddleware");
 const guestMiddleware = require("../middlewares/users/guestMiddleware")
-const  authMiddleware = require ("../middlewares/users/authMiddelware")
+const authMiddleware = require ("../middlewares/users/authMiddelware")
 
 
 
@@ -18,6 +18,7 @@ const userController = require("../controllers/userController");
 //Validaciones - Registro
 const registerValidations = [
    body('name').notEmpty().withMessage("Debes completar tu nombre"),
+   body('last_name').notEmpty().withMessage("Debes completar tu apellido"),
    body('email').notEmpty().withMessage("Debes ingresar un email").bail().isEmail().withMessage("Debes ingresar un email válido"),
    body('tel').notEmpty().withMessage("Debes ingresar tu teléfono"),
    body('password').notEmpty().withMessage("Debes ingresar una contraseña"),
@@ -52,11 +53,16 @@ const loginValidations = [
 
  
 //Rutas
-router.get ("/iniciar-sesion", guestMiddleware, userController.login); //Formulario de Login
-router.post('/iniciar-sesion', loginValidations, userController.loginProcces) //Formulario de Login - procesar 
+router.get ("/listausuarios", userController.list); // Listado de usuarios - NO HAY BOTÓN PARA ACCEDER A LA LISTA
 
 router.get ("/registrarse",guestMiddleware, userController.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, userController.processRegister); //Formulario de Registro - procesar
+
+router.get ("/iniciar-sesion", guestMiddleware, userController.login); //Formulario de Login
+router.post('/iniciar-sesion', loginValidations, userController.loginProcces) //Formulario de Login - procesar 
+
+
+
 
 router.get("/perfil", controller.perfil);
 router.get("/logout", controller.logout);

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+<body>
+
+        <!-- PARTIAL DEL HEADER-->
+        <%-include ("../partials/header.ejs") %>
+
+     <!-- INICIO MAIN  -->
+     <section class="users">
+        <% usuarios.forEach (usuario => { %>
+            <article class="users-container">
+                <div class="description-product">
+                    <a href ="/productos/<%= usuario.id %> "><img src= "images/user-images/<%= usuario.image %>" enctype= ></a>
+                    <h4 class="name"><%= usuario.first_name %> <%= usuario.last_name %> </h4>
+                    <br>
+                    <p class="datos-usuario"><%= usuario.email %></p>
+                    <p class="datos-usuario"><%= usuario.phone %></p>
+                    <button class="buttom-detail">Editar usuario</button><button class="buttom-cart">Borrar usuario</button>
+                </div>
+                
+            </article>
+        <% })%> 
+    </section>
+     <!-- FIN MAIN  -->
+
+     <!-- INICIO FOOTER  -->
+          <!-- PARTIAL DEL FOOTER-->
+          <%-include ("../partials/footer.ejs") %>
+        <!-- FIN FOOTER  -->
+    </body>
+</html>
