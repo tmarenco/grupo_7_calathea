@@ -53,7 +53,7 @@ module.exports = {
                     email: req.body.email,
                     image: req.file.filename,
                     id_category: 1,
-                    pasword: bcryptjs.hashSync(req.body.password, 10)
+                    password: bcryptjs.hashSync(req.body.password, 10)
                 });
                 return res.redirect("/usuario/iniciar-sesion")
             }
@@ -138,11 +138,12 @@ module.exports = {
             {errors: resultValidation.mapped(), oldData: req.body})            
         } else {
             let userToLogin = db.Users.findOne({
+              
                 where: {
                     email: req.body.email
                 }
             }).then(function(usuario){
-                if (usuario == null){
+                if (usuario == undefined){
                     return res.render (path.join(__dirname, "../views/users/login.ejs"), {
                         errors: {
                             email: {
