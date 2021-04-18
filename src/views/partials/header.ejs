@@ -27,11 +27,42 @@
         <div class= "logo">
             <img width=150px heigth=150px src="/images/logo/logo-cursiva.png" alt="Calathea-logo">
         </div>
-        <div class= "mini-menu">
+
+        <!-- icono del nav mobile-->
+        <div class="icon-miniNav">
             <i class="fas fa-bars"></i>
         </div>
-    </section>
+     
+        <!-- nav mobile-->
+        <div class="miniHeader">
+            <nav class="mini-nav">
+                    <ul >
+                        <li><a href="/">Inicio</a></li>
+                        <br>
+                        <li><a href="/productos">Productos</a></li>
+                        <br>
+                        <li><a href="/quienes-somos">Quiénes Somos</a></li>
+                        <br>
+                        <li><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                        <br>
+                        <li><a href="/contacto">Contacto</a></li>
+                    </ul>
+            </nav>
+        </div>
     
+    </section>
+    <script>
+        let miniNav = document.querySelector(".mini-nav")
+        
+        let iconMiniNav = document.querySelector(".icon-miniNav")
+       
+        iconMiniNav.addEventListener("click", function(){
+            miniNav.classList.toggle("showNav")
+            
+            
+        })
+
+    </script>
 
     <div class="header-bottom">
         <div class="nav-bar">

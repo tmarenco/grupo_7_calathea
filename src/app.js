@@ -42,7 +42,6 @@ app.use (express.json());
 app.use(methodOverride("_method"))
 
 
-
 //------------------RUTAS----------------------------//
 
 /* RUTAS HOME*/
