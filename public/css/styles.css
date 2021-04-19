@@ -42,19 +42,65 @@
     z-index: 1;
 }
 
-.mini-menu {
+.icon-miniNav {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
-    border: solid 3px #49183c;
+    border: solid 1.3px #49183c;
     border-radius: 0.5rem;
     width: 3rem;
     height: 2.5rem;
     align-items: center;
     margin: auto;
-    background-color: #754668
+    background-color: #754668;
+    cursor: pointer;
 }
+.icon-miniNav:hover {
+    color: white;
+    transition: 0.4s;
+    border: solid 1.3px #754668;
+    width: 3.1rem;
+    height: 2.6rem;
+    background-color: #a1608f;
+    cursor: pointer;
+}
+
+
+.mini-nav{
+    transition: 0.10s;
+    display: none;
+    height: 100%; 
+    width: 43%; 
+    z-index: 1;
+    background-color: #754668;
+    color: white;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow-x: hidden;
+    padding-top: 60px;
+    font-size: 1.1em;
+    
+}
+.mini-nav ul li{
+    display: block;
+}
+.mini-nav a{
+    color: white;
+}
+
+.mini-nav a:hover{
+    color: #e7badb;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 1.15em;
+}
+
+.showNav {
+    display: block;
+}
+
 .header-right li, 
 .header-right a{
     display: flex;
@@ -953,7 +999,6 @@ color: pink
     max-width: 40%;
     }
     
-    
     .container-productos {
         max-width: 100%;
         margin:auto;
@@ -1006,7 +1051,7 @@ color: pink
         display: block;
     }
 
-    .mini-menu{
+    .icon-miniNav{
         display: none;
     }
 
