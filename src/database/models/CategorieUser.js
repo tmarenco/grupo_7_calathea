@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
                 type: dataTypes.INTEGER
             },
 
-        description: {
+        descrption: {
             type: dataTypes.STRING(45),
 
         }

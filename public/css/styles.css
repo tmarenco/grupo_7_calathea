@@ -66,6 +66,23 @@
     cursor: pointer;
 }
 
+.errorName,
+.errorLastName,
+.errorEmail,
+.errorPhone,
+.errorPw,
+.errorConfirmPw {
+    color: red;
+    font-weight: bolder;
+
+}
+
+.errorMensaje {
+    display: none;
+    color: red;
+    font-weight: bolder;
+}
+
 
 .mini-nav{
     transition: 0.10s;
@@ -729,6 +746,20 @@ color: pink
     color: white;
     padding: 10px;
     margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+
+.boton-editar{
+    display: block;
+    background-color:#537467;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     outline: none;
     border: none;
     font-size: 1.2rem;

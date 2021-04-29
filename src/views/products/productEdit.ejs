@@ -17,50 +17,91 @@
 
             <div class="div-formulario-contacto">
                 <label for="name"><strong>NOMBRE</strong></label>
-                <input type="text" name="name" id="name" value="<%= product.name %>" class="formulario-input-contacto">
+                <input type="text" name="name" id="name" 
+                placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto <%= locals.errors && errors.name ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.name ? oldData.name : product.name %>">
+                <% if(locals.errors && errors.name){ %>
+                  <div class="fr-error">
+                      <%= errors.name.msg %> 
+                  </div>
+              <% } %>
+              <div class= "errorName errorMensaje"></div>
             </div>
             <div class="div-formulario-contacto">
                 <label for="description"><strong>DESCRIPCION</strong></label>
-                <input type="text" name="description" id="description" value="<%= product.description %>" class="formulario-input-contacto">
+                <input type="text" name="description" id="description" 
+                placeholder ="DESCRIPCION" class="formulario-input-contacto <%= locals.errors && errors.description ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.description ? oldData.description : product.description %>">
+                <% if(locals.errors && errors.description){ %>
+                  <div class="fr-error">
+                      <%= errors.description.msg %> 
+                  </div>
+              <% } %>
+              <div class= "errorDescription errorMensaje"></div>
             </div>
             <div class="div-formulario-contacto">
                 <label for="image"><strong>IMAGEN DEL PRODUCTO</strong></label>
-                <input type="file" name="image" id="image" class="formulario-input-contacto" value = "<%=product.image%>">
+                <input type= "file" name="image" id="image" 
+                placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto <%= locals.errors && errors.image ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.image ? oldData.image : product.image %>">
+                <% if(locals.errors && errors.image){ %>
+                  <div class="fr-error">
+                      <%= errors.image.msg %> 
+                  </div>
+              <% } %>
+              <div class= "errorImage errorMensaje"></div>
             </div>
           
             <div class="div-formulario-contacto">
-              <label for="category"><strong>CATEGORIAS</strong></label>
-              <select class="formulario-input-contacto" name="id_categories" id="id_categories">
-                <% categorie.forEach(category => { %>
-                <option value="<%= category.id %>"><%=category.name %></option>
-               <% }) %> 
-                
-            </select>
+                <label for="category"><strong>CATEGORIAS</strong></label>
+                    <select class="formulario-input-contacto" name="id_categories" id="id_categories">
+                        <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%=category.name %></option>
+                       <% }) %> 
+                        
+                    </select>
+              </div>
+  
+              <div class="div-formulario-contacto">
+                <label for="price"><strong>PRECIO</strong></label>
+                <input type="number" name="price" id="price" 
+                placeholder ="$ 1" class="formulario-input-contacto <%= locals.errors && errors.price ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.price ? oldData.price : product.price %>">
+                <% if(locals.errors && errors.price){ %>
+                    <div class="fr-error">
+                        <%= errors.price.msg %> 
+                    </div>
+                <% } %>
+                <div class= "errorPrice errorMensaje"></div>
             </div>
   
             <div class="div-formulario-contacto">
-              <label for="price"><strong>PRECIO</strong></label>
-              <input type="number" name="price" id="price" value="<%= product.price %>" class="formulario-input-contacto">
-          </div>
+                <label for="promo"><strong>PROMOCIÓN</strong></label>
+                <select class="formulario-input-contacto" name="id_offer" id="id_offer">
+                    <% offer.forEach(offers => { %>
+                        <option value="<%= offers.id %>"><%=offers.description %></option>
+                       <% }) %> 
+                    
+                </select>
+              </div>
   
-          <div class="div-formulario-contacto">
-              <label for="promo"><strong>PROMOCIÓN</strong></label>
-              <select class="formulario-input-contacto" name="id_offer" id="id_offer">
-                <% offer.forEach(offers => { %>
-                    <option value="<%= offers.id %>"><%=offers.description %></option>
-                   <% }) %> 
-                
-            </select>
+  
+              <div class="div-formulario-contacto">
+                <label for="stock"><strong>STOCK</strong></label>
+                <input type="number" name="stock" id="stock" 
+                placeholder ="5" class="formulario-input-contacto <%= locals.errors && errors.price ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.stock ? oldData.stock : product.stock %>">
+                <% if(locals.errors && errors.stock){ %>
+                    <div class="fr-error">
+                        <%= errors.stock.msg %> 
+                    </div>
+                <% } %>
+                <div class= "errorStock errorMensaje"></div>
             </div>
-  
-  
-            <div class="div-formulario-contacto">
-              <label for="stock"><strong>STOCK</strong></label>
-              <input type="number" name="stock" id="stock" value="<%= product.stock %>" class="formulario-input-contacto">
-          </div>
           <button type="submit" class="formulario-boton-fr">Modificar producto</button>
         </form>
   </section>
 </main>  
+<script src= "/js/updateProduct.js" ></script>  
 </body>
 </html>

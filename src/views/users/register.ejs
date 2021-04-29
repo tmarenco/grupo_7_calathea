@@ -30,6 +30,7 @@
                         <%= errors.name.msg %> 
                     </div>
                 <% } %>
+                <div class= "errorName errorMensaje"></div>
             </div>
             <div class="fomulario-div-fr">
                 <label for="last_name"><strong>APELLIDO</strong></label>
@@ -41,6 +42,7 @@
                         <%= errors.last_name.msg %> 
                     </div>
                 <% } %>
+                <div class= "errorLastName errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr">  
                 <label for="email"><strong>EMAIL</strong></label>
@@ -51,6 +53,7 @@
                     <div class="fr-error">
                     <%= errors.email.msg %>
                 <% } %>
+                <div class= "errorEmail errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
@@ -62,6 +65,7 @@
                     <div class="fr-error">
                     <%= errors.tel.msg %> </div>
                 <% } %>
+                <div class= "errorPhone errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr"> 
                 <label for="password"><strong>CONTRASEÑA</strong></label>
@@ -72,6 +76,7 @@
                         <%= errors.password.msg %>
                     </div>
                 <% } %>
+                <div class= "errorPw errorMensaje"></div>
             </div>  
             <div class="fomulario-div-fr">  
                 <label for="confirm"><strong>CONFIRMAR CONTRASEÑA</strong></label>
@@ -82,6 +87,7 @@
                         <%= errors.confirm.msg %>
                     </div>
                 <% } %>
+                <div class= "errorConfirmPw errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr">
                 <label for="profileImage"><strong>IMAGEN DE PERFIL</strong></label>
@@ -93,6 +99,7 @@
                         <%= errors.profileImage.msg %> 
                     </div>
                 <% } %>
+                <div class= errorImage></div>
             </div> 
 
                 <button type="submit" class="formulario-boton-fr">CREAR CUENTA</button>
@@ -107,5 +114,6 @@
     </main>
 </div>
     <%-include ("../partials/footer.ejs") %>
+    <script src= "/js/register.js" ></script>
     </body>
 </html>

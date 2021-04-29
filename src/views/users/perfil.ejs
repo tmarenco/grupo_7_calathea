@@ -27,16 +27,21 @@
                 <section class="section-izquierdo-contacto">
                 <div class="perfil-div-img">               
                     <label for="img" class="perfil-img"><strong>AVATAR</strong></label>
-                    <img src="/images/user-images/<%=usuario.imagen %>" alt="avatar" class="perfil-img">
+                    <img src="/images/user-images/<%=usuario.image %>" alt="avatar" class="perfil-img">
                 </div>   
                 </section><br><br>
 
 
                 <section class="section-izquierdo-contacto">
                     <div class="fomulario-div-fr">
-                            <label for="name"><strong>NOMBRE COMPLETO</strong></label>
-                        <div class="formulario-input-fr"><%=usuario.name %></div>
+                            <label for="name"><strong>NOMBRE</strong></label>
+                        <div class="formulario-input-fr"><%=usuario.first_name %></div>
                     </div> 
+
+                    <div class="fomulario-div-fr">
+                        <label for="name"><strong>APELLIDO</strong></label>
+                    <div class="formulario-input-fr"><%=usuario.last_name %></div>
+                </div> 
 
             <div class="fomulario-div-fr">  
                 <label for="email"><strong>EMAIL</strong></label>
@@ -45,13 +50,20 @@
 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
-                <div class="formulario-input-fr"><%=usuario.tel %></div>
-            </div> <br><br>
+                <div class="formulario-input-fr"><%=usuario.phone %></div>
+            </div> 
+
+            <br><br>
 
         </section>    
-                
+        
+            </form>
+
+            <form action="/usuario/<%= usuario.id %>/editar">
+                <button class="boton-editar">Editar usuario</button>
             </form>
         
+            
         </section>
     
     </main>

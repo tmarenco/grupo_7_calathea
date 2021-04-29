@@ -16,15 +16,39 @@
 
           <div class="div-formulario-contacto">
               <label for="name"><strong>NOMBRE</strong></label>
-              <input type="text" name="name" id="name" placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto">
+              <input type="text" name="name" id="name" 
+              placeholder ="NOMBRE DEL PRODUCTO" class="formulario-input-contacto <%= locals.errors && errors.name ? "error-border" : null %>"
+              value="<%= locals.oldData && oldData.name ? oldData.name : '' %>">
+              <% if(locals.errors && errors.name){ %>
+                <div class="fr-error">
+                    <%= errors.name.msg %> 
+                </div>
+            <% } %>
+            <div class= "errorName errorMensaje"></div>
           </div>
           <div class="div-formulario-contacto">
               <label for="description"><strong>DESCRIPCION</strong></label>
-              <input type="text" name="description" id="description" placeholder ="DESCRIPCION" class="formulario-input-contacto">
+              <input type="text" name="description" id="description" 
+              placeholder ="DESCRIPCION" class="formulario-input-contacto <%= locals.errors && errors.description ? "error-border" : null %>"
+              value="<%= locals.oldData && oldData.description ? oldData.description : '' %>">
+              <% if(locals.errors && errors.description){ %>
+                <div class="fr-error">
+                    <%= errors.description.msg %> 
+                </div>
+            <% } %>
+            <div class= "errorDescription errorMensaje"></div>
           </div>
           <div class="div-formulario-contacto">
               <label for="image"><strong>IMAGEN DEL PRODUCTO</strong></label>
-              <input type= "file" name="image" id="image" placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto">
+              <input type= "file" name="image" id="image" 
+              placeholder ="IMAGEN DEL PRODUCTO" class="formulario-input-contacto <%= locals.errors && errors.image ? "error-border" : null %>"
+              value="<%= locals.oldData && oldData.image ? oldData.image : '' %>">
+              <% if(locals.errors && errors.image){ %>
+                <div class="fr-error">
+                    <%= errors.image.msg %> 
+                </div>
+            <% } %>
+            <div class= "errorImage errorMensaje"></div>
           </div>
         
           <div class="div-formulario-contacto">
@@ -32,14 +56,23 @@
                 <select class="formulario-input-contacto" name="id_categories" id="id_categories">
                     <% categories.forEach(category => { %>
                     <option value="<%= category.id %>"><%=category.name %></option>
-                   <% }) %> 
+                   <% }) %>
+                    
                     
                 </select>
           </div>
 
           <div class="div-formulario-contacto">
             <label for="price"><strong>PRECIO</strong></label>
-            <input type="number" name="price" id="price" placeholder ="$ 1" class="formulario-input-contacto">
+            <input type="number" name="price" id="price" 
+            placeholder ="$ 1" class="formulario-input-contacto <%= locals.errors && errors.price ? "error-border" : null %>"
+            value="<%= locals.oldData && oldData.price ? oldData.price : '' %>">
+            <% if(locals.errors && errors.price){ %>
+                <div class="fr-error">
+                    <%= errors.price.msg %> 
+                </div>
+            <% } %>
+            <div class= "errorPrice errorMensaje"></div>
         </div>
 
         <div class="div-formulario-contacto">
@@ -55,7 +88,15 @@
 
           <div class="div-formulario-contacto">
             <label for="stock"><strong>STOCK</strong></label>
-            <input type="number" name="stock" id="stock" placeholder ="5" class="formulario-input-contacto">
+            <input type="number" name="stock" id="stock" 
+            placeholder ="5" class="formulario-input-contacto <%= locals.errors && errors.price ? "error-border" : null %>"
+            value="<%= locals.oldData && oldData.stock ? oldData.stock : '' %>">
+            <% if(locals.errors && errors.stock){ %>
+                <div class="fr-error">
+                    <%= errors.stock.msg %> 
+                </div>
+            <% } %>
+            <div class= "errorStock errorMensaje"></div>
         </div>
 
         <div class="div-formulario-contacto">
@@ -65,6 +106,7 @@
           <button type="submit" class="formulario-boton-fr">Crear producto</button>
 
   </section>
-</main>  
+</main>
+<script src= "/js/create.js" ></script>  
 </body>
 </html>

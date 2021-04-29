@@ -7,6 +7,7 @@ const db = require ("../database/models/");
 const { Op } = require("sequelize");
 const Offer = require("../database/models/Offer");
 const Product = require("../database/models/Product");
+const {validationResult} = require('express-validator')
 
 
 module.exports = {
@@ -31,9 +32,10 @@ module.exports = {
         db.Categorie.findAll() // cargamos las categorias a la vista
         ])
         .then(resultPromises => { 
-            const offer = resultPromises [0]
-            const categories = resultPromises [1]
-            res.render (path.join(__dirname, "../views/products/productCreate.ejs"),{categories,offer});
+            const offer = resultPromises[0];
+            const categories = resultPromises[1];
+            console.log(categories[0].name)
+            res.render (path.join(__dirname, "../views/products/productCreate.ejs"),{categories ,offer});
         })
     },
 
@@ -58,28 +60,83 @@ module.exports = {
 
         // store: crea un nuevo producto lo redirige a la pagina de productos
     store: (req, res) => {
+        const resultValidation = validationResult(req);
         const {name, description , id_categories , price , id_offer , stock , order } = req.body
-        const { filename } = req.file
-       
+        if (req.file != undefined){
+            const { filename } = req.file
+        }  
 
-        db.Product.create({
-            name, 
-            description , 
-            image : filename,
-            id_categories: Number(id_categories),
-            price , 
-            id_offer , 
-            stock , 
-            order,
+        Promise.all([
+            db.Offer.findAll(),
+            db.Categorie.findAll() // cargamos las categorias a la vista
+            ])
+            .then(resultPromises => { 
+                const offer = resultPromises[0];
+                const categories = resultPromises[1];
+                if(resultValidation.errors.length > 0){
+                    res.render((path.join(__dirname, "../views/products/productCreate.ejs")),{errors: resultValidation.mapped(), oldData: req.body, categories, offer});
+                } else {
+                    db.Product.create({
+                        name, 
+                        description , 
+                        image : req.file.filename,
+                        id_categories: Number(id_categories),
+                        price , 
+                        id_offer , 
+                        stock , 
+                        order,
+                        
+                    })
+                    .then (newProduct => {
+                        res.redirect("/productos")
+                    })
+                    .catch (error =>{
+                        res.send ("fallo")
+                    })
+            }
+            })
+        
+
+    //     if(resultValidation.errors.length > 0){
+    //         res.render((path.join(__dirname, "../views/products/productCreate.ejs")),{errors: resultValidation.mapped(), oldData: req.body});
+    //     } else {
+    //         db.Product.create({
+    //             name, 
+    //             description , 
+    //             image : filename,
+    //             //id_categories: Number(id_categories),
+    //             price , 
+    //             //id_offer , 
+    //             stock , 
+    //             order,
+                
+    //         })
+    //         .then (newProduct => {
+    //             res.redirect("/productos")
+    //         })
+    //         .catch (error =>{
+    //             res.send ("fallo")
+    //         })
+    // }
+
+        // db.Product.create({
+        //     name, 
+        //     description , 
+        //     image : filename,
+        //     id_categories: Number(id_categories),
+        //     price , 
+        //     id_offer , 
+        //     stock , 
+        //     order,
             
-        })
-        .then (newProduct => {
-            //console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
-            res.redirect("/productos")
-        })
-        .catch (error =>{
-            res.send ("fallo")
-        })
+        // })
+        // .then (newProduct => {
+        //     //console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
+        //     res.redirect("/productos")
+        // })
+        // .catch (error =>{
+        //     res.send ("fallo")
+        // })
     },
 
     // edit: formulario de actualziacion de productos
@@ -92,11 +149,11 @@ module.exports = {
        ])
        .then(resultPromises => {
            const product = resultPromises [0]
-           const categorie = resultPromises [1]
+           const categories = resultPromises [1]
            const offer = resultPromises [2]
 
            if(product){
-            res.render (path.join (__dirname, "../views/products/productEdit.ejs"), { product ,categorie , offer})
+            res.render (path.join (__dirname, "../views/products/productEdit.ejs"), { product ,categories , offer})
         }})
            
         },
@@ -104,34 +161,90 @@ module.exports = {
 
     update: (req, res) => {
        const { id } = req.params
-       const {name, description , id_categories , price , id_offer , stock , order } = req.body
+       const {name, description , id_categories , price , id_offer , stock , order } = req.body;
+       const resultValidation = validationResult(req);
 
-       db.Product.findByPk( id )
-       .then(product => {
-           const originImage = product.image
 
-           db.Product.update ({
-            name, 
-            description , 
-            id_categories: Number(id_categories) , 
-            price , 
-            id_offer , 
-            stock , 
-            order,
-            image : req.file ? req.file.filename : originImage
-           },
-           {
-               where :{
-                   id
-                } 
-           })
+       Promise.all([
+        db.Product.findByPk(req.params.id),
+        db.Categorie.findAll(),
+        db.Offer.findAll(),
 
-           .then (() => {
-            // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
-               res.redirect ("/productos");
-           })
+       ])
+       .then(resultPromises => {
+           const product = resultPromises [0]
+           const categories = resultPromises [1]
+           const offer = resultPromises [2]
+           
 
-        })
+           if(resultValidation.errors.length > 0){
+            res.render((path.join(__dirname, "../views/products/productEdit.ejs")),{errors: resultValidation.mapped(), oldData: req.body, product, offer, categories});
+        } else {
+            db.Product.findByPk( id )
+            .then(product => {
+                const originImage = product.image
+     
+                db.Product.update ({
+                 name, 
+                 description , 
+                 id_categories: Number(id_categories) , 
+                 price , 
+                 id_offer , 
+                 stock , 
+                 order,
+                 image : req.file ? req.file.filename : originImage
+                },
+                {
+                    where :{
+                        id
+                     } 
+                })
+     
+                .then (() => {
+                 // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
+                    res.redirect ("/productos");
+                })
+     
+             })
+        }
+    })
+
+
+
+
+
+
+    //    if(resultValidation.errors.length > 0){
+    //     res.render((path.join(__dirname, "../views/products/productEdit.ejs")),{errors: resultValidation.mapped(), oldData: req.body});
+    // } else {
+    //     db.Product.findByPk( id )
+    //     .then(product => {
+    //         const originImage = product.image
+ 
+    //         db.Product.update ({
+    //          name, 
+    //          description , 
+    //          id_categories: Number(id_categories) , 
+    //          price , 
+    //          id_offer , 
+    //          stock , 
+    //          order,
+    //          image : req.file ? req.file.filename : originImage
+    //         },
+    //         {
+    //             where :{
+    //                 id
+    //              } 
+    //         })
+ 
+    //         .then (() => {
+    //          // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
+    //             res.redirect ("/productos");
+    //         })
+ 
+    //      })
+    // }
+
     
     },
 

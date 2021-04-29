@@ -6,6 +6,7 @@ const bcryptjs = require("bcryptjs")
 const db = require ("../database/models/");
 
 
+
 module.exports = {  
     list: (req,res) => {
         db.Users.findAll({
@@ -154,9 +155,11 @@ module.exports = {
                 } else {
                     let isOkThePassword = bcryptjs.compareSync(req.body.password, usuario.password);
                     if (isOkThePassword){
-                        delete userToLogin.password;
-                        req.session.userLogged = userToLogin;
+                        delete usuario.password;
+                        req.session.userLogged = usuario;
+                        //console.log (userToLogin)
                         return res.redirect ("/usuario/perfil")
+                        //return res.send(usuario)
                     } else {
                         return res.render ((path.join(__dirname, "../views/users/login.ejs")), {
                             errors: {
@@ -203,8 +206,62 @@ module.exports = {
     perfil:(req, res) => {
         console.log(req.session)
         return res.render( (path.join(__dirname, "../views/users/perfil.ejs")), {usuario : req.session.userLogged} )
-         
-},
+    },
+
+    edit: (req, res) => {
+        return res.render( (path.join(__dirname, "../views/users/userEdit.ejs")), {usuario : req.session.userLogged} )
+    },
+
+    update: (req, res)=> {
+        // db.Users.update (
+        //     {
+        //         first_name: req.body.name,
+        //         last_name: req.body.last_name, 
+        //         phone: req.body.tel,
+        //         email: req.body.email,
+        //         image : req.file ? req.file.filename : originImage,
+        //         id_category: 1,
+        //         password: req.body.password
+        //     },
+        //     {
+        //         where: {id: req.params.id}
+        //     })
+
+        //     return res.redirect ("/usuario/perfil")
+        const id = req.params.id;
+ 
+        db.Users.findByPk(id)
+        .then(usuario => {
+            const originImage = usuario.image
+            const passwordVieja = usuario.password
+ 
+            db.Users.update ({
+             first_name: req.body.name,
+             last_name: req.body.last_name, 
+             phone: req.body.tel,
+             email: req.body.email,
+             image : req.file ? req.file.filename : originImage,
+             id_category: 1,
+             password: req.body.password ? password : passwordVieja
+            },
+            {
+                where :{
+                    id: req.params.id
+                 } 
+            })
+ 
+            .then (() => {
+                db.Users
+                    .findByPk(id)
+                    .then(user =>{
+                        delete user.password
+                        req.session.userLogged = user
+                        return res.redirect ("/usuario/perfil")
+                    })
+                })
+ 
+         })
+    },
 
     logout :(req,res) =>{ // cerrar sesion 
         req.session.destroy();

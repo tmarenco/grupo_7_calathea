@@ -8,8 +8,8 @@ function authMiddleware(req,res,next){
     if(!req.session.userlogged){
         return  res.redirect ("/usuario/iniciar-sesion")
     } 
-        next();
-    }
+    next();
+}
     
 
 

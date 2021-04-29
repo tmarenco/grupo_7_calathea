@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+<body>
+    <!-- PARTIAL DEL HEADER-->
+    <%-include ("../partials/header.ejs") %>
+
+    <!-- INICIO MAIN  -->
+    <div class="contenedor-general">
+    <!--MENU HORIZONTAL-->
+    <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/">Mi Cuenta /</a> <a href="#"><strong>Editar Usuario</strong></a></div>
+
+    <!--INICIO DE FORMULARIO-->
+    <main class= "Main-fr">
+        <section class= "section-fr">
+
+            <form action ="/usuario/<%= usuario.id %>/editar/?_method=PUT" method ="POST" class="form-fr" enctype="multipart/form-data">
+
+                <p class= "formulario-titulo-fr"><strong>Editá tu usuario</strong></p>
+
+            
+            <div class="fomulario-div-fr">
+                <label for="name"><strong>NOMBRE</strong></label>
+                <input type="text" name="name" id="name" 
+                    class="formulario-input-fr <%= locals.errors && errors.name ? "error-border" : null %>" 
+                    value="<%= locals.oldData && oldData.name ? oldData.name : usuario.first_name %>">
+                <% if(locals.errors && errors.name){ %>
+                    <div class="fr-error">
+                        <%= errors.name.msg %> 
+                    </div>
+                <% } %>
+            </div>
+            <div class="fomulario-div-fr">
+                <label for="last_name"><strong>APELLIDO</strong></label>
+                <input type="text" name="last_name" id="last_name" 
+                    class="formulario-input-fr <%= locals.errors && errors.last_name ? "error-border" : null %>" 
+                    value="<%= locals.oldData && oldData.last_name ? oldData.last_name : usuario.last_name %>">
+                <% if(locals.errors && errors.last_name){ %>
+                    <div class="fr-error">
+                        <%= errors.last_name.msg %> 
+                    </div>
+                <% } %>
+            </div> 
+            <div class="fomulario-div-fr">  
+                <label for="email"><strong>EMAIL</strong></label>
+                <input type="email" name="email" id="email" placeholder= "email@valido.com" 
+                class="formulario-input-fr <%= locals.errors && errors.email ? "error-border" : null %>" 
+                value="<%= locals.oldData && oldData.email ? oldData.email : usuario.email %>">
+                <% if(locals.errors && errors.email){ %>
+                    <div class="fr-error">
+                    <%= errors.email.msg %>
+                <% } %>
+            </div> 
+            <div class="fomulario-div-fr">               
+                <label for="tel"><strong>TELÉFONO</strong></label>
+                <input type="tel" name="tel" id="tel" placeholder=" 011-123-4567" 
+                class='formulario-input-fr <%= locals.errors && errors.tel ? "error-border" : null %>'
+                value='<%= locals.oldData && oldData.tel ? oldData.tel : usuario.phone %>'>
+                
+                <% if(locals.errors && errors.tel){ %>
+                    <div class="fr-error">
+                    <%= errors.tel.msg %> </div>
+                <% } %>
+            </div> 
+            <div class="fomulario-div-fr"> 
+                <label for="password"><strong>CONTRASEÑA</strong></label>
+                <input type="password" name="password" id="password" 
+                class="formulario-input-fr <%= locals.errors && errors.password ? "error-border" : null %>">
+                <% if(locals.errors && errors.password){ %>
+                    <div class="fr-error">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+            </div>  
+            <div class="fomulario-div-fr">  
+                <label for="confirm"><strong>CONFIRMAR CONTRASEÑA</strong></label>
+                <input type="password" name="confirm" id="confirm" 
+                class="formulario-input-fr <%= locals.errors && errors.confirm ? "error-border" : null %>">
+                <% if(locals.errors && errors.confirm){ %>
+                    <div class="fr-error">
+                        <%= errors.confirm.msg %>
+                    </div>
+                <% } %>
+            </div> 
+            <div class="fomulario-div-fr">
+                <label for="profileImage"><strong>IMAGEN DE PERFIL</strong></label>
+                <input type="file" name="profileImage" id="profileImage" 
+                class="formulario-input-fr <%= locals.errors && errors.profileImage ? "error-border" : null %>"
+                value="<%= locals.oldData && oldData.profileImage ? oldData.profileImage : usuario.image %>">
+                <% if(locals.errors && errors.profileImage){ %>
+                    <div class="fr-error">
+                        <%= errors.profileImage.msg %> 
+                    </div>
+                <% } %>
+            </div> 
+
+                <button type="submit" class="formulario-boton-fr">EDITAR CUENTA</button>
+                
+               
+
+            
+            </form>
+        
+        </section>
+    
+    </main>
+</div>
+    <%-include ("../partials/footer.ejs") %>
+    </body>
+</html>

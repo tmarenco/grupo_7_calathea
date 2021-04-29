@@ -20,7 +20,7 @@ app.set ("views ", "src/views");
 app.use(session(
     { secret: 'Mensaje secreto!',
     resave: false, // no vuelve a guardar si no hay cambios
-    saveUninitialized: false, //guarda sesiones aunque no haya datos
+    saveUninitialized: true, //guarda sesiones aunque no haya datos
     }));
 
   
