@@ -26,32 +26,44 @@
             
         </section>
         <section class= "opciones-catalogo">
-            <section class= "opcion" id= "opcion1">
-                <p class="titulo-opcion"><a href="/productos" >PLANTAS INTERIOR</a></p>
-            </section>
-            <section class= "opcion" id= "opcion2">
-                <p class="titulo-opcion"><a href= "/productos">PLANTAS EXTERIOR</a></p>
-            </section>
-            <section class= "opcion" id= "opcion3">
-                <p class="titulo-opcion"><a href= "/productos">DECO</a></p>
-            </section>
-            <section class= "opcion" id= "opcion4">
-                <p class="titulo-opcion"><a href= "/productos">MACETAS</a></p>
-            </section>
-            <section class= "opcion" id= "opcion5">
-                <p class="titulo-opcion"><a href= "/productos">ACCESORIOS</a></p>
-            </section>
-            <section class= "opcion" id= "opcion6">
-                <p class="titulo-opcion"><a href= "/productos">FERTILIZANTES</a></p>
-            </section>
+            <a href="/productos/filtro/1">
+                <section class= "opcion" id= "opcion1">
+                    <p class="titulo-opcion">PLANTAS INTERIOR</p>
+                </section>
+            </a>
+            <a href= "/productos/filtro/2">
+                <section class= "opcion" id= "opcion2">
+                    <p class="titulo-opcion">PLANTAS EXTERIOR</p>
+                </section>
+            </a>
+            <a href= "/productos/filtro/6">
+                <section class= "opcion" id= "opcion3">
+                    <p class="titulo-opcion">DECO</p>
+                </section>
+            </a>
+            <a href= "/productos/filtro/5">
+                <section class= "opcion" id= "opcion4">
+                    <p class="titulo-opcion">MACETAS</p>
+                </section>  
+            </a>
+            <a href= "/productos/filtro/3">
+                <section class= "opcion" id= "opcion5">
+                    <p class="titulo-opcion">ACCESORIOS</p>
+                </section>    
+            </a>
+            <a href= "/productos/filtro/4">
+                <section class= "opcion" id= "opcion6">
+                    <p class="titulo-opcion">FERTILIZANTES</p>
+                </section>
+            </a>
         </section>
         <p class="titulo-pd">PRODUCTOS DESTACADOS</p>
         <section class= "section-productos-destacados">
-            <section class= "producto-destacado"><a href= ""></a></section>
-            <section class= "producto-destacado"><a href= ""></a></section>
-            <section class= "producto-destacado"><a href= ""></a></section>
-            <section class= "producto-destacado"><a href= ""></a></section>
-            <section class= "producto-destacado"><a href= ""></a></section>
+            <section><a href= "/productos/1"><img class= "producto-destacado" src= "/images/productos/<%= productos[0].image %>"></a></section>
+            <section><a href= "/productos/2"><img class= "producto-destacado" src= "/images/productos/<%= productos[1].image %>"></a></section>
+            <section><a href= "productos/32"><img class= "producto-destacado" src= "/images/productos/<%= productos[31].image %>"></a></section>
+            <section><a href= "/productos/61"><img class= "producto-destacado" src= "/images/productos/<%= productos[60].image %>"></a></section>
+            <section><a href= "/productos/51"><img class= "producto-destacado" src= "/images/productos/<%= productos[50].image %>"></a></section>
         </section>
     </main>
 </div> 

@@ -53,12 +53,11 @@
         
           <div class="div-formulario-contacto">
             <label for="category"><strong>CATEGORIAS</strong></label>
-                <select class="formulario-input-contacto" name="id_categories" id="id_categories">
+                <select required class="formulario-input-contacto" name="id_categories" id="id_categories">
+                    <option value="">Seleccioná una categoría</option>
                     <% categories.forEach(category => { %>
                     <option value="<%= category.id %>"><%=category.name %></option>
                    <% }) %>
-                    
-                    
                 </select>
           </div>
 
@@ -77,7 +76,8 @@
 
         <div class="div-formulario-contacto">
             <label for="promo"><strong>PROMOCIÓN</strong></label>
-            <select class="formulario-input-contacto" name="id_offer" id="id_offer">
+            <select required class="formulario-input-contacto" name="id_offer" id="id_offer">
+                <option value="">Seleccioná una oferta</option>
                 <% offer.forEach(offers => { %>
                     <option value="<%= offers.id %>"><%=offers.description %></option>
                    <% }) %> 

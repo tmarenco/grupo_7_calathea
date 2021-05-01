@@ -55,12 +55,14 @@
         <button type="submit" class="boton-agregar-pd">Agregar a Carrito</button>
         <p>Si ya agregaste este producto podras ir a <a class = "a-pd"href="/productos/carrito">mi carrito</a></p>
         <br>
-        <form action="/productos/<%= producto.id %>/editar">
-            <button class="boton-agregar-pd">Editar producto</button>
-        </form>
-        <form action= "/productos/<%= producto.id %>?_method=delete" method="POST">
-            <button class="boton-agregar-pd">Borrar producto</button>
-        </form>
+        <% if (locals.userLogged && locals.userLogged.id_category == 1){ %>
+            <form action="/productos/<%= producto.id %>/editar">
+                <button class="boton-agregar-pd">Editar producto</button>
+            </form>
+            <form action= "/productos/<%= producto.id %>?_method=delete" method="POST">
+                <button class="boton-agregar-pd">Borrar producto</button>
+            </form>
+        <% } %>
 
 
     </section>

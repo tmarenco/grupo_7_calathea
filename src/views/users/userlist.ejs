@@ -12,12 +12,11 @@
         <% usuarios.forEach (usuario => { %>
             <article class="users-container">
                 <div class="description-product">
-                    <a href ="/productos/<%= usuario.id %> "><img src= "/images/user-images/<%= usuario.image %>" enctype= ></a>
+                    <a href ="/usuario/<%= usuario.id %>/perfilusuario"><img src= "/images/user-images/<%= usuario.image %>" enctype= ></a>
                     <h4 class="name"><%= usuario.first_name %> <%= usuario.last_name %> </h4>
                     <br>
                     <p class="datos-usuario"><%= usuario.email %></p>
-                    <p class="datos-usuario"><%= usuario.phone %></p>
-                    <button class="buttom-detail">Editar usuario</button><button class="buttom-cart">Borrar usuario</button>
+                    <a href ="/usuario/<%= usuario.id %>/perfilusuario"><button class="buttom-detail">Detalle de usuario</button></a>
                 </div>
                 
             </article>

@@ -1,14 +1,16 @@
+<!-- esta pagina es ususarios/ ADMINISTRACIÓN, SOLO PARA LOS UASUARIOS CON CATEGORÍA ADMINISTRADOR -->
 <!DOCTYPE html>
 <html lang="en">
     <!-- PARTIAL DEL HEAD-->
-    <%- include("./partials/head.ejs")%>
-
+    <%- include("../partials/head.ejs")%>
+    
+    <body>
     <!-- PARTIAL DEL HEADER-->
-    <%-include ("./partials/header.ejs") %>
-   
-<body>
+    <%-include ("../partials/header.ejs") %>
+
+    <!-- INICIO MAIN  -->
     <div class="contenedor-general sinPermiso">
-        <h1 class= "sinPermiso-titulo">¡Ups! Lo siento, esta página no existe.</h1>
+        <h1 class= "sinPermiso-titulo">¡Ups! Lo siento, usted no tiene permiso para ingresar a esta sección.</h1>
         <div class= "contenedor-sinPermiso">
             <img class= "sinPermiso-imagen"src= "/images/logo/sinPermiso2.png">
         </div>
@@ -17,6 +19,7 @@
         </div>
 
     </div>
-    <%-include ("partials/footer.ejs") %>
+
+    <%-include ("../partials/footer.ejs") %>
 </body>
 </html>

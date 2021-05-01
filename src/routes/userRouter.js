@@ -7,6 +7,7 @@ const multer = require("../middlewares/users/multerMiddleware");
 const guestMiddleware = require("../middlewares/users/guestMiddleware")
 const authMiddleware = require ("../middlewares/users/authMiddelware")
 const userLogged = require ("../middlewares/users/userLoggedmiddelware")
+const adminMiddleware = require("../middlewares/users/adminMiddleware")
 
 
 //Validaciones
@@ -68,7 +69,7 @@ const loginValidations = [
 
  
 //Rutas
-router.get ("/listausuarios", controller.list); // Listado de usuarios - NO HAY BOTÓN PARA ACCEDER A LA LISTA
+ // Listado de usuarios - NO HAY BOTÓN PARA ACCEDER A LA LISTA
 
 router.get ("/registrarse",guestMiddleware, controller.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, controller.processRegister); //Formulario de Registro - procesar
@@ -79,7 +80,12 @@ router.get ("/:id/editar", controller.edit); // EDITAR USUARIO
 router.put ("/:id/editar", uploadFile.single ("image"), controller.update);
 
 
+router.get("/administracion", adminMiddleware, controller.administracion);
+router.get("/sinPermiso", controller.sinPermiso);
+router.get ("/listausuarios", adminMiddleware, controller.list);
 router.get("/perfil", controller.perfil);
+router.get("/:id/perfilusuario", adminMiddleware, controller.perfilUsuario);
+router.delete ("/:id/perfilusuario", adminMiddleware, controller.delete);
 router.get("/logout", controller.logout);
 
 

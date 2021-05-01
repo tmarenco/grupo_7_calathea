@@ -42,17 +42,31 @@
         </div>
     </section>
 
+    <!-- FILTRO DE TIPO DE PRODUCTO -->
+
+    <div class="header-filter">
+        <nav class="nav-bar-filter">
+                <ul class="nav">
+                    <li><a href="/productos/filtro/1">Planta Interior</a></li>
+                    <li><a href="/productos/filtro/2">Planta Exterior</a></li>
+                    <li><a href="/productos/filtro/3">Accesorios</a></li>
+                    <li><a href="/productos/filtro/4">Fertilizantes</a></li>
+                    <li><a href="/productos/filtro/5">Macetas</a></li>
+                    <li><a href="/productos/filtro/6">Deco</a></li>
+                </ul>
+        </nav>
+    </div> 
 
     <!--LISTADO DE PRODUCTOS-->
     <section class="products">
         <% productos.forEach (producto => { %>
             <article class="products-container">
                 <div class="description-product">
-                    <a href ="/productos/<%= producto.id %> "><img src= "images/productos/<%= producto.image %>" alt="Plantas de Interior" enctype= ></a>
+                    <a href ="/productos/<%= producto.id %> "><img src= "/images/productos/<%= producto.image %>" alt="Imagen no encontrada" enctype= ></a>
                     <h4 class="name"><%= producto.name %></h4>
                     <p class="price">$<%= producto.price %></p>
                     <p class="category"><%=producto.categorie.name %></p>
-                    <button class="buttom-detail">Ver detalle</button><button class="buttom-cart">Agregar a carrito</button>
+                    <a href ="/productos/<%= producto.id %> "><button class="buttom-detail">Ver detalle</button></a><a href ="productos/carrito"><button class="buttom-cart">Agregar a carrito</button></a>
                 </div>
                 
             </article>

@@ -1,0 +1,73 @@
+<!-- esta pagina es ususarios/DETALLE DE USUARIO -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+    
+    <body>
+    <!-- PARTIAL DEL HEADER-->
+    <%-include ("../partials/header.ejs") %>
+
+    <!-- INICIO MAIN  -->
+    <div class="contenedor-general">
+    <!--MUENU HORIZONTAL-->
+
+    <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/usuario/listausuarios">Lista de usuarios /</a>Perfil del usuario</a></div>
+
+    
+    <!--INICIO DE FORMULARIO-->
+
+    <main class= "Main-fr">
+        <section class= "section-perfil">
+
+            <form action ="/usuario/registrarse" method ="POST" class="form-fr">
+
+                <p class= "formulario-titulo-fr"><strong>PERFIL DEL USUARIO</strong></p>
+
+                <section class="section-izquierdo-contacto">
+                <div class="perfil-div-img">               
+                    <label for="img" class="perfil-img"><strong>AVATAR</strong></label>
+                    <img src="/images/user-images/<%=usuario.image %>" alt="avatar" class="perfil-img">
+                </div>   
+                </section><br><br>
+
+
+                <section class="section-izquierdo-contacto">
+                    <div class="fomulario-div-fr">
+                            <label for="name"><strong>NOMBRE</strong></label>
+                        <div class="formulario-input-fr"><%=usuario.first_name %></div>
+                    </div> 
+
+                    <div class="fomulario-div-fr">
+                        <label for="name"><strong>APELLIDO</strong></label>
+                    <div class="formulario-input-fr"><%=usuario.last_name %></div>
+                </div> 
+
+            <div class="fomulario-div-fr">  
+                <label for="email"><strong>EMAIL</strong></label>
+                <div class="formulario-input-fr"><%=usuario.email %></div>
+            </div> 
+
+            <div class="fomulario-div-fr">               
+                <label for="tel"><strong>TELÉFONO</strong></label>
+                <div class="formulario-input-fr"><%=usuario.phone %></div>
+            </div> 
+
+            <br><br>
+
+        </section>    
+        
+            </form>
+
+            <form action="/usuario/<%= usuario.id %>/perfilusuario?_method=delete" method="POST">
+                <button class="boton-editar">Borrar usuario</button>
+            </form>
+        
+            
+        </section>
+    
+    </main>
+    </div>
+    <%-include ("../partials/footer.ejs") %>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!-- esta pagina es ususarios/ ADMINISTRACIÓN, SOLO PARA LOS UASUARIOS CON CATEGORÍA ADMINISTRADOR -->
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+    
+    <body>
+    <!-- PARTIAL DEL HEADER-->
+    <%-include ("../partials/header.ejs") %>
+
+    <!-- INICIO MAIN  -->
+    <div class="contenedor-general">
+        <h1 class= "saludoAdmin">Hola, <%= locals.userLogged.first_name %>!</h1>
+        <a href= "/usuario/listausuarios"><button class= "botonListado">Listado de usuarios</button></a>
+        <a href= "/productos"><button class= "botonListado">Listado de productos</button></a>
+        <a href= "/productos/crear"><button class= "botonListado">Crear producto</button></a>
+    </div>
+
+    <%-include ("../partials/footer.ejs") %>
+</body>
+</html>

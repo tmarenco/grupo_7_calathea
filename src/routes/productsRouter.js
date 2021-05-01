@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const controller = require ("../controllers/productsController");
 const path = require ("path")
+const adminMiddleware = require("../middlewares/users/adminMiddleware")
 
 const multer = require("multer");
 const storage = multer.diskStorage ({
@@ -84,12 +85,13 @@ const productValidations = [
 // LAS 7 RUTAS QUE PIDE LA CONSIGNA DEL SPRINT 4
 
 router.get ("/", controller.products); //LISTO
-router.get ("/crear", controller.create); // LISTO
+router.get ("/filtro/:id", controller.filter); //LISTO
+router.get ("/crear", adminMiddleware, controller.create); // LISTO
 router.get ("/:id(\\d+)/", controller.show); // LISTO
 router.post ("/", upload.single("image"), productValidations, controller.store); // LISTO
-router.get ("/:id/editar", controller.edit); // LISTO
+router.get ("/:id/editar", adminMiddleware, controller.edit); // LISTO
 router.put ("/:id", upload.single ("image"), productEditValidations, controller.update); // LISTO
-router.delete ("/:id", controller.delete); // LISTO
+router.delete ("/:id", adminMiddleware, controller.delete); // LISTO
 
 router.get ("/carrito", controller.cart); 
 

@@ -9,10 +9,13 @@
             <div class= "header-right">
                 <ul>
                     <% if(locals.isLogged) { %> 
-                        <img class="imagen-avatar" src="/images/user-images/<%=locals.userLogged.image %> " alt=""><li> Hola <%=locals.userLogged.first_name %></a></li>
+                        <img class="imagen-avatar" src="/images/user-images/<%=locals.userLogged.image %> " alt=""><li>¡Hola, <%=locals.userLogged.first_name %>!</a></li>
                             <ul>
                                 <a href="/usuario/perfil"><li><em>Mi perfil</em></li></a>
-                                <a href="/productos/carrito"><li><i class="fas fa-shopping-cart"></i><em>Mi carrito</em></li></a> 
+                                <a href="/productos/carrito"><li><i class="fas fa-shopping-cart"></i><em>Mi carrito</em></li></a>
+                                <% if (locals.userLogged.id_category == 1){ %>
+                                    <a href="/usuario/administracion"><li><em>Administración</em></li></a>
+                                <% } %>
                                 <a href="/usuario/logout"><li><em>Cerrar Sesion</em></li></a>
                             </ul>
                     <% } else { %> 

@@ -5,6 +5,7 @@ const campoEmail = document.querySelector("#email")
 const campoPhone = document.querySelector("#tel")
 const campoPw = document.querySelector("#password")
 const campoConfirmPw = document.querySelector("#confirm")
+const campoImage = document.querySelector("#profileImage")
 
 const errorName = document.querySelector(".errorName")
 const errorLastName = document.querySelector(".errorLastName")
@@ -12,7 +13,9 @@ const errorEmail = document.querySelector(".errorEmail")
 const errorPhone = document.querySelector(".errorPhone")
 const errorPw = document.querySelector(".errorPw")
 const errorConfirmPw = document.querySelector(".errorConfirmPw")
+const errorImage = document.querySelectorAll(".errorImage");
 const errorMensaje = document.querySelectorAll(".errorMensaje");
+
 
 function resetFormErrors(){
     errorMensaje.forEach(error =>{
@@ -67,25 +70,19 @@ form.addEventListener("submit", function(e){
         errors = true
     }
     if (campoConfirmPw.value.length == 0){
-        errorConfirmPw.innerText = "La contraseña debe ser más larga"
+        errorConfirmPw.innerText = "Por favor, repita la contraseña"
         errorConfirmPw.style.display = "block"
         errors = true
-    } 
+    } else if (campoConfirmPw.value != campoPw.value ){
+        errorConfirmPw.innerText = "Las contraseñas deben coincidir"
+        errorConfirmPw.style.display = "block"
+        errors = true
+    }
 
     if (errors == true){
         e.preventDefault()
     }
-
-    // let campoImage = document.querySelector("#profileImage")
-    // let errorImage = document.querySelector(".errorImage")
-    // if (campoImage.value == null){
-    //     errorImage.innerText = "Por favor, cargue una imagen"
-    //     errors = true
-
-    //     if (errors = true){
-    //         e.preventDefault()
-    //     }
-    // }
+    
 })
 
 

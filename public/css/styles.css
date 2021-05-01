@@ -147,6 +147,55 @@ padding:5px;
     border-radius: 10px;
 }
 
+/* ESTILOS PARA PÁGINA DE SIN PERMISO */
+
+.sinPermiso {
+    display: flex;
+    flex-direction: column;
+}
+.sinPermiso-titulo {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    color:#49183c;
+}
+.sinPermiso-imagen {
+    justify-content: center;
+    align-content: center;
+    border: solid 0.5REM #49183c;
+    width: 60%;
+
+}
+.contenedor-sinPermiso {
+    display: flex;
+    justify-content: center;
+
+}
+
+.botonPermiso{
+    margin: 1rem;
+    display: block;
+    width: 70% !important;
+    background-color:#5c3251;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contenedor-Boton a{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+
+
+
+
 /* ESTILOS PAGINA MI PERFIL */
 
 .section-izquierdo-contacto{
@@ -168,6 +217,9 @@ padding:5px;
     width: 100%;
     display: none;
 }
+
+
+
 
 .nav-bar{
     padding: .25rem;
@@ -196,6 +248,27 @@ padding:5px;
 .nav-bar a.active{
     color:#e7badb;
     display: none;
+
+}
+
+/*Estilos página administración*/
+
+.saludoAdmin {
+    color:rgb(118, 71, 105);
+    margin: 1rem;
+}
+.botonListado{
+    margin: 1rem;
+    display: block;
+    width: 50%;
+    background-color:#537467;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 
 }
 
@@ -228,6 +301,11 @@ main {
 
 .hero-container img{
     width: 100%;
+}
+
+.opciones-catalogo a{
+    text-decoration: none;
+    color: white
 }
 
 @keyframes cambio {
@@ -353,7 +431,7 @@ main {
     justify-content: center; 
 }
 .producto-destacado {
-    background-image: url(/images/recomendados/anthorium-en-maceta.png);
+    /*background-image: url(/images/recomendados/anthorium-en-maceta.png); */
     background-size: cover;
     border: #754668 solid 1px;
     border-radius: 10px;
@@ -573,6 +651,30 @@ a { text-decoration: none;}
 .menu-horizontal a:hover{
 color: pink
 
+}
+
+.header-filter {
+    margin: 1rem;
+    background-color: #537467;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar-filter ul{
+    list-style: none;
+    margin: 1rem;
+}
+
+.nav-bar-filter ul li{
+    margin: 0.6rem;
+    display: flex;
+    justify-content: center;
+    border:black solid 0.2rem
+}
+.nav-bar-filter a{
+    text-decoration: none;
+    color:black;
 }
 
 .lista-conteiner-productos{
@@ -1113,11 +1215,40 @@ color: pink
         display: block;
     }
 
-    .opciones-catalogo {
+    .opciones-catalogo{
         justify-content: center;
+        ;
     }
 
+    /*INICIO SINPERMISO */
 
+    .sinPermiso-imagen {
+        border: solid 1rem #49183c;
+        width: 30%;
+    
+    }    
+    .botonPermiso{
+        width: 30% !important;
+    }
+    
+
+
+    /* INICIO QUERY DE FILTER DE PROCUTOS */
+
+    .header-filter {
+        font-size: 1.2rem;
+        display: block;
+    }
+    
+    .nav-bar-filter ul{
+        margin: 1rem;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .nav-bar-filter ul li{
+        border: none
+    }
 
 
 

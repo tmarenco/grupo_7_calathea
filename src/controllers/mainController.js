@@ -1,8 +1,17 @@
 const path = require ("path");
+const db = require ("../database/models/");
+const Product = require("../database/models/Product");
 
 module.exports = {
     index: (req, res) => {
-        res.render (path.join (__dirname, "../views/home/index.ejs"))
+        db.Product.findAll({
+            include: [
+                { association: "categorie"}
+                ]
+        })
+        .then(productList => {
+        res.render (path.join (__dirname, "../views/home/index.ejs"), {productos:productList})
+        })
     },
 
     contact: (req, res) => {

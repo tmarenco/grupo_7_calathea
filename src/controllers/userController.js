@@ -8,17 +8,6 @@ const db = require ("../database/models/");
 
 
 module.exports = {  
-    list: (req,res) => {
-        db.Users.findAll({
-            include: [
-                { association: "CategorieUser"}
-                ]
-        })
-        .then(userList => {
-            res.render (path.join (__dirname, "../views/users/userlist.ejs"), {usuarios:userList})
-        })
-    },
-
     register: (req, res) => {
         res.render (path.join (__dirname, "../views/users/register.ejs"));
     },
@@ -53,7 +42,7 @@ module.exports = {
                     phone: req.body.tel,
                     email: req.body.email,
                     image: req.file.filename,
-                    id_category: 1,
+                    id_category: 2,
                     password: bcryptjs.hashSync(req.body.password, 10)
                 });
                 return res.redirect("/usuario/iniciar-sesion")
@@ -204,9 +193,27 @@ module.exports = {
     },
 
     perfil:(req, res) => {
-        console.log(req.session)
         return res.render( (path.join(__dirname, "../views/users/perfil.ejs")), {usuario : req.session.userLogged} )
     },
+    perfilUsuario:(req, res)=> {
+        db.Users.findByPk(req.params.id)
+        .then(userDetail =>{
+            if(userDetail){
+             res.render (path.join (__dirname, "../views/users/userProfile.ejs"), {usuario:userDetail})}
+             })
+    },
+
+    delete: (req, res) => {
+        const id = req.params.id
+        db.Users.destroy( {
+            where : {
+                id
+            }
+        })
+        .then ( () => { 
+             res.redirect ("/usuario/listausuarios")
+        })
+     },
 
     edit: (req, res) => {
         return res.render( (path.join(__dirname, "../views/users/userEdit.ejs")), {usuario : req.session.userLogged} )
@@ -228,7 +235,7 @@ module.exports = {
         //     })
 
         //     return res.redirect ("/usuario/perfil")
-        const id = req.params.id;
+        const id = req.session.userLogged.id;
  
         db.Users.findByPk(id)
         .then(usuario => {
@@ -246,7 +253,7 @@ module.exports = {
             },
             {
                 where :{
-                    id: req.params.id
+                    id: id
                  } 
             })
  
@@ -266,5 +273,22 @@ module.exports = {
     logout :(req,res) =>{ // cerrar sesion 
         req.session.destroy();
         return res.redirect("/");
+    },
+    administracion: (req, res)=>{
+        return res.render(path.join(__dirname, "../views/users/admin.ejs"))
+        //return res.render( (path.join(__dirname, "../views/users/admin.ejs")), {usuario : req.session.userLogged} )
+    },
+    sinPermiso: (req, res)=>{
+        return res.render( (path.join(__dirname, "../views/home/sinPermiso.ejs")), {usuario : req.session.userLogged} )
+    },
+    list: (req,res) => {
+        db.Users.findAll({
+            include: [
+                { association: "CategorieUser"}
+                ]
+        })
+        .then(userList => {
+            return res.render (path.join (__dirname, "../views/users/userlist.ejs"), {usuarios:userList})
+        })
     }
 };

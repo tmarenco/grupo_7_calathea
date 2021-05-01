@@ -25,6 +25,21 @@ module.exports = {
 
       
     },
+    filter: (req, res)=>{
+        //Hacemos un find all en el cual incluímos la tabla categories que tiene los nombres de las categorías
+        db.Product.findAll({
+            include: [
+                { association: "categorie"}
+                ],
+                //Le pedimos que solo nos encuentre los productos cuyo id_categorie sea igual al id que llega por params
+            where: {
+                id_categories: req.params.id
+            }
+        })
+        .then(productListFiltered =>{
+            res.render (path.join (__dirname, "../views/products/products.ejs"), {productos:productListFiltered})
+        })
+    },
     //create: formulario de creacion de un nuevo producto
     create: (req, res) => {
         Promise.all([
@@ -183,6 +198,7 @@ module.exports = {
             db.Product.findByPk( id )
             .then(product => {
                 const originImage = product.image
+
      
                 db.Product.update ({
                  name, 
