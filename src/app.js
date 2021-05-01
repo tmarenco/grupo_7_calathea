@@ -12,6 +12,8 @@ const cookies = require("cookie-parser")
 /*Carpeta pública*/
 app.use (express.static(publicPath));
 
+
+
 /* ejs*/
 app.set ("view engine", "ejs");
 app.set ("views ", "src/views");
@@ -64,7 +66,7 @@ app.use ((req,res,next) => {
 })
 
 /*------------------------------ SERVIDOR---------------------------*/
-app.listen (3000, () => {
+app.listen (process.env.PORT || 3000, () => {
     console.log ("-----------------------");
     console.log ("http://localhost:3000");
     console.log ("-----------------------");
