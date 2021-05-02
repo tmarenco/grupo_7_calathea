@@ -69,7 +69,6 @@ const loginValidations = [
 
  
 //Rutas
- // Listado de usuarios - NO HAY BOTÓN PARA ACCEDER A LA LISTA
 
 router.get ("/registrarse",guestMiddleware, controller.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, controller.processRegister); //Formulario de Registro - procesar
@@ -81,6 +80,8 @@ router.put ("/:id/editar", uploadFile.single ("profileImage"), controller.update
 
 
 router.get("/administracion", adminMiddleware, controller.administracion);
+router.get ("/registrar-admin",adminMiddleware, controller.registerAdmin); //Formulario de Registro 
+router.post("/registrar-admin",adminMiddleware, multer.single('profileImage'), registerValidations, controller.processRegisterAdmin); //Formulario de Registro de usuario administrador
 router.get("/sinPermiso", controller.sinPermiso);
 router.get ("/listausuarios", adminMiddleware, controller.list);
 router.get("/perfil", controller.perfil);
