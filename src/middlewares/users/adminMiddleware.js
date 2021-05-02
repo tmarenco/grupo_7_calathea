@@ -3,7 +3,7 @@
 //Si cumple con esas condiciones, puede pasar al siguiente paso indicado en la ruta. Ese paso sería entrar a la url "usuario/administracion"
 //Si no cumpliese con esas condiciones, lo redirecciona a la vista del home "sinPermiso". 
 // Usar este usuario para ver cosas de administración:
-// Correo: leomessi@hotmail.com
+// Correo: liomessi@gmail.com
 // Contraseña: Lionel10!!
 
 const path = require('path')

@@ -20,6 +20,7 @@
 /*header*/
 
 
+
 .header-top {
     display: flex;
     margin: 0.2rem;
@@ -861,6 +862,7 @@ color: pink
 .boton-editar{
     display: block;
     background-color:#537467;
+    width: 50%;
     color: white;
     padding: 10px;
     margin-top: 10px;
@@ -1244,6 +1246,12 @@ color: pink
         width: 50%;
     }
 
+    /* INICIO QUERY PERFIL */
+
+    .boton-editar{
+        width: 20%;
+    }
+
     /* INICIO QUERY DE FILTER DE PROCUTOS */
 
     .header-filter {
@@ -1363,6 +1371,7 @@ color: pink
     .opciones-catalogo {
         flex-direction: row;
         flex-wrap: wrap;
+        margin-top: 6%;
     }
 
     .hero {

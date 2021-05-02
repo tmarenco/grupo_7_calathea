@@ -77,7 +77,7 @@ router.post("/registrarse", multer.single('profileImage'), registerValidations, 
 router.get ("/iniciar-sesion", guestMiddleware, controller.login); //Formulario de Login
 router.post('/iniciar-sesion', loginValidations, userLogged, controller.loginProcces) //Formulario de Login - procesar 
 router.get ("/:id/editar", controller.edit); // EDITAR USUARIO
-router.put ("/:id/editar", uploadFile.single ("image"), controller.update);
+router.put ("/:id/editar", uploadFile.single ("profileImage"), controller.update);
 
 
 router.get("/administracion", adminMiddleware, controller.administracion);

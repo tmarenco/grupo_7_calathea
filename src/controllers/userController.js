@@ -248,8 +248,7 @@ module.exports = {
              phone: req.body.tel,
              email: req.body.email,
              image : req.file ? req.file.filename : originImage,
-             id_category: 1,
-             password: req.body.password ? password : passwordVieja
+             password: req.body.password ? bcryptjs.hashSync(req.body.password, 10) : passwordVieja
             },
             {
                 where :{

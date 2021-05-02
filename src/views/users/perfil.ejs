@@ -58,11 +58,15 @@
 
         </section>    
         
-            </form>
-
+            </form>            
             <form action="/usuario/<%= usuario.id %>/editar">
                 <button class="boton-editar">Editar usuario</button>
             </form>
+            <% if (locals.userLogged.id_category == 1){%>
+                <form action="/usuario/administracion">
+                    <button class="boton-editar">Administración</button>
+                </form>
+            <% } %> 
         
             
         </section>
