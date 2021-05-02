@@ -9,14 +9,15 @@
             <div class= "header-right">
                 <ul>
                     <% if(locals.isLogged) { %> 
-                        <img class="imagen-avatar" src="/images/user-images/<%=locals.userLogged.image %> " alt=""><li>¡Hola, <%=locals.userLogged.first_name %>!</a></li>
                             <ul>
-                                <a href="/usuario/perfil"><li><em>Mi perfil</em></li></a>
-                                <a href="/productos/carrito"><li><i class="fas fa-shopping-cart"></i><em>Mi carrito</em></li></a>
+                                <img class="imagen-avatar" src="/images/user-images/<%=locals.userLogged.image %> " alt="">
+                                <li>¡Hola, <%=locals.userLogged.first_name %>!</a></li>
+                                <a href="/usuario/perfil"><li><em><ion-icon name="arrow-forward"></ion-icon>Mi perfil</em></li></a>
+                                <a href="/productos/carrito"><li><em><ion-icon name="arrow-forward"></ion-icon>Carrito   <i class="fas fa-shopping-cart"></i></em></li></a>
                                 <% if (locals.userLogged.id_category == 1){ %>
-                                    <a href="/usuario/administracion"><li><em>Administración</em></li></a>
+                                    <a href="/usuario/administracion"><li><em><ion-icon name="arrow-forward"></ion-icon>Administración</em></li></a>
                                 <% } %>
-                                <a href="/usuario/logout"><li><em>Cerrar Sesion</em></li></a>
+                                <a href="/usuario/logout"><li><em><ion-icon name="arrow-forward"></ion-icon>Cerrar Sesion</em></li></a>
                             </ul>
                     <% } else { %> 
                         <li><a href="/usuario/iniciar-sesion"><i class="fas fa-user"></i> Iniciar sesión</a></li>
@@ -49,6 +50,8 @@
                         <li><a href="/preguntas-frecuentes">Preguntas Frecuentes</a></li>
                         <br>
                         <li><a href="/contacto">Contacto</a></li>
+                        <br>
+                        <li class= "boton-cerrar">Cerrar</li>
                     </ul>
             </nav>
         </div>
@@ -56,14 +59,18 @@
     </section>
     <script>
         let miniNav = document.querySelector(".mini-nav")
+        let botonCerrar = document.querySelector(".boton-cerrar")
         
         let iconMiniNav = document.querySelector(".icon-miniNav")
        
         iconMiniNav.addEventListener("click", function(){
             miniNav.classList.toggle("showNav")
-            
-            
         })
+
+        botonCerrar.addEventListener("click", function(){
+            miniNav.classList.remove("showNav")
+        })
+
 
     </script>
 

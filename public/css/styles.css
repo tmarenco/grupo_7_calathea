@@ -209,6 +209,9 @@ padding:5px;
     border-radius: 30px;
 }
 
+.section-perfil {
+    margin: 1rem
+}
 
 
 .header-bottom .nav-bar{
@@ -331,7 +334,7 @@ main {
 }
 
 .opcion {
-    margin: 0.75rem;
+    margin: 1rem 2.5rem;
     width: 18rem;
     height: 18rem;;
     background-repeat: no-repeat;
@@ -924,7 +927,7 @@ color: pink
 }
 
 .section-izquierdo-contacto{
-    width: 50%;
+    width: 100%;
 }
 .main-contactos p{
     width: 90%;
@@ -941,7 +944,7 @@ color: pink
     padding: 0;
 }
 .section-derecha-contacto{
-    width: 50%;
+    width: 100%;
 }
 .formulario-contacto{
     width: 100%;
@@ -1231,7 +1234,15 @@ color: pink
         width: 30% !important;
     }
     
+    /*INICIO CONTACTO */
 
+    .section-izquierdo-contacto {
+        width: 50%;
+    }
+
+    .section-derecha-contacto{
+        width: 50%;
+    }
 
     /* INICIO QUERY DE FILTER DE PROCUTOS */
 

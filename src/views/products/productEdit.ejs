@@ -56,7 +56,15 @@
                 <label for="category"><strong>CATEGORIAS</strong></label>
                     <select class="formulario-input-contacto" name="id_categories" id="id_categories">
                         <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%=category.name %></option>
+                            <%if (category.id == product.id_categories){ %> 
+                            <option value="<%= category.id %>" selected>
+                                <%=category.name %>
+                            </option>
+                            <% } else { %>
+                                <option value="<%= category.id %>">
+                                    <%=category.name %>
+                                </option>
+                            <% } %> 
                        <% }) %> 
                         
                     </select>
@@ -78,9 +86,17 @@
             <div class="div-formulario-contacto">
                 <label for="promo"><strong>PROMOCIÓN</strong></label>
                 <select class="formulario-input-contacto" name="id_offer" id="id_offer">
-                    <% offer.forEach(offers => { %>
-                        <option value="<%= offers.id %>"><%=offers.description %></option>
-                       <% }) %> 
+                       <% offer.forEach(offers => { %>
+                        <%if (offers.id == product.id_offer){ %> 
+                        <option value="<%= offers.id %>" selected>
+                            <%=offers.description %>
+                        </option>
+                        <% } else { %>
+                            <option value="<%= offers.id %>">
+                                <%=offers.description %>
+                            </option>
+                        <% } %> 
+                   <% }) %> 
                     
                 </select>
               </div>
