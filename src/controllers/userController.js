@@ -172,38 +172,42 @@ processRegisterAdmin:(req,res) => {
     },
 
     update: (req, res)=> {
+        const resultValidation = validationResult(req);
         const id = req.session.userLogged.id;
- 
+
         db.Users.findByPk(id)
-        .then(usuario => {
-            const originImage = usuario.image
-            const passwordVieja = usuario.password
- 
-            db.Users.update ({
-             first_name: req.body.name,
-             last_name: req.body.last_name, 
-             phone: req.body.tel,
-             email: req.body.email,
-             image : req.file ? req.file.filename : originImage,
-             password: req.body.password ? bcryptjs.hashSync(req.body.password, 10) : passwordVieja
-            },
-            {
-                where :{
-                    id: id
-                 } 
-            })
- 
-            .then (() => {
-                db.Users
-                    .findByPk(id)
-                    .then(user =>{
-                        delete user.password
-                        req.session.userLogged = user
-                        return res.redirect ("/usuario/perfil")
+            .then(usuario => {
+                const originImage = usuario.image
+                const passwordVieja = usuario.password
+                const originEmail = usuario.email
+                
+                if(resultValidation.errors.length > 0){
+                    res.render((path.join(__dirname, "../views/users/userEdit.ejs")),{errors: resultValidation.mapped(), oldData: req.body, usuario});
+                } else { 
+                    db.Users.update ({
+                        first_name: req.body.name,
+                        last_name: req.body.last_name, 
+                        phone: req.body.tel,
+                        email: originEmail,
+                        image : req.file ? req.file.filename : originImage,
+                        password: req.body.password ? bcryptjs.hashSync(req.body.password, 10) : passwordVieja
+                    },
+                    {
+                        where :{
+                            id: id
+                        } 
                     })
-                })
- 
-         })
+                    .then (() => {
+                        db.Users
+                        .findByPk(id)
+                        .then(user =>{
+                            delete user.password
+                            req.session.userLogged = user
+                            return res.redirect ("/usuario/perfil")
+                        })
+                    })
+                }
+            })
     },
 
     logout :(req,res) =>{ // cerrar sesion 

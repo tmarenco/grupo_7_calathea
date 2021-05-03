@@ -30,6 +30,7 @@
                         <%= errors.name.msg %> 
                     </div>
                 <% } %>
+                <div class= "errorName errorMensaje"></div>
             </div>
             <div class="fomulario-div-fr">
                 <label for="last_name"><strong>APELLIDO</strong></label>
@@ -41,16 +42,7 @@
                         <%= errors.last_name.msg %> 
                     </div>
                 <% } %>
-            </div> 
-            <div class="fomulario-div-fr">  
-                <label for="email"><strong>EMAIL</strong></label>
-                <input type="email" name="email" id="email" placeholder= "email@valido.com" 
-                class="formulario-input-fr <%= locals.errors && errors.email ? "error-border" : null %>" 
-                value="<%= locals.oldData && oldData.email ? oldData.email : usuario.email %>">
-                <% if(locals.errors && errors.email){ %>
-                    <div class="fr-error">
-                    <%= errors.email.msg %>
-                <% } %>
+                <div class= "errorLastName errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr">               
                 <label for="tel"><strong>TELÉFONO</strong></label>
@@ -62,6 +54,7 @@
                     <div class="fr-error">
                     <%= errors.tel.msg %> </div>
                 <% } %>
+                <div class= "errorPhone errorMensaje"></div>
             </div> 
             <div class="fomulario-div-fr"> 
                 <label for="password"><strong>CONTRASEÑA</strong></label>
@@ -107,5 +100,6 @@
     </main>
 </div>
     <%-include ("../partials/footer.ejs") %>
+    <script src= "/js/updateUser.js" ></script>
     </body>
 </html>

@@ -62,7 +62,30 @@ const loginValidations = [
     body('password')
           .notEmpty().withMessage("Debes ingresar una contraseña")
  ];
-
+ const editValidations = [
+     body('name')
+          .notEmpty().withMessage("Debes completar tu nombre").bail()
+          .isLength({min: 2}).withMessage("El nombre debe ser más largo"),
+     body('last_name')
+          .notEmpty().withMessage("Debes completar tu apellido")
+          .isLength({min: 2}).withMessage("El apellido debe ser más largo"),
+     body('tel')
+          .notEmpty().withMessage("Debes ingresar tu teléfono"),
+     body('profileImage')
+          .custom((value, {req }) => {
+               
+               if(req.file){
+                    let extensions = ['.jpg', '.png', '.gif', "jpeg"];
+                    let newfile = req.file;
+                    let fileExtesion = path.extname(newfile.originalname);
+                    if(!extensions.includes(fileExtesion)){
+                         throw new Error ("La extensión del archivo debe ser .png, .jpg, .gif o .jpeg")
+                    }
+               }
+               return true
+          }
+          )
+  ];
 
 
 
@@ -76,7 +99,7 @@ router.post("/registrarse", multer.single('profileImage'), registerValidations, 
 router.get ("/iniciar-sesion", guestMiddleware, controller.login); //Formulario de Login
 router.post('/iniciar-sesion', loginValidations, userLogged, controller.loginProcces) //Formulario de Login - procesar 
 router.get ("/:id/editar", controller.edit); // EDITAR USUARIO
-router.put ("/:id/editar", uploadFile.single ("profileImage"), controller.update);
+router.put ("/:id/editar", uploadFile.single ("profileImage"), editValidations, controller.update);
 
 
 router.get("/administracion", adminMiddleware, controller.administracion);
