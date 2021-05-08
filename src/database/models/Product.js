@@ -59,7 +59,11 @@ module.exports = (sequelize, dataTypes) => {
          Product.belongsTo(models.Categorie, { // belogsTo porque la tabla productos es la que tiene la FK de categorie
             as: "categorie", // as es un nombre que le ponemos a la relacion
             foreignKey: "id_categories" // nombre de la columna que es foreignkey en la tabla products
-    })
+        })
+        Product.belongsTo(models.Offer,{
+            as: "offers",
+            foreignKey: "id_offer"
+        })
     }
 
 

@@ -59,6 +59,13 @@ const userRouter= require ("./routes/userRouter");
 const cookieParser = require("cookie-parser");
 app.use ("/usuario", userRouter);
 
+/* RUTAS API*/
+const apiProductRouter= require ("./routes/api/apiProductRouter");
+app.use("/api/products", apiProductRouter)
+
+const apiUserRouter = require ("./routes/api/apiUserRouter");
+app.use("/api/users", apiUserRouter)
+
 
 /* RUTA 404*/
 app.use ((req,res,next) => {

@@ -66,9 +66,10 @@ module.exports = {
         .then(productDetail =>{
             //console.log(productDetail.categorie) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             if(productDetail){
-             res.render (path.join (__dirname, "../views/products/productDetail.ejs"), {producto:productDetail})}
+             res.render (path.join (__dirname, "../views/products/productDetail.ejs"), {producto:productDetail})
+            }
              else{
-                 res.send("Producto no encontrado")
+                res.render (path.join (__dirname, "../views/not-found.ejs"))
              }})
         
     },

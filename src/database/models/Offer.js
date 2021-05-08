@@ -20,5 +20,14 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Offer = sequelize.define(alias, columns, config);
+
+    Offer.associate = models => {
+        Offer.hasMany(models.Product, { 
+           as: "offers", 
+           foreignKey: "id_offer" 
+   })
+   }
+
+
     return Offer;
     }
