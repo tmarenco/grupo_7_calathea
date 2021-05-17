@@ -7,6 +7,9 @@ const methodOverride = require("method-override")
 const session = require("express-session");
 const cookies = require("cookie-parser")
 
+/* CORS --> Esto se lo pasamos a las rutas de las APIS ya que por un tema de permisos (creo), no funciona sin esto*/
+const cors = require("cors")
+
 /* -----------------------------CONFIGURACION APP.USE-------------------------------*/
 
 /*Carpeta pública*/
@@ -61,10 +64,10 @@ app.use ("/usuario", userRouter);
 
 /* RUTAS API*/
 const apiProductRouter= require ("./routes/api/apiProductRouter");
-app.use("/api/products", apiProductRouter)
+app.use("/api/products", cors(), apiProductRouter)
 
 const apiUserRouter = require ("./routes/api/apiUserRouter");
-app.use("/api/users", apiUserRouter)
+app.use("/api/users", cors(), apiUserRouter)
 
 
 /* RUTA 404*/

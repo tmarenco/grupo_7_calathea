@@ -38,11 +38,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.INTEGER
         },
 
-
-        order : {
-            type: dataTypes.INTEGER 
-        },
-
         
 
     }

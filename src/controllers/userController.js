@@ -190,7 +190,7 @@ processRegisterAdmin:(req,res) => {
                         phone: req.body.tel,
                         email: originEmail,
                         image : req.file ? req.file.filename : originImage,
-                        password: req.body.password ? bcryptjs.hashSync(req.body.password, 10) : passwordVieja
+                        password: passwordVieja
                     },
                     {
                         where :{

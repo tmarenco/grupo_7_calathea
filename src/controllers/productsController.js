@@ -40,6 +40,16 @@ module.exports = {
             res.render (path.join (__dirname, "../views/products/products.ejs"), {productos:productListFiltered})
         })
     },
+    // search: (req,res)=>{
+    //     db.Product.findAll({
+    //         where: {
+    //             name: {[Op.like]: "%" + req.params.busqueda + "%"}
+    //         }
+    //     })
+    //     .then(products=> {
+    //         res.render (path.join (__dirname, "../views/products/products.ejs"), {products})
+    //     })
+    // },
     //create: formulario de creacion de un nuevo producto
     create: (req, res) => {
         Promise.all([

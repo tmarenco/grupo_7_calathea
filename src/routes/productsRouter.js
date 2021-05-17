@@ -38,7 +38,7 @@ const productValidations = [
     body('image')
          .custom((value, {req }) => {
               let newfile = req.file;
-              let extensions = ['.jpg', '.png', '.gif', "jpeg"];
+              let extensions = ['.jpg', '.png', '.gif', ".jpeg"];
               
               if(!newfile){
                    throw new Error ('Debes cargar una imagen')
@@ -67,7 +67,7 @@ const productValidations = [
      body('image')
           .custom((value, {req }) => {
                let newfile = req.file;
-               let extensions = ['.jpg', '.png', '.gif', "jpeg"];
+               let extensions = ['.jpg', '.png', '.gif', ".jpeg"];
                if (newfile != undefined) {
                       let fileExtesion = path.extname(newfile.originalname);
                       if(!extensions.includes(fileExtesion)){
@@ -86,6 +86,7 @@ const productValidations = [
 
 router.get ("/", controller.products); //LISTO
 router.get ("/filtro/:id", controller.filter); //LISTO
+//router.get ("/:busqueda", controller.search); 
 router.get ("/crear", adminMiddleware, controller.create); // LISTO
 router.get ("/:id(\\d+)/", controller.show); // LISTO
 router.post ("/", upload.single("image"), productValidations, controller.store); // LISTO

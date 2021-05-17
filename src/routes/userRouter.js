@@ -38,7 +38,7 @@ const registerValidations = [
    body('profileImage')
         .custom((value, {req }) => {
              let newfile = req.file;
-             let extensions = ['.jpg', '.png', '.gif', "jpeg"];
+             let extensions = ['.jpg', '.png', '.gif', ".jpeg"];
              
              if(!newfile){
                   throw new Error ('Debes cargar una imagen')
@@ -75,7 +75,7 @@ const loginValidations = [
           .custom((value, {req }) => {
                
                if(req.file){
-                    let extensions = ['.jpg', '.png', '.gif', "jpeg"];
+                    let extensions = ['.jpg', '.png', '.gif', ".jpeg"];
                     let newfile = req.file;
                     let fileExtesion = path.extname(newfile.originalname);
                     if(!extensions.includes(fileExtesion)){
@@ -92,14 +92,14 @@ const loginValidations = [
 
  
 //Rutas
-
 router.get ("/registrarse",guestMiddleware, controller.register); //Formulario de Registro 
 router.post("/registrarse", multer.single('profileImage'), registerValidations, controller.processRegister); //Formulario de Registro - procesar
 
 router.get ("/iniciar-sesion", guestMiddleware, controller.login); //Formulario de Login
 router.post('/iniciar-sesion', loginValidations, userLogged, controller.loginProcces) //Formulario de Login - procesar 
-router.get ("/:id/editar", controller.edit); // EDITAR USUARIO
+router.get ("/:id/editar", authMiddleware, controller.edit); // EDITAR USUARIO 
 router.put ("/:id/editar", uploadFile.single ("profileImage"), editValidations, controller.update);
+router.get("/perfil", authMiddleware, controller.perfil);
 
 
 router.get("/administracion", adminMiddleware, controller.administracion);
@@ -107,11 +107,11 @@ router.get ("/registrar-admin",adminMiddleware, controller.registerAdmin); //For
 router.post("/registrar-admin",adminMiddleware, multer.single('profileImage'), registerValidations, controller.processRegisterAdmin); //Formulario de Registro de usuario administrador
 router.get("/sinPermiso", controller.sinPermiso);
 router.get ("/listausuarios", adminMiddleware, controller.list);
-router.get("/perfil", controller.perfil);
 router.get("/:id/perfilusuario", adminMiddleware, controller.perfilUsuario);
 router.delete ("/:id/perfilusuario", adminMiddleware, controller.delete);
 router.get("/logout", controller.logout);
 
+//rec.session.previousPage
 
 module.exports = router;
 

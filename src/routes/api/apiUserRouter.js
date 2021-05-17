@@ -6,6 +6,7 @@ const path = require ("path")
 //const adminMiddleware = require("../middlewares/users/adminMiddleware")
 
 
+
 router.get ("/", controller.getUsers);
 router.get ("/:id", controller.getUserById);
 

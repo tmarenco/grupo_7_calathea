@@ -4,7 +4,11 @@ module.exports = {
     getProducts(req,res){
         Promise.all([
             db.Product.findAll({
-                attributes: ["id", "name", "description"]
+                attributes: ["id", "name", "description", "image", "price"]
+            }, {
+                include: ["categorie", "offers"],
+                raw: true,
+                nest: true
             }),
             db.Offer.findAll(),
             db.Categorie.findAll(),

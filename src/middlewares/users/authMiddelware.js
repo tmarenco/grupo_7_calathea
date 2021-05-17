@@ -5,11 +5,21 @@ const path = require('path')
 //sirve para que cuando uno no esta logueado no pueda entrar a la pagina de perfil
 
 function authMiddleware(req,res,next){
-    if(!req.session.userlogged){
+    if(!req.session.userLogged){
         return  res.redirect ("/usuario/iniciar-sesion")
     } 
     next();
 }
+
+// function authMiddleware(req,res,next){
+//     if(req.session.userLogged){
+//         next()
+//     } 
+//     return  res.redirect ("/usuario/iniciar-sesion")
+// }
+
+
+
     
 
 
