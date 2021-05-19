@@ -8,14 +8,11 @@
    
 <body>
     <div class="contenedor-general sinPermiso">
-        <h1 class= "sinPermiso-titulo">¡Ups! Lo siento, esta página no existe.</h1>
+        <h2 class= "sinPermiso-titulo">¡Ups! la página que estás buscando no existe.</h2>
         <div class= "contenedor-sinPermiso">
-            <img class= "sinPermiso-imagen"src= "/images/logo/sinPermiso2.png">
+            <a href='/'><img class= "sinPermiso-imagen"src= "/images/not-found.jpg"></a>
         </div>
-        <div class= "contenedor-Boton">
-            <a href="/"><button class= "botonPermiso">¡Hacé click para volver al inicio!</button></a>
-        </div>
-
+        <br>
     </div>
     <%-include ("partials/footer.ejs") %>
 </body>

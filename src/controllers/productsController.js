@@ -19,7 +19,6 @@ module.exports = {
                 ]
         })
         .then(productList => {
-            //console.log(productList.categorie) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             res.render (path.join (__dirname, "../views/products/products.ejs"), {productos:productList})
         })
 
@@ -37,19 +36,21 @@ module.exports = {
             }
         })
         .then(productListFiltered =>{
-            res.render (path.join (__dirname, "../views/products/products.ejs"), {productos:productListFiltered})
+            res.render(path.join (__dirname, "../views/products/products.ejs"), {productos:productListFiltered})
         })
     },
-    // search: (req,res)=>{
-    //     db.Product.findAll({
-    //         where: {
-    //             name: {[Op.like]: "%" + req.params.busqueda + "%"}
-    //         }
-    //     })
-    //     .then(products=> {
-    //         res.render (path.join (__dirname, "../views/products/products.ejs"), {products})
-    //     })
-    // },
+    search: (req, res) => {
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.Like]: '%' + req.body.search + '%'
+                }
+            }
+        })
+        .then(products=> {
+            res.render(path.join (__dirname, "../views/products/products.ejs"), {products})
+    })
+    },
     //create: formulario de creacion de un nuevo producto
     create: (req, res) => {
         Promise.all([
