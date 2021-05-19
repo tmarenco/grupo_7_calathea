@@ -19,7 +19,9 @@
 }
 /*header*/
 
-
+.logo a:hover{
+    cursor: pointer;
+}
 
 .header-top {
     display: flex;
@@ -163,14 +165,19 @@ padding:5px;
 .sinPermiso-imagen {
     justify-content: center;
     align-content: center;
-    border: solid 0.5REM #49183c;
-    width: 60%;
+    border: none;
+    width: 30%;
 
 }
-.contenedor-sinPermiso {
+.contenedor-sinPermiso a{
     display: flex;
     justify-content: center;
 
+}
+.contenedor-sinPermiso a:hover{
+    cursor: pointer;
+    transition: 0.4s;
+    transform: scale(1.05);
 }
 
 .botonPermiso{
@@ -902,17 +909,38 @@ color: pink
 }
 /* FIN DE ESTILOS PAGINA QUIENES SOMOS*/
 
-/* INICIO DE STILOS PAGINA PREGUNTAS FRECUENTES*/
-.main_preguntas{
-    display: block;
-    margin: 30px;
-    
-}
-.main_preguntas h1,
- h3,
- h4{
+
+/* INICIO DE ESTILOS PAGINA PREGUNTAS FRECUENTES*/
+.contenedor-general h2{
     text-align: center;
-    margin: auto;
+    margin-top: 2rem;
+}
+
+.main_preguntas{
+    display: flex;
+    padding: 2rem;
+}
+
+.lista_preguntas-li{
+    text-decoration: none;
+}
+.faq-contenedor1{
+  width:60%;
+}
+.faq-contenedor2{
+    width: 30%;
+    padding: 2rem;
+}
+
+.faq-img{
+    width: 150%;
+}
+
+@media (min-width: 1200px){
+
+.faq-img{
+    width: 100%;
+}
 }
 
 /* FIN DE ESTILOS PAGINA PREGUNTAS FRECUENTES*/
@@ -1228,8 +1256,8 @@ color: pink
     /*INICIO SINPERMISO */
 
     .sinPermiso-imagen {
-        border: solid 1rem #49183c;
-        width: 30%;
+        border: none;
+        width: 20%;
     
     }    
     .botonPermiso{
