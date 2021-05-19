@@ -209,6 +209,50 @@ processRegisterAdmin:(req,res) => {
                 }
             })
     },
+    editPw: (req,res)=>{
+        return res.render(path.join(__dirname, "../views/users/changePw.ejs"), {usuario : req.session.userLogged})
+    },
+
+    updatePw: (req, res)=> {
+        const resultValidation = validationResult(req);
+        const id = req.session.userLogged.id;
+
+        db.Users.findByPk(id)
+            .then(usuario => {
+                // const originName = usuario.first_name
+                // const originLastName = usuario.last_name
+                // const originPhone = usuario.phone
+                // const originImage = usuario.image
+                // const originEmail = usuario.email
+                
+                if(resultValidation.errors.length > 0){
+                    res.render((path.join(__dirname, "../views/users/changePw.ejs")),{errors: resultValidation.mapped(), usuario});
+                } else { 
+                    db.Users.update ({
+                        // first_name: originName,
+                        // last_name: originLastName, 
+                        // phone: originPhone,
+                        // email: originEmail,
+                        // image : originImage,
+                        password: bcryptjs.hashSync(req.body.password, 10)
+                    },
+                    {
+                        where :{
+                            id: id
+                        } 
+                    })
+                    .then (() => {
+                        db.Users
+                        .findByPk(id)
+                        .then(user =>{
+                            delete user.password
+                            req.session.userLogged = user
+                            return res.redirect ("/usuario/perfil")
+                        })
+                    })
+                }
+            })
+    },
 
     logout :(req,res) =>{ // cerrar sesion 
         req.session.destroy();

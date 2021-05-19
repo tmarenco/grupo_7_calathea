@@ -52,7 +52,7 @@ function ContentRowTop(props){
 										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={lastProductImage} alt="Foto último producto"/>
 									</div>
 									<p>{props.products[lastProduct].description}</p>
-									<a className="btn btn-danger botonDetalle" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a>
+									<a className="btn btn-danger botonDetalle" target="_blank" rel="nofollow" href={`http://localhost:3000/productos/${props.products[lastProduct].id}`}>Ver detalle de producto</a>
 								</div>
 							</div>
 						</div>

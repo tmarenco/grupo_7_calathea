@@ -87,6 +87,15 @@ const loginValidations = [
           )
   ];
 
+  const passwordValidations = [
+     body('password')
+          .notEmpty().withMessage("Debes ingresar una contraseña").bail()
+          .isLength({min: 8}).withMessage("La contraseña debe ser más larga").bail()
+          .isStrongPassword().withMessage("La contraseña debe contener al menos una mayúscula, un símbolo y 2 números"),
+     body('confirm')
+          .notEmpty().withMessage("Debes confirmar la contraseña")
+  ];
+
 
 
 
@@ -99,6 +108,8 @@ router.get ("/iniciar-sesion", guestMiddleware, controller.login); //Formulario 
 router.post('/iniciar-sesion', loginValidations, userLogged, controller.loginProcces) //Formulario de Login - procesar 
 router.get ("/:id/editar", authMiddleware, controller.edit); // EDITAR USUARIO 
 router.put ("/:id/editar", uploadFile.single ("profileImage"), editValidations, controller.update);
+router.get ("/:id/editarContrasenia", authMiddleware, controller.editPw); // EDITAR CONTRASEÑA 
+router.put ("/:id/editarContrasenia", passwordValidations, controller.updatePw);
 router.get("/perfil", authMiddleware, controller.perfil);
 
 

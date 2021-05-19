@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- PARTIAL DEL HEAD-->
+    <%- include("../partials/head.ejs")%>
+<body>
+    <!-- PARTIAL DEL HEADER-->
+    <%-include ("../partials/header.ejs") %>
+
+    <!-- INICIO MAIN  -->
+    <div class="contenedor-general">
+    <!--MENU HORIZONTAL-->
+    <div class="menu-horizontal"><a href="/" > Inicio /</a> <a href="/">Mi Cuenta /</a> <a href="#"><strong>Cambiá tu contraseña</strong></a></div>
+
+    <!--INICIO DE FORMULARIO-->
+    <main class= "Main-fr">
+        <section class= "section-fr">
+
+            <form action ="/usuario/<%= usuario.id %>/editarContrasenia/?_method=PUT" method ="POST" class="form-fr">
+
+                <p class= "formulario-titulo-fr"><strong>Cambía tu contraseña</strong></p>
+            <div class="fomulario-div-fr"> 
+                <label for="password"><strong>CONTRASEÑA</strong></label>
+                <input type="password" name="password" id="password" 
+                class="formulario-input-fr <%= locals.errors && errors.password ? "error-border" : null %>">
+                <% if(locals.errors && errors.password){ %>
+                    <div class="fr-error">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+                <div class= "errorPw errorMensaje"></div>
+            </div>  
+            <div class="fomulario-div-fr">  
+                <label for="confirm"><strong>CONFIRMAR CONTRASEÑA</strong></label>
+                <input type="password" name="confirm" id="confirm" 
+                class="formulario-input-fr <%= locals.errors && errors.confirm ? "error-border" : null %>">
+                <% if(locals.errors && errors.confirm){ %>
+                    <div class="fr-error">
+                        <%= errors.confirm.msg %>
+                    </div>
+                <% } %>
+                <div class= "errorConfirmPw errorMensaje"></div>
+            </div> 
+
+                <button type="submit" class="formulario-boton-fr">REALIZAR CAMBIO</button>
+            
+            </form>
+        
+        </section>
+    
+    </main>
+</div>
+    <%-include ("../partials/footer.ejs") %>
+    <script src= "/js/updatePw.js" ></script>
+    </body>
+</html>

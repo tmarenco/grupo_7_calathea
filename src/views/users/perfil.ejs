@@ -62,6 +62,9 @@
             <form action="/usuario/<%= usuario.id %>/editar">
                 <button class="boton-editar">Editar usuario</button>
             </form>
+            <form action="/usuario/<%= usuario.id %>/editarContrasenia">
+                <button class="boton-editar">Cambiar contraseña</button>
+            </form>
             <% if (locals.userLogged.id_category == 1){%>
                 <form action="/usuario/administracion">
                     <button class="boton-editar">Administración</button>
