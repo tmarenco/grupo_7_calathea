@@ -122,7 +122,7 @@ router.get("/:id/perfilusuario", adminMiddleware, controller.perfilUsuario);
 router.delete ("/:id/perfilusuario", adminMiddleware, controller.delete);
 router.get("/logout", controller.logout);
 
-//rec.session.previousPage
+
 
 module.exports = router;
 

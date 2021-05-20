@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../../controllers/api/apiUserController"); 
 const path = require ("path")
-//const adminMiddleware = require("../middlewares/users/adminMiddleware")
+
 
 
 

@@ -75,7 +75,6 @@ module.exports = {
                 ]
         })
         .then(productDetail =>{
-            //console.log(productDetail.categorie) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
             if(productDetail){
              res.render (path.join (__dirname, "../views/products/productDetail.ejs"), {producto:productDetail})
             }
@@ -122,48 +121,6 @@ module.exports = {
                     })
             }
             })
-        
-
-    //     if(resultValidation.errors.length > 0){
-    //         res.render((path.join(__dirname, "../views/products/productCreate.ejs")),{errors: resultValidation.mapped(), oldData: req.body});
-    //     } else {
-    //         db.Product.create({
-    //             name, 
-    //             description , 
-    //             image : filename,
-    //             //id_categories: Number(id_categories),
-    //             price , 
-    //             //id_offer , 
-    //             stock , 
-    //             order,
-                
-    //         })
-    //         .then (newProduct => {
-    //             res.redirect("/productos")
-    //         })
-    //         .catch (error =>{
-    //             res.send ("fallo")
-    //         })
-    // }
-
-        // db.Product.create({
-        //     name, 
-        //     description , 
-        //     image : filename,
-        //     id_categories: Number(id_categories),
-        //     price , 
-        //     id_offer , 
-        //     stock , 
-        //     order,
-            
-        // })
-        // .then (newProduct => {
-        //     //console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
-        //     res.redirect("/productos")
-        // })
-        // .catch (error =>{
-        //     res.send ("fallo")
-        // })
     },
 
     // edit: formulario de actualziacion de productos
@@ -229,51 +186,12 @@ module.exports = {
                 })
      
                 .then (() => {
-                 // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
                     res.redirect ("/productos");
                 })
      
              })
         }
     })
-
-
-
-
-
-
-    //    if(resultValidation.errors.length > 0){
-    //     res.render((path.join(__dirname, "../views/products/productEdit.ejs")),{errors: resultValidation.mapped(), oldData: req.body});
-    // } else {
-    //     db.Product.findByPk( id )
-    //     .then(product => {
-    //         const originImage = product.image
- 
-    //         db.Product.update ({
-    //          name, 
-    //          description , 
-    //          id_categories: Number(id_categories) , 
-    //          price , 
-    //          id_offer , 
-    //          stock , 
-    //          order,
-    //          image : req.file ? req.file.filename : originImage
-    //         },
-    //         {
-    //             where :{
-    //                 id
-    //              } 
-    //         })
- 
-    //         .then (() => {
-    //          // console.log(req.body) COMENTÉ ESTO PORQUE ENTIENDO QUE ESTABA DE MÁS Y ERA SOLO UNA PRUEBA
-    //             res.redirect ("/productos");
-    //         })
- 
-    //      })
-    // }
-
-    
     },
 
     // delete : elimina un producto

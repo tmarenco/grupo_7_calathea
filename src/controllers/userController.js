@@ -2,7 +2,6 @@ const path = require ("path");
 const {validationResult} = require('express-validator')
 //se requiere bcryptjs para encriptar la contraseña
 const bcryptjs = require("bcryptjs")
-//const usersTable = require("../models/Users");
 const db = require ("../database/models/");
 
 
@@ -219,21 +218,10 @@ processRegisterAdmin:(req,res) => {
 
         db.Users.findByPk(id)
             .then(usuario => {
-                // const originName = usuario.first_name
-                // const originLastName = usuario.last_name
-                // const originPhone = usuario.phone
-                // const originImage = usuario.image
-                // const originEmail = usuario.email
-                
                 if(resultValidation.errors.length > 0){
                     res.render((path.join(__dirname, "../views/users/changePw.ejs")),{errors: resultValidation.mapped(), usuario});
                 } else { 
                     db.Users.update ({
-                        // first_name: originName,
-                        // last_name: originLastName, 
-                        // phone: originPhone,
-                        // email: originEmail,
-                        // image : originImage,
                         password: bcryptjs.hashSync(req.body.password, 10)
                     },
                     {
