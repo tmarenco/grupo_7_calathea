@@ -1,0 +1,19 @@
+{
+  "name": "grupo_7_calathea",
+  "version": "1.0.0",
+  "description": "Página web de venta de plantas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmarenco/grupo_7_calathea.git"
+  },
+  "author": "Tomás Marenco, Irina Leicach y Gastón Gatti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmarenco/grupo_7_calathea/issues"
+  },
+  "homepage": "https://github.com/tmarenco/grupo_7_calathea#readme"
+}
