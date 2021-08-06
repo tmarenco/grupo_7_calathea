@@ -1,4 +1,4 @@
-// Conexión a base de datos local
+//Conexión a base de datos local
 // module.exports = {
 //   "development": {
 //     "username": "root",
